@@ -20,8 +20,8 @@
     width: 100%;
     height: 25px;
     margin-top: 64px;
-    grid-template-areas: ". logo nav account . ";
-    grid-template-columns: 80px 1fr 1fr 1fr 80px;
+    grid-template-areas: ". logo nav account_img account . ";
+    grid-template-columns: 80px 1fr 1fr 1fr 0.1fr 80px;
     grid-template-rows: 1fr;
     gap: 1rem;
     justify-content: space-between;
@@ -43,7 +43,7 @@
 
 .nav {
     grid-area: nav;
-    justify-self: start;
+    justify-self: center;
 }
 
 .menu {
@@ -69,6 +69,11 @@
     text-decoration: none;
 }
 
+.account_img{
+    grid-area: account_img;
+    justify-self: end;
+}
+
 .heading {
     display: grid;
     width: 100%;
@@ -76,8 +81,8 @@
     margin-top: 187px;
     grid-template-areas: ". line st . "
         ". title title . "
-        ". scroll . . ";
-    grid-template-columns: 0.5fr 100px 1fr 0.5fr;
+        ". scroll arrow_img . ";
+    grid-template-columns: 0.5fr 120px 1fr 0.5fr;
     grid-template-rows: 0.2fr 1fr 0.2fr;
 }
 
@@ -125,4 +130,10 @@
     font-size: 18px;
     line-height: 22px;
     color: #FFFFFF;
+}
+
+.arrow_img{
+    grid-area: arrow_img;
+justify-self: start;
+align-self: center;
 }
