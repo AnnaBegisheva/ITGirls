@@ -69,7 +69,7 @@
     text-decoration: none;
 }
 
-.account_img{
+.account_img {
     grid-area: account_img;
     justify-self: end;
 }
@@ -132,8 +132,70 @@
     color: #FFFFFF;
 }
 
-.arrow_img{
+.arrow_img {
     grid-area: arrow_img;
-justify-self: start;
-align-self: center;
+    justify-self: start;
+    align-self: center;
+}
+
+.social {
+    color: #FFFFFF;
+    position: absolute;
+    width: 77px;
+    height: 22px;
+    left: 104px;
+    top: 420px;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    transform: rotate(90deg);
+}
+
+.ig_img {
+    position: absolute;
+    left: 130px;
+    top: 485px;
+}
+
+.twitter_img {
+    position: absolute;
+    left: 130px;
+    top: 520px;
+}
+
+.slider {
+    position: absolute;
+    left: 85vw;
+    color: #FFFFFF;
+    display: grid;
+    height: 220px;
+    margin-top: 280px;
+    font-family: Gilroy;
+    font-size: 18px;
+    line-height: 22px;
+    grid-template-areas: ". start . "
+        ". one . "
+        ". two . "
+        ". three . ";
+    grid-template-columns: 1fr 70px 115px;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    justify-items: end;
+}
+
+.start {
+    grid-area: start;
+}
+
+.one {
+    grid-area: one;
+}
+
+.two {
+    grid-area: two;
+}
+
+.three {
+    grid-area: three;
 }
