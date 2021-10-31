@@ -5,6 +5,10 @@
     src: local("Chronicle-Display-Roman.woff"), url("fonts/Chronicle-Display-Roman.woff") format("woff");
 }
 
+body {
+    background-color: #0B1D26;
+}
+
 .block {
     height: 300vh;
     position: absolute;
@@ -198,4 +202,97 @@
 
 .three {
     grid-area: three;
+}
+
+#hiker_img {
+    position: absolute;
+    width: 300px;
+    left: 70vw;
+    top: 200vh;
+}
+
+.number {
+    position: absolute;
+    left: 15vw;
+    top: 200vh;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 240px;
+    line-height: 240px;
+    color: #FFFFFF;
+    opacity: 0.1;
+}
+
+.get_started {
+    display: grid;
+    width: 45%;
+    height: 450px;
+    margin-top: 133vh;
+    margin-left: 25vw;
+    grid-template-areas: "line st_one"
+        "h2 h2"
+        "text text"
+        "more arrow";
+    grid-template-columns: 120px 1fr;
+    grid-template-rows: 0.2fr 1fr 1fr 0.2fr;
+    align-content: space-between;
+}
+
+.line_one {
+    grid-area: line;
+    width: 78px;    
+    height: 2px;
+    top: 10px;
+    background: #FBD784;    
+    align-self: center;
+}
+
+.subtitle_one {
+    grid-area: st_one;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #FBD784;
+}
+
+.h2 {
+    grid-area: h2;
+    font-family: Chronicle Display;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 77px;
+    color: #FFFFFF;
+    margin: 0px;
+}
+
+.text_one {
+    grid-area: text;
+    color: #FFFFFF;
+    font-family: Gilroy;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 32px;
+    width: 632px;
+}
+
+.more {
+    grid-area: more;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+.yellow_arrow_img {
+    grid-area: arrow;
+    justify-self: start;
+    align-self: center;
 }
