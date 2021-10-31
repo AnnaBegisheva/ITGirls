@@ -10,7 +10,7 @@ body {
 }
 
 .block {
-    height: 300vh;
+    height: 450vh;
     position: absolute;
     background: url("assets/bg_hero.png")0px 0px/100% no-repeat,
         url("assets/hg.png") 0px 0px/100% no-repeat,
@@ -204,16 +204,16 @@ body {
     grid-area: three;
 }
 
-#hiker_img {
+#hiking_img {
     position: absolute;
-    width: 300px;
-    left: 70vw;
-    top: 200vh;
+    width: 370px;
+    left: 65vw;
+    top: 205vh;
 }
 
-.number {
+.number_one {
     position: absolute;
-    left: 15vw;
+    left: 7vw;
     top: 200vh;
     font-family: Gilroy;
     font-style: normal;
@@ -226,10 +226,10 @@ body {
 
 .get_started {
     display: grid;
-    width: 45%;
-    height: 450px;
+    width: 40%;
+    height: 370px;
     margin-top: 133vh;
-    margin-left: 25vw;
+    margin-left: 17.5vw;
     grid-template-areas: "line st_one"
         "h2 h2"
         "text text"
@@ -241,10 +241,10 @@ body {
 
 .line_one {
     grid-area: line;
-    width: 78px;    
+    width: 79px;
     height: 2px;
     top: 10px;
-    background: #FBD784;    
+    background: #FBD784;
     align-self: center;
 }
 
@@ -253,11 +253,12 @@ body {
     font-family: Gilroy;
     font-style: normal;
     font-weight: 800;
-    font-size: 18px;
+    font-size: 12px;
     line-height: 22px;
     letter-spacing: 6px;
     text-transform: uppercase;
     color: #FBD784;
+    margin: 0px;
 }
 
 .h2 {
@@ -265,7 +266,7 @@ body {
     font-family: Chronicle Display;
     font-style: normal;
     font-weight: 600;
-    font-size: 64px;
+    font-size: 60px;
     line-height: 77px;
     color: #FFFFFF;
     margin: 0px;
@@ -276,9 +277,8 @@ body {
     color: #FFFFFF;
     font-family: Gilroy;
     font-style: normal;
-    font-size: 18px;
+    font-size: 12px;
     line-height: 32px;
-    width: 632px;
 }
 
 .more {
@@ -286,9 +286,195 @@ body {
     font-family: Gilroy;
     font-style: normal;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 12px;
     line-height: 22px;
+    color: #FBD784;
+}
+
+.yellow_arrow_img {
+    grid-area: arrow;
+    justify-self: start;
+    align-self: center;
+}
+
+#hiker_img {
+    position: absolute;
+    width: 370px;
+    left: 7vw;
+    top: 275vh;
+}
+
+.number_two {
+    position: absolute;
+    left: 45vw;
+    top: 275vh;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 240px;
+    line-height: 240px;
     color: #FFFFFF;
+    opacity: 0.1;
+}
+
+.essentials {
+    display: grid;
+    width: 40%;
+    height: 370px;
+    margin-top: 32vh;
+    margin-left: 56vw;
+    grid-template-areas: "line st_one"
+        "h2 h2"
+        "text text"
+        "more arrow";
+    grid-template-columns: 120px 1fr;
+    grid-template-rows: 0.2fr 1fr 1fr 0.2fr;
+    align-content: space-between;
+}
+
+.line_two {
+    grid-area: line;
+    width: 79px;
+    height: 2px;
+    top: 10px;
+    background: #FBD784;
+    align-self: center;
+}
+
+.subtitle_two {
+    grid-area: st_one;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #FBD784;
+    margin: 0px;
+}
+
+.h2 {
+    grid-area: h2;
+    font-family: Chronicle Display;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 77px;
+    color: #FFFFFF;
+    margin: 0px;
+}
+
+.text_two {
+    grid-area: text;
+    color: #FFFFFF;
+    font-family: Gilroy;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 32px;
+}
+
+.more {
+    grid-area: more;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 22px;
+    color: #FBD784;
+}
+
+.yellow_arrow_img {
+    grid-area: arrow;
+    justify-self: start;
+    align-self: center;
+}
+
+#compass_img {
+    position: absolute;
+    width: 370px;
+    left: 65vw;
+    top: 345vh;
+}
+
+.number_three {
+    position: absolute;
+    left: 7vw;
+    top: 350vh;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 240px;
+    line-height: 240px;
+    color: #FFFFFF;
+    opacity: 0.1;
+}
+
+.key {
+    display: grid;
+    width: 40%;
+    height: 370px;
+    margin-top: 27vh;
+    margin-left: 17.5vw;
+    grid-template-areas: "line st_one"
+        "h2 h2"
+        "text text"
+        "more arrow";
+    grid-template-columns: 120px 1fr;
+    grid-template-rows: 0.2fr 1fr 1fr 0.2fr;
+    align-content: space-between;
+}
+
+.line_three {
+    grid-area: line;
+    width: 79px;
+    height: 2px;
+    top: 10px;
+    background: #FBD784;
+    align-self: center;
+}
+
+.subtitle_three {
+    grid-area: st_one;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #FBD784;
+    margin: 0px;
+}
+
+.h2 {
+    grid-area: h2;
+    font-family: Chronicle Display;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 77px;
+    color: #FFFFFF;
+    margin: 0px;
+}
+
+.text_three {
+    grid-area: text;
+    color: #FFFFFF;
+    font-family: Gilroy;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 32px;
+}
+
+.more {
+    grid-area: more;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 22px;
+    color: #FBD784;
 }
 
 .yellow_arrow_img {
