@@ -10,7 +10,7 @@ body {
 }
 
 .block {
-    height: 450vh;
+    height: 400vh;
     position: absolute;
     background: url("assets/bg_hero.png")0px 0px/100% no-repeat,
         url("assets/hg.png") 0px 0px/100% no-repeat,
@@ -482,3 +482,73 @@ body {
     justify-self: start;
     align-self: center;
 }
+
+.footer {
+    display: grid;
+    color: #FFFFFF;
+    margin: 200px 0px;
+    height: 280px;
+    grid-template-areas: ". logo blog mntn . "
+        ". cta blog mntn . "
+        ". . blog mntn ."
+        ". . blog mntn . "
+        ". . blog . . "
+        ". copy blog . . ";
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 0.5fr;
+    grid-template-rows: 1.2fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.name {
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;    
+    line-height: 32px;
+    color: #FBD784;
+}
+
+.logo {
+    grid-area: logo;
+    font-family: Chronicle Display;
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: 0.01em;
+    text-transform: capitalize;
+    align-self: end;
+}
+
+.footersection1 {
+    grid-area: cta;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+.footersection2 {
+    grid-area: blog;
+}
+
+.footersection3 {
+    grid-area: mntn;
+}
+
+.copy {
+    grid-area: copy;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 32px;
+    color: #FFFFFF;
+    opacity: 0.5;
+}
+
+.link {
+    text-decoration: none;
+    color: #FFFFFF;
+    display: block;
+    padding: 5px;
+}
+
