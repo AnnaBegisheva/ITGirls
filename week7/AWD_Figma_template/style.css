@@ -163,7 +163,6 @@ body {
     align-items: center;
 }
 
-
 .slider {
     position: absolute;
     left: 85vw;
@@ -307,18 +306,46 @@ body {
     max-width: 100%;
 }
 
+.block_two {
+    display: grid;
+    height: 55vh;
+    width: 80%;
+    margin-left: 13%;
+    margin-top: 10%;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+}
+
+#number {
+    grid-column: 5 / 8;
+    grid-row: 1 / 3;
+}
+
+#content {
+    grid-column: 6 / 11;
+    grid-row: 4 / 6;
+    align-self: center;
+}
+
+#image_container {
+    grid-column: 1 / 4;
+    grid-row: 1 / 8;
+}
+
 .footer {
-    display: none;
+    display: grid;
     color: #FFFFFF;
-    margin: 200px 0px;
-    height: 280px;
-    grid-template-areas: ". logo blog mntn . "
-        ". cta blog mntn . "
-        ". . blog mntn ."
-        ". . blog mntn . "
-        ". . blog . . "
-        ". copy blog . . ";
-    grid-template-columns: 0.5fr 2fr 1fr 1fr 0.5fr;
+    margin: 12em 0em;
+    height: 6em;
+    width: 80%;
+    margin-left: 10%;
+    grid-template-areas: "logo blog mntn"
+        "cta blog mntn"
+        ". blog mntn"
+        ". blog mntn"
+        ". blog . "
+        "copy blog . ";
+    grid-template-columns: 2fr 1fr 1fr;
     grid-template-rows: 1.2fr 1fr 1fr 1fr 1fr 1fr;
 }
 
@@ -326,16 +353,16 @@ body {
     font-family: Gilroy;
     font-style: normal;
     font-weight: bold;
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5em;
+    line-height: 1.6em;
     color: #FBD784;
 }
 
 .logo {
     grid-area: logo;
     font-family: Chronicle Display;
-    font-size: 32px;
-    line-height: 38px;
+    font-size: 1.7em;
+    line-height: 1.7em;
     letter-spacing: 0.01em;
     text-transform: capitalize;
     align-self: end;
@@ -346,8 +373,9 @@ body {
     font-family: Gilroy;
     font-style: normal;
     font-weight: bold;
-    font-size: 18px;
-    line-height: 32px;
+    font-size: 1em;
+    line-height: 1em;
+    margin-top: 2em;
 }
 
 .footersection2 {
@@ -363,10 +391,11 @@ body {
     font-family: Gilroy;
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
-    line-height: 32px;
+    font-size: 1em;
+    line-height: 2em;
     color: #FFFFFF;
     opacity: 0.5;
+    margin-top: 86px;
 }
 
 .link {
@@ -374,4 +403,9 @@ body {
     color: #FFFFFF;
     display: block;
     padding: 5px;
+}
+
+.link:hover {
+    color: #8d8d8d;
+    text-decoration: none;
 }
