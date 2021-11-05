@@ -204,6 +204,7 @@ body {
     height: 55vh;
     width: 80%;
     margin-left: 13%;
+    margin-top: 10%;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(7, 1fr);
 }
