@@ -1,0 +1,376 @@
+@font-face {
+    font-family: "Chronicle-Display-Roman.woff";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Chronicle-Display-Roman.woff"), url("fonts/Chronicle-Display-Roman.woff") format("woff");
+}
+
+body {
+    background-color: #0B1D26;
+}
+
+.backgroun {
+    height: 400vh;
+    position: absolute;
+    background: url("assets/bg_hero.png")0px 0px/100% no-repeat,
+        url("assets/hg.png") 0px 0px/100% no-repeat,
+        url("assets/mg.png") 0px 632px/100% no-repeat,
+        url("assets/bg_content.png") 0px 1500px/100% no-repeat,
+        url("assets/vg.png") 0px 1152px/100% no-repeat;
+}
+
+.container {
+    height: 100vh;
+}
+
+.header {
+    display: grid;
+    width: 100%;
+    height: 3%;
+    margin-top: 5%;
+    grid-template-areas: ". logo nav account_img account . ";
+    grid-template-columns: 5% 1fr 1fr 1fr 0.1fr 5%;
+    grid-template-rows: 1fr;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Gilroy, sans-serif;
+    font-style: normal;
+    font-size: 1em;
+    color: #FFFFFF;
+}
+
+.logo {
+    grid-area: logo;
+    font-family: Chronicle-Display-Roman;
+    font-size: 2em;
+    line-height: 2em;
+    letter-spacing: 0.7px;
+    text-transform: capitalize;
+}
+
+.nav {
+    grid-area: nav;
+    justify-self: center;
+}
+
+.menu {
+    text-decoration: none;
+    color: #FFFFFF;
+    padding-right: 40px;
+}
+
+.menu:hover {
+    color: #8d8d8d;
+    text-decoration: none;
+}
+
+.account {
+    grid-area: account;
+    justify-self: end;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.account:hover {
+    color: #8d8d8d;
+    text-decoration: none;
+}
+
+.account_img {
+    grid-area: account_img;
+    justify-self: end;
+}
+
+.heading {
+    display: grid;
+    width: 100%;
+    height: 30vh;
+    margin-top: 11em;
+    grid-template-areas: ". line st . "
+        ". title title . "
+        ". scroll arrow_img . ";
+    grid-template-columns: 0.5fr 120px 1fr 0.5fr;
+    grid-template-rows: 0.2fr 1fr 0.2fr;
+    align-items: center;
+}
+
+.heading_line {
+    grid-area: line;
+    width: 5em;
+    height: 0.15em;
+    background: #FBD784;
+    align-self: center;
+}
+
+.heading_subtitle {
+    grid-area: st;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1em;
+    line-height: 1em;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #FBD784;
+}
+
+.title {
+    grid-area: title;
+    width: 60vw;
+    height: 20vh;
+    font-family: Chronicle Display;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 5rem;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    margin: 0.5em 0px;
+    align-self: center;
+}
+
+.scroll {
+    grid-area: scroll;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1em;
+    line-height: 1em;
+    color: #FFFFFF;
+}
+
+.arrow_img {
+    grid-area: arrow_img;
+    justify-self: start;
+    align-self: center;
+}
+
+.social {
+    position: absolute;
+    margin-top: 43vh;
+    color: #FFFFFF;
+    font-family: Gilroy;
+    font-style: normal;
+    font-size: 1em;
+    line-height: 1em;
+    transform: rotate(90deg);
+    display: grid;
+    height: 3em;
+    width: 9em;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+
+.slider {
+    position: absolute;
+    left: 85vw;
+    color: #FFFFFF;
+    display: grid;
+    height: 220px;
+    margin-top: 34vh;
+    font-family: Gilroy;
+    font-size: 1em;
+    line-height: 1.1em;
+    grid-template-areas: ". start . "
+        ". one . "
+        ". two . "
+        ". three . ";
+    grid-template-columns: 1fr 70px 115px;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    justify-items: end;
+}
+
+.start {
+    grid-area: start;
+}
+
+.one {
+    grid-area: one;
+}
+
+.two {
+    grid-area: two;
+}
+
+.three {
+    grid-area: three;
+}
+
+.block {
+    display: grid;
+    height: 55vh;
+    width: 80%;
+    margin-left: 13%;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+}
+
+.number {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12em;
+    color: #FFFFFF;
+    opacity: 0.1;
+}
+
+.content {
+    grid-column: 2 / 6;
+    grid-row: 4 / 6;
+    align-self: center;
+}
+
+.content {
+    display: grid;
+    height: 45vh;
+    margin-top: 2em;
+    grid-template-areas: "line st"
+        "h2 h2"
+        "text text"
+        "more arrow";
+    grid-template-columns: 0.2fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr 0.5fr;
+    align-content: space-around;
+}
+
+.line {
+    grid-area: line;
+    background-color: #FBD784;
+    width: 4em;
+    height: 0.15em;
+    align-self: center;
+}
+
+.subtitle {
+    grid-area: st;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1em;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #FBD784;
+}
+
+.h2 {
+    grid-area: h2;
+    font-family: Chronicle Display;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3em;
+    color: #FFFFFF;
+    margin: 10px 0;
+}
+
+.text {
+    grid-area: text;
+    color: #FFFFFF;
+    font-family: Gilroy;
+    font-style: normal;
+    font-size: 0.9em;
+    line-height: 1.5em;
+}
+
+.more {
+    grid-area: more;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.9em;
+    line-height: 2em;
+    color: #FBD784;
+    text-decoration: none;
+}
+
+.more:hover {
+    color: #8d8d8d;
+}
+
+.yellow_arrow_img {
+    grid-area: arrow;
+    margin-left: 5%;
+    align-self: center;
+}
+
+.image_container {
+    grid-column: 7 / 10;
+    grid-row: 1 / 8;
+}
+
+.image {
+    max-width: 100%;
+}
+
+.footer {
+    display: none;
+    color: #FFFFFF;
+    margin: 200px 0px;
+    height: 280px;
+    grid-template-areas: ". logo blog mntn . "
+        ". cta blog mntn . "
+        ". . blog mntn ."
+        ". . blog mntn . "
+        ". . blog . . "
+        ". copy blog . . ";
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 0.5fr;
+    grid-template-rows: 1.2fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.name {
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    color: #FBD784;
+}
+
+.logo {
+    grid-area: logo;
+    font-family: Chronicle Display;
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: 0.01em;
+    text-transform: capitalize;
+    align-self: end;
+}
+
+.footersection1 {
+    grid-area: cta;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+.footersection2 {
+    grid-area: blog;
+}
+
+.footersection3 {
+    grid-area: mntn;
+}
+
+.copy {
+    grid-area: copy;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 32px;
+    color: #FFFFFF;
+    opacity: 0.5;
+}
+
+.link {
+    text-decoration: none;
+    color: #FFFFFF;
+    display: block;
+    padding: 5px;
+}
