@@ -26,25 +26,24 @@ body {
 .header {
     display: grid;
     width: 100%;
-    height: 3%;
-    margin-top: 5%;
+    height: 27%;
+    margin-top: 3%;
     grid-template-areas: ". logo nav account_img account . ";
-    grid-template-columns: 5% 1fr 1fr 1fr 0.1fr 5%;
+    grid-template-columns: 5% 1fr 10fr 0.1fr 0.9fr 5%;
     grid-template-rows: 1fr;
-    gap: 1rem;
+    gap: 1vw;
     justify-content: space-between;
-    align-items: center;
+    align-items:baseline;
     font-family: Gilroy, sans-serif;
     font-style: normal;
-    font-size: 1em;
+    font-size: 1vw;
     color: #FFFFFF;
 }
 
 .logo {
     grid-area: logo;
     font-family: Chronicle-Display-Roman;
-    font-size: 2em;
-    line-height: 2em;
+    font-size: 2vw;
     letter-spacing: 0.7px;
     text-transform: capitalize;
 }
@@ -57,7 +56,7 @@ body {
 .menu {
     text-decoration: none;
     color: #FFFFFF;
-    padding-right: 40px;
+    padding-right: 5vw;
 }
 
 .menu:hover {
@@ -67,7 +66,7 @@ body {
 
 .account {
     grid-area: account;
-    justify-self: end;
+    justify-self: start;
     text-decoration: none;
     color: #FFFFFF;
 }
@@ -80,25 +79,25 @@ body {
 .account_img {
     grid-area: account_img;
     justify-self: end;
+    margin-top: 1vh;
 }
 
 .heading {
     display: grid;
     width: 100%;
-    height: 30vh;
-    margin-top: 11em;
+    height: 30%;
     grid-template-areas: ". line st . "
         ". title title . "
         ". scroll arrow_img . ";
-    grid-template-columns: 0.5fr 120px 1fr 0.5fr;
-    grid-template-rows: 0.2fr 1fr 0.2fr;
+    grid-template-columns: 1fr 0.3fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
     align-items: center;
 }
 
 .heading_line {
     grid-area: line;
-    width: 5em;
-    height: 0.15em;
+    width: 5vw;
+    height: 0.2vh;
     background: #FBD784;
     align-self: center;
 }
@@ -108,8 +107,7 @@ body {
     font-family: Gilroy;
     font-style: normal;
     font-weight: 800;
-    font-size: 1em;
-    line-height: 1em;
+    font-size: 1vw;
     letter-spacing: 6px;
     text-transform: uppercase;
     color: #FBD784;
@@ -118,14 +116,13 @@ body {
 .title {
     grid-area: title;
     width: 60vw;
-    height: 20vh;
     font-family: Chronicle Display;
     font-style: normal;
     font-weight: 600;
-    font-size: 5rem;
+    font-size: 5vw;
     text-transform: capitalize;
     color: #FFFFFF;
-    margin: 0.5em 0px;
+    margin: 2vh 0px;
     align-self: center;
 }
 
@@ -134,8 +131,7 @@ body {
     font-family: Gilroy;
     font-style: normal;
     font-weight: 700;
-    font-size: 1em;
-    line-height: 1em;
+    font-size: 1vw;
     color: #FFFFFF;
 }
 
@@ -147,16 +143,14 @@ body {
 
 .social {
     position: absolute;
-    margin-top: 43vh;
+    margin-top: 15%;
     color: #FFFFFF;
     font-family: Gilroy;
     font-style: normal;
-    font-size: 1em;
-    line-height: 1em;
+    font-size: 1.2vw;
     transform: rotate(90deg);
     display: grid;
-    height: 3em;
-    width: 9em;
+    width: 12vw;
     grid-template-columns: 2fr 1fr 1fr;
     grid-template-rows: 1fr;
     justify-items: center;
@@ -168,11 +162,9 @@ body {
     left: 85vw;
     color: #FFFFFF;
     display: grid;
-    height: 220px;
-    margin-top: 34vh;
+    margin-top: 9%;
     font-family: Gilroy;
-    font-size: 1em;
-    line-height: 1.1em;
+    font-size: 1.2vw;
     grid-template-areas: ". start . "
         ". one . "
         ". two . "
@@ -202,7 +194,7 @@ body {
     display: grid;
     height: 55vh;
     width: 80%;
-    margin-left: 13%;
+    margin-left: 15%;
     margin-top: 10%;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(7, 1fr);
@@ -214,7 +206,7 @@ body {
     font-family: Gilroy;
     font-style: normal;
     font-weight: bold;
-    font-size: 12em;
+    font-size: 13vw;
     color: #FFFFFF;
     opacity: 0.1;
 }
@@ -228,7 +220,7 @@ body {
 .content {
     display: grid;
     height: 45vh;
-    margin-top: 2em;
+    margin-top: 5vh;
     grid-template-areas: "line st"
         "h2 h2"
         "text text"
@@ -241,8 +233,8 @@ body {
 .line {
     grid-area: line;
     background-color: #FBD784;
-    width: 4em;
-    height: 0.15em;
+    width: 4vw;
+    height: 0.2vh;
     align-self: center;
 }
 
@@ -251,7 +243,7 @@ body {
     font-family: Gilroy;
     font-style: normal;
     font-weight: 800;
-    font-size: 1em;
+    font-size: 1vw;
     letter-spacing: 6px;
     text-transform: uppercase;
     color: #FBD784;
@@ -262,7 +254,7 @@ body {
     font-family: Chronicle Display;
     font-style: normal;
     font-weight: 600;
-    font-size: 3em;
+    font-size: 3.5vw;
     color: #FFFFFF;
     margin: 10px 0;
 }
@@ -272,8 +264,8 @@ body {
     color: #FFFFFF;
     font-family: Gilroy;
     font-style: normal;
-    font-size: 0.9em;
-    line-height: 1.5em;
+    font-size: 1vw;
+    line-height: 3vh;
 }
 
 .more {
@@ -281,8 +273,8 @@ body {
     font-family: Gilroy;
     font-style: normal;
     font-weight: 700;
-    font-size: 0.9em;
-    line-height: 2em;
+    font-size: 1vw;
+    line-height: 5vh;
     color: #FBD784;
     text-decoration: none;
 }
@@ -322,7 +314,7 @@ body {
 }
 
 #content {
-    grid-column: 6 / 11;
+    grid-column: 6 / 10;
     grid-row: 4 / 6;
     align-self: center;
 }
@@ -335,8 +327,8 @@ body {
 .footer {
     display: grid;
     color: #FFFFFF;
-    margin: 12em 0em;
-    height: 6em;
+    margin: 15vh 0px;
+    height: 20vh;
     width: 80%;
     margin-left: 10%;
     grid-template-areas: "logo blog mntn"
@@ -353,19 +345,16 @@ body {
     font-family: Gilroy;
     font-style: normal;
     font-weight: bold;
-    font-size: 1.5em;
-    line-height: 1.6em;
+    font-size: 1.5vw;
     color: #FBD784;
 }
 
-.logo {
+.f_logo {
     grid-area: logo;
     font-family: Chronicle Display;
-    font-size: 1.7em;
-    line-height: 1.7em;
-    letter-spacing: 0.01em;
+    font-size: 2vw;
+    letter-spacing: 0.7px;
     text-transform: capitalize;
-    align-self: end;
 }
 
 .footersection1 {
@@ -373,9 +362,8 @@ body {
     font-family: Gilroy;
     font-style: normal;
     font-weight: bold;
-    font-size: 1em;
-    line-height: 1em;
-    margin-top: 2em;
+    font-size: 1vw;
+    margin-top: 3vh;
 }
 
 .footersection2 {
@@ -391,11 +379,10 @@ body {
     font-family: Gilroy;
     font-style: normal;
     font-weight: 500;
-    font-size: 1em;
-    line-height: 2em;
+    font-size: 1vw;
     color: #FFFFFF;
     opacity: 0.5;
-    margin-top: 86px;
+    margin-top: 12vh;
 }
 
 .link {
