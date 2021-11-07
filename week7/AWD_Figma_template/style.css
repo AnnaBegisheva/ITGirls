@@ -6,17 +6,8 @@
 }
 
 body {
+    background: url("assets/bg_full.png")0px 0px/100% no-repeat;
     background-color: #0B1D26;
-}
-
-.backgroun {
-    height: 400vh;
-    position: absolute;
-    background: url("assets/bg_hero.png")0px 0px/100% no-repeat,
-        url("assets/hg.png") 0px 0px/100% no-repeat,
-        url("assets/mg.png") 0px 632px/100% no-repeat,
-        url("assets/bg_content.png") 0px 1500px/100% no-repeat,
-        url("assets/vg.png") 0px 1152px/100% no-repeat;
 }
 
 .container {
@@ -33,7 +24,7 @@ body {
     grid-template-rows: 1fr;
     gap: 1vw;
     justify-content: space-between;
-    align-items:baseline;
+    align-items: baseline;
     font-family: Gilroy, sans-serif;
     font-style: normal;
     font-size: 1vw;
@@ -76,16 +67,22 @@ body {
     text-decoration: none;
 }
 
-.account_img {
+.icon_container {
     grid-area: account_img;
     justify-self: end;
     margin-top: 1vh;
+    width: 150%;
+}
+
+.account_img {
+    max-width: 100%;
 }
 
 .heading {
     display: grid;
     width: 100%;
     height: 30%;
+    margin-top: -10vh;
     grid-template-areas: ". line st . "
         ". title title . "
         ". scroll arrow_img . ";
@@ -120,6 +117,7 @@ body {
     font-style: normal;
     font-weight: 600;
     font-size: 5vw;
+    line-height: 115%;
     text-transform: capitalize;
     color: #FFFFFF;
     margin: 2vh 0px;
@@ -143,7 +141,7 @@ body {
 
 .social {
     position: absolute;
-    margin-top: 15%;
+    margin-top: 5%;
     color: #FFFFFF;
     font-family: Gilroy;
     font-style: normal;
@@ -153,8 +151,16 @@ body {
     width: 12vw;
     grid-template-columns: 2fr 1fr 1fr;
     grid-template-rows: 1fr;
-    justify-items: center;
+    justify-items: stretch;
     align-items: center;
+}
+
+.icon {
+    width: 100%;
+}
+
+.social_img {
+    max-width: 100%;
 }
 
 .slider {
@@ -162,7 +168,7 @@ body {
     left: 85vw;
     color: #FFFFFF;
     display: grid;
-    margin-top: 9%;
+    margin-top: -2%;
     font-family: Gilroy;
     font-size: 1.2vw;
     grid-template-areas: ". start . "
@@ -190,11 +196,15 @@ body {
     grid-area: three;
 }
 
-.block {
-    display: grid;
-    height: 55vh;
+.content_container {
+    margin-top: 45%;
     width: 80%;
     margin-left: 15%;
+}
+
+.block {
+    display: grid;
+    max-height: 55vh;
     margin-top: 10%;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(7, 1fr);
@@ -244,6 +254,7 @@ body {
     font-style: normal;
     font-weight: 800;
     font-size: 1vw;
+    line-height: 130%;
     letter-spacing: 6px;
     text-transform: uppercase;
     color: #FBD784;
@@ -255,6 +266,7 @@ body {
     font-style: normal;
     font-weight: 600;
     font-size: 3.5vw;
+    line-height: 100%;
     color: #FFFFFF;
     margin: 10px 0;
 }
@@ -265,6 +277,7 @@ body {
     font-family: Gilroy;
     font-style: normal;
     font-size: 1vw;
+    line-height: 100%;
     line-height: 3vh;
 }
 
@@ -301,8 +314,6 @@ body {
 .block_two {
     display: grid;
     height: 55vh;
-    width: 80%;
-    margin-left: 13%;
     margin-top: 10%;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(7, 1fr);
@@ -368,10 +379,12 @@ body {
 
 .footersection2 {
     grid-area: blog;
+    font-size: 1vw;
 }
 
 .footersection3 {
     grid-area: mntn;
+    font-size: 1vw;
 }
 
 .copy {
