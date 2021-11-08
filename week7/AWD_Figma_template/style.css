@@ -6,8 +6,11 @@
 }
 
 body {
-    background: url("assets/bg_full.png")0px 0px/100% no-repeat;
-    background-color: #0B1D26;
+    background: url("assets/bg_full.png")0px 0px/100% no-repeat, #0B1D26;
+}
+
+.background {
+    overflow: hidden;
 }
 
 .container {
@@ -175,7 +178,7 @@ body {
         ". one . "
         ". two . "
         ". three . ";
-    grid-template-columns: 1fr 70px 115px;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     justify-items: end;
 }
