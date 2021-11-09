@@ -323,9 +323,15 @@ body {
     }
 }
 
-@media screen and (max-width: 1199px) and (min-width: 1024px) {
+@media screen and (max-width: 1199px) and (min-width: 1024px) and (orientation: landscape){
     .content_container {
         margin-top: 35%;
+    }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 1024px) and (orientation: portrait) {
+    .content_container {
+        margin-top: -35%;
     }
 }
 
