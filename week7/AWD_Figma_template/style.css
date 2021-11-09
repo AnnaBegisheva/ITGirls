@@ -24,6 +24,12 @@ body {
     }
 }
 
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+    .container {
+        height: 50vh;
+    }
+}
+
 .header {
     display: grid;
     width: 100%;
@@ -174,6 +180,13 @@ body {
         height: 50%;
         margin-top: 3vh;
     }
+}
+
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+    .heading {
+        height: 50%;
+        margin-top: 3vh;
+}
 }
 
 .heading_line {
