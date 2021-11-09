@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color:  #0B1D26;
+    background-color: #0B1D26;
 }
 
 .background {
@@ -16,6 +16,12 @@ body {
 
 .container {
     height: 100vh;
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        height: 30vh;
+    }
 }
 
 .header {
@@ -39,8 +45,7 @@ body {
     .header {
         font-size: 2vw;
     }
-}   
-
+}
 
 .logo {
     grid-area: logo;
@@ -75,12 +80,14 @@ body {
     .menu {
         display: none;
     }
+
     .burger {
         display: block;
         position: relative;
         width: 30px;
         height: 20px;
     }
+
     .burger span {
         position: absolute;
         background-color: #FFFFFF;
@@ -89,7 +96,8 @@ body {
         height: 2px;
         top: 9px
     }
-    .burger::before, 
+
+    .burger::before,
     .burger::after {
         content: " ";
         background-color: #FFFFFF;
@@ -98,13 +106,15 @@ body {
         height: 2px;
         left: 1vw;
     }
+
     .burger::before {
         top: 0;
     }
+
     .burger::after {
         bottom: 0;
     }
-} 
+}
 
 .menu:hover {
     color: #8d8d8d;
@@ -117,6 +127,7 @@ body {
     text-decoration: none;
     color: #FFFFFF;
 }
+
 @media screen and (max-width: 767px) {
     .account {
         display: none;
@@ -138,6 +149,7 @@ body {
 .account_img {
     max-width: 100%;
 }
+
 @media screen and (max-width: 767px) {
     .account_img {
         display: none;
@@ -159,9 +171,10 @@ body {
 
 @media screen and (max-width: 767px) {
     .heading {
-        height: 20%;
+        height: 50%;
+        margin-top: 3vh;
     }
-    }
+}
 
 .heading_line {
     grid-area: line;
@@ -185,14 +198,14 @@ body {
 @media screen and (max-width: 767px) {
     .heading_subtitle {
         font-size: 2vw;
-        letter-spacing: 100%;
+        letter-spacing: 1vw;
     }
-    }
+}
 
 .title {
     grid-area: title;
     width: 60vw;
-    font-family: Chronicle Display;
+    font-family: "Chronicle Display";
     font-style: normal;
     font-weight: 600;
     font-size: 5vw;
@@ -207,7 +220,7 @@ body {
     .title {
         margin: 1vh 0px;
     }
-    }
+}
 
 .scroll {
     grid-area: scroll;
@@ -222,7 +235,7 @@ body {
     .scroll {
         font-size: 2vw;
     }
-    }
+}
 
 .arrow_img {
     grid-area: arrow_img;
@@ -251,6 +264,7 @@ body {
         display: none;
     }
 }
+
 .icon {
     width: 100%;
 }
@@ -299,16 +313,34 @@ body {
 }
 
 .content_container {
-    margin-top: 45%;
     width: 80%;
     margin-left: 15%;
 }
 
+@media screen and (min-width: 1200px) {
+    .content_container {
+        margin-top: 45%;
+    }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 1024px) {
+    .content_container {
+        margin-top: 35%;
+    }
+}
+
+
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+    .content_container {
+        margin-top: 35%;
+    }
+}
+
 @media screen and (max-width: 767px) {
     .content_container {
-        margin-top: -20vh;
+        margin-top: 45%;
     }
-    }
+}
 
 .block {
     display: grid;
@@ -348,6 +380,12 @@ body {
     align-content: space-around;
 }
 
+@media screen and (max-width: 767px) {
+    .content {
+        height: 5vh;
+    }
+}
+
 .line {
     grid-area: line;
     background-color: #FBD784;
@@ -370,7 +408,7 @@ body {
 
 .h2 {
     grid-area: h2;
-    font-family: Chronicle Display;
+    font-family: "Chronicle Display";
     font-style: normal;
     font-weight: 600;
     font-size: 3.5vw;
@@ -427,6 +465,12 @@ body {
     grid-template-rows: repeat(7, 1fr);
 }
 
+@media screen and (max-width: 767px) {
+    .block_two {
+        height: 35vh;
+    }
+}
+
 #number {
     grid-column: 5 / 8;
     grid-row: 1 / 3;
@@ -470,7 +514,7 @@ body {
 
 .f_logo {
     grid-area: logo;
-    font-family: Chronicle Display;
+    font-family: "Chronicle Display";
     font-size: 2vw;
     letter-spacing: 0.7px;
     text-transform: capitalize;
