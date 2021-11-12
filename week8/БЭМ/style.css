@@ -1,0 +1,123 @@
+@font-face {
+    font-family: "Intro-Regular";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Intro-Regular.woff"), url("fonts/Intro-Regular.woff") format("woff");
+}
+
+body {
+    overflow-x: hidden;
+    height: 100%;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+.browser {
+    min-width: 100vw;
+}
+
+.header {
+    display: grid;
+    width: 90%;
+    margin: 5vh auto;
+    grid-template-areas: "logo button";
+    grid-template-columns: 9fr 1fr;
+}
+
+.logo {
+    grid-area: logo;
+}
+
+.header_button {
+    grid-area: button;
+    font-size: 0.8rem;
+}
+
+.heading {
+    font-family: "Intro-Regular";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3.75rem;
+    line-height: 120%;
+    margin: 0 0;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.text {
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.25rem;
+    line-height: 160%;
+    color: #000000;
+}
+
+.heading_main {
+    width: 90%;
+}
+
+.text_main {
+    width: 90%;
+}
+
+.button {
+    background: #5222D0;
+    border-radius: 100px;
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    font-family: "Intro-Regular";
+    font-style: normal;
+    font-weight: normal;
+}
+
+.button_main {
+    width: 50%;
+    height: 10vh;
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+.container {
+    width: 40%;
+    height: 70vh;
+    margin-left: 10%;
+}
+
+.background {
+    position: absolute;
+    width: 48%;
+    height: 70vh;
+    left: 47%;
+    top: 15vh;
+}
+
+image {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.nav {
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 160%;
+    margin-left: 10%;
+    height: 10vh;
+}
+
+.nav__link {
+    text-decoration: none;
+    padding-right: 2vw;
+    color: #5222D0;
+}
