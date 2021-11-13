@@ -20,16 +20,22 @@ body {
     flex: 1 1 auto;
 }
 
-.browser {
-    min-width: 100vw;
+.image {
+    max-width: 100%;
 }
 
-.header {
+/* Header */
+
+.header__browser {
+    min-width: 100%;
+}
+
+.header__container {
     display: grid;
     width: 90%;
     margin: 5vh auto;
     grid-template-areas: "logo button";
-    grid-template-columns: 9fr 1fr;
+    grid-template-columns: 9fr 3fr;
 }
 
 .logo {
@@ -38,16 +44,19 @@ body {
 
 .header_button {
     grid-area: button;
-    font-size: 0.8rem;
+    font-size: 1vw;
+    justify-self: end;
+    width: fit-content;
 }
+
+/* Main body */
 
 .heading {
     font-family: "Intro-Regular";
     font-style: normal;
-    font-weight: normal;
-    font-size: 3.75rem;
+    font-weight: bold;
+    font-size: 4vw;
     line-height: 120%;
-    margin: 0 0;
     text-transform: uppercase;
     color: #000000;
 }
@@ -56,18 +65,9 @@ body {
     font-family: Roboto Slab;
     font-style: normal;
     font-weight: 300;
-    font-size: 1.25rem;
+    font-size: 1.5vw;
     line-height: 160%;
     color: #000000;
-}
-
-.heading_main {
-    width: 90%;
-}
-
-
-.text_main {
-    width: 90%;
 }
 
 .button {
@@ -81,38 +81,47 @@ body {
     font-weight: normal;
 }
 
+.background {
+    display: grid;
+    max-width: 100vw;
+    grid-template-areas: ". body img";
+    grid-template-columns: 10% 1fr 1fr;
+}
+
+.main-body {
+    grid-area: body;
+}
+
+.image-container {
+    grid-area: img;
+}
+
+.heading_main {
+    width: 85%;
+}
+
+.text_main {
+    width: 75%;
+    margin-bottom: 7vh;
+}
+
 .button_main {
     width: 50%;
-    height: 10vh;
-    font-size: 2rem;
+    height: 15%;
+    font-size: 2vw;
     line-height: 2rem;
 }
 
-.title-block {
-    width: 40%;
-    height: 70vh;
-    margin-left: 10%;
-}
-
-.background {
-    position: absolute;
-    width: 48%;
-    height: 70vh;
-    left: 47%;
-    top: 15vh;
-}
-
-image {
-    max-width: 100%;
-    object-fit: cover;
-}
-
+/* Footer */
 .nav {
     font-family: Roboto Slab;
     font-style: normal;
     font-weight: 300;
-    font-size: 1rem;
+    font-size: 1vw;
     line-height: 160%;
+}
+
+.footer__nav{
     margin-left: 10%;
     height: 10vh;
 }
@@ -120,16 +129,31 @@ image {
 .nav__link {
     text-decoration: none;
     padding-right: 2vw;
+}
+
+.nav__link:hover {
+    color: #333;
+}
+
+.nav__link_main {
     color: #5222D0;
 }
+
+/* Page */
+
+/* Page footer */
 
 .nav__link_page {
     color: #000000;
 }
 
+/* Page heading*/
+
 .heading_page {
     margin-left: 7vw;
 }
+
+/* Page body */
 
 .container {
     width: 90%;
@@ -143,14 +167,13 @@ image {
 
 .block {
     padding: 37px;
-
 }
 
 .block__subtitle {
     font-family: Intro-Regular;
     font-style: normal;
     font-weight: bold;
-    font-size: 1.8rem;
+    font-size: 2vw;
     line-height: 120%;
     text-transform: uppercase;
     color: #000000;
@@ -176,7 +199,7 @@ image {
     font-family: Roboto Slab;
     font-style: normal;
     font-weight: 300;
-    font-size: 1rem;
+    font-size: 1vw;
     line-height: 160%;
 }
 

@@ -15,23 +15,25 @@
 
 <body>
     <div class="wrapper">
-        <header>
-            <img src="assets/browser.svg" alt="browser_bar" class="browser">
-            <div class="header">
+        <header class="header">
+            <div class="header__browser">
+                <img src="assets/browser.svg" alt="browser_bar" class="image">
+            </div>
+            <div class="header__container">
                 <div class="logo">
-                    <img src="assets/logo.svg" alt="logo">
+                    <img src="assets/logo.svg" alt="logo" class="image">
                 </div>
-                <button class="button"> <span>корзина</span> <img src="assets/icon_cart.svg" alt="icon">
+                <button class="button header_button"> <span>корзина</span> <img src="assets/icon_cart.svg" alt="icon" class="image">
                 </button>
             </div>
         </header>
 
         <main class="main">
             <div class="background">
+                <div class="image-container">
                 <img src="assets/pic.png" alt="image" class="image">
             </div>
-
-            <div class="title-block">
+            <div class="main-body">
                 <h1 class="heading heading_main">
                     Виртуальная реальность без проводов
                 </h1>
@@ -40,17 +42,18 @@
                     комьютеров.
                 </p>
                 <button class="button button_main">
-                    <span>Купить</span> <img src="assets/icon_card.svg" alt="icon">
+                    <span>Купить</span> <img src="assets/icon_card.svg" alt="icon" class="image">
                 </button>
-            </div>  
+            </div>
+        </div>
         </main>
 
         <footer class="footer">
-            <nav class="nav">
-                <a href="page.html" class="nav__link">Возможности</a>
-                <a href="" class="nav__link">Где купить</a>
-                <a href="" class="nav__link">Доставка</a>
-                <a href="" class="nav__link">Помощь</a>
+            <nav class="nav footer__nav">
+                <a href="page.html" class="nav__link nav__link_main">Возможности</a>
+                <a href="" class="nav__link nav__link_main">Где купить</a>
+                <a href="" class="nav__link nav__link_main">Доставка</a>
+                <a href="" class="nav__link nav__link_main">Помощь</a>
             </nav>
         </footer>
     </div>
