@@ -65,6 +65,7 @@ body {
     width: 90%;
 }
 
+
 .text_main {
     width: 90%;
 }
@@ -87,7 +88,7 @@ body {
     line-height: 2rem;
 }
 
-.container {
+.title-block {
     width: 40%;
     height: 70vh;
     margin-left: 10%;
@@ -120,4 +121,75 @@ image {
     text-decoration: none;
     padding-right: 2vw;
     color: #5222D0;
+}
+
+.nav__link_page {
+    color: #000000;
+}
+
+.heading_page {
+    margin-left: 7vw;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 5vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+
+}
+
+.block {
+    padding: 37px;
+}
+
+.block__subtitle {
+    font-family: Intro-Regular;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+
+
+.block__container {
+    background-color: #EC615B;
+    height: 90%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.block__subtitle_white {
+    color: #fff;
+    justify-self: center;
+    width: 90%;
+}
+
+.e-mail {
+    justify-self: center;
+    width: 90%;
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 160%;
+}
+
+.e-mail__input {
+height: 4vh;
+width: 100%;
+padding: 0;
+border: none;
+}
+
+.button_page {
+    width: 50%;
+    height: 4vh;
+    margin-left: 5%;
 }
