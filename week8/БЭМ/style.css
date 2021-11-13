@@ -137,12 +137,13 @@ image {
     margin-bottom: 5vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 2fr 1fr;
+    grid-template-rows: 1fr 0.5fr;
 
 }
 
 .block {
     padding: 37px;
+
 }
 
 .block__subtitle {
@@ -154,8 +155,6 @@ image {
     text-transform: uppercase;
     color: #000000;
 }
-
-
 
 .block__container {
     background-color: #EC615B;
@@ -192,4 +191,14 @@ border: none;
     width: 50%;
     height: 4vh;
     margin-left: 5%;
+}
+
+.block_one {
+    border: 1px solid #EC615B;
+}
+
+.block_four {
+    border: 1px solid #EC615B;
+    margin-left: -1vw;
+    margin-right: 1vw;
 }
