@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            margin: 25% auto;
+            justify-content: center;
+        }
+
+        .btn {
+            display: block;
+            box-sizing: border-box;
+            font-size: 1.1rem;
+            line-height: 1.55;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            text-align: center;
+            padding: 1.1rem 3.4rem 1.1rem 3.4rem;
+            border: none;
+            border-radius: 50px;
+            background: #3dc4c4;
+        }
+
+        .btn:hover {
+            cursor: pointer;
+            transition: background-color 0.4s ease;
+            background: #2e9999;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <button class="btn" onClick="showMessage1 ()">+</button>
+        <button class="btn" onClick="showMessage2 ()">-</button>
+        <button class="btn" onClick="showMessage3 ()">x</button>
+        <button class="btn" onClick="showMessage4 ()">/</button>
+    </div>
+
+    <script>
+        function showMessage1() {
+            let a = prompt("Первое число?", 2);
+            let b = prompt("Второе число?", 1);
+            alert(+a + +b);
+        }
+
+        function showMessage2() {
+            let a = prompt("Первое число?", 2);
+            let b = prompt("Второе число?", 1);
+            alert(a - b);
+        }
+
+        function showMessage3() {
+            let a = prompt("Первое число?", 2);
+            let b = prompt("Второе число?", 1);
+            alert(a * b);
+        }
+
+        function showMessage4() {
+            let a = prompt("Первое число?", 2);
+            let b = prompt("Второе число?", 1);
+            alert(a / b);
+        }
+    </script>
+</body>
+
+</html>
