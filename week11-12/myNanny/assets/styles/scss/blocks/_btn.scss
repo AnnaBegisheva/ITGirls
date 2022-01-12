@@ -1,0 +1,59 @@
+.btn {
+    display: inline-block;
+    box-sizing: border-box;
+    color: $lightColor;
+    font-size: 1.1rem;
+    line-height: 1.55;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    text-align: center;
+    padding: 1.1rem 3.4rem 1.1rem 3.4rem;
+    border: none;
+
+    &:hover {
+        cursor: pointer;
+        transition: background-color 0.4s ease;
+    }
+
+    &_defaultcolor {
+        background: $defaultColor;
+
+        &:hover {
+            background: $defaultColor_hover;
+        }
+    }
+
+    &_accentСolor {
+        background: $accentColor;
+
+        &:hover {
+            background: $accentColor_hover;
+        }
+    }
+
+    &_defaultcolor-accentСolor {
+        background: $defaultColor;
+
+        &:hover {
+            background: $accentColor_hover;
+            color: $darkColor;
+        }
+    }
+
+    &_lightColor-darkСolor {
+        background-color: $lightColor;
+        color: $darkColor;
+
+        &:hover {
+            background-color: $darkColor;
+            color: $lightColor;
+        }
+    }
+
+    &_small {
+        font-size: 0.8rem;
+        padding: 0.7rem 2rem 0.7rem
+    }
+
+}

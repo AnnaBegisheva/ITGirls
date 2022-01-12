@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Стать няней</title>
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/styles/normalize.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles/scss/main.css">
+</head>
+
+<body>
+
+    <header class="header container">
+        <div class="header__inner container__row_wide">
+            <div class="header__logo">
+                <a href="#"><img class="header__img" src="./assets/images/nanny-logo.svg" alt="Логотип"></a>
+            </div>
+            <div class="header__menu">
+                <input class="header__check" id="header__toggle" type="checkbox" />
+                <label class="header__btn" for="header__toggle">
+                    <span></span>
+                </label>
+                <nav class="header__links">
+                    <div>
+                        <a class="header__item header__page"
+                            href="https://samdanova.github.io/Project-MyNannyPro/">Главная</a>
+                        <a class="header__item header__page"
+                            href="https://samdanova.github.io/Project-MyNannyPro/page2.html">Тарифы</a>
+                        <a class="header__item header__page"
+                            href="https://samdanova.github.io/Project-MyNannyPro/page3.html">Наша команда</a>
+                        <a class="header__item header__page header__page_active" href="index.html">Стать няней</a>
+                        <a class="header__item header__page" href="./faq/index.html">FAQ</a>
+                        <a class="header__item header__page" href="./partners/index.html">Партнеры</a>
+                        <a class="header__item header__page" href="./contacts/index.html">Контакты</a>
+                        <a class="header__item header__buttons btn btn_defaultcolor btn_small" href="#">Найти няню</a>
+                        <a class="header__item header__buttons btn btn_lightColor-darkСolor btn_small"
+                            href="https://app.star-c.ru/">Войти <span class="mobile__hidden">→</span></a>
+                    </div>
+                    <div class="header__social desktop__hidden">
+                        <a href="https://www.facebook.com/mynannypro/">
+                            <svg class="header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                                enable-background="new 0 0 48 48" xml:space="preserve">
+                                <path style="fill:#4dcdc4;"
+                                    d="M47.761,24c0,13.121-10.638,23.76-23.758,23.76C10.877,47.76,0.239,37.121,0.239,24c0-13.124,10.638-23.76,23.764-23.76C37.123,0.24,47.761,10.876,47.761,24 M20.033,38.85H26.2V24.01h4.163l0.539-5.242H26.2v-3.083c0-1.156,0.769-1.427,1.308-1.427h3.318V9.168L26.258,9.15c-5.072,0-6.225,3.796-6.225,6.224v3.394H17.1v5.242h2.933V38.85z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/mynanny.pro/">
+                            <svg class="header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"
+                                xml:space="preserve">
+                                <path style="fill:#4dcdc4;"
+                                    d="M15,11.014 C12.801,11.014 11.015,12.797 11.015,15 C11.015,17.202 12.802,18.987 15,18.987 C17.199,18.987 18.987,17.202 18.987,15 C18.987,12.797 17.199,11.014 15,11.014 L15,11.014 Z M15,17.606 C13.556,17.606 12.393,16.439 12.393,15 C12.393,13.561 13.556,12.394 15,12.394 C16.429,12.394 17.607,13.561 17.607,15 C17.607,16.439 16.444,17.606 15,17.606 L15,17.606 Z">
+                                </path>
+                                <path style="fill:#4dcdc4;"
+                                    d="M19.385,9.556 C18.872,9.556 18.465,9.964 18.465,10.477 C18.465,10.989 18.872,11.396 19.385,11.396 C19.898,11.396 20.306,10.989 20.306,10.477 C20.306,9.964 19.897,9.556 19.385,9.556 L19.385,9.556 Z">
+                                </path>
+                                <path style="fill:#4dcdc4;"
+                                    d="M15.002,0.15 C6.798,0.15 0.149,6.797 0.149,15 C0.149,23.201 6.798,29.85 15.002,29.85 C23.201,29.85 29.852,23.202 29.852,15 C29.852,6.797 23.201,0.15 15.002,0.15 L15.002,0.15 Z M22.666,18.265 C22.666,20.688 20.687,22.666 18.25,22.666 L11.75,22.666 C9.312,22.666 7.333,20.687 7.333,18.28 L7.333,11.734 C7.333,9.312 9.311,7.334 11.75,7.334 L18.25,7.334 C20.688,7.334 22.666,9.312 22.666,11.734 L22.666,18.265 L22.666,18.265 Z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="trainingSection">
+            <div class="trainingSection__inner">
+                <div class="container__row">
+                    <div class="trainingSection__textBlock">
+                        <h2 class="trainingSection__title">Подготовка нянь особого назначения</h2>
+                        <p class="trainingSection__text">Перед началом работы все няни сервиса проходят обучение
+                            независимо от опыта и образования.
+                            Подготовка состоит из онлайн-курса, еженедельных встреч и очного
+                            инструктажа.</p>
+                    </div>
+                </div>
+
+                <div class="container__row trainingSection__content">
+                    <div class="introBlock">
+                        <div class="introBlock__titleBlock">
+                            <img class="introBlock__icon" src="./assets/images/star.svg" alt="icon">
+                            <h2 class="introBlock__title">Обучение</h2>
+                        </div>
+                        <div class="introBlock__text textBlock">
+                            <p class="textBlock__title">Что няни изучают на курсе?</p>
+                            <p class="textBlock__text">Курс содержит 6 модулей, в конце каждого модуля няни отвечают
+                                на вопросы, которые мы проверяем лично, а в конце сдают итоговое задание.</p>
+                        </div>
+                    </div>
+
+                    <div class="curve">
+
+                        <div class="curve__text">
+                            <div class="textBlock textBlock_one">
+                                <p class="textBlock__title">Развивающий уход, забота с уважением</p>
+                                <p class="textBlock__text">Няни учатся знакомиться с детьми, выстраивать коммуникацию,
+                                    организовывать оптимальную развивающую среду для ребенка, уважать его выбор и
+                                    желания. Мы вместе фантазируем о том, какие занятия можно предложить детям, какие
+                                    подручные средства использовать в игре.</p>
+                            </div>
+
+                            <div class="textBlock textBlock_two">
+                                <p class="textBlock__title">Психологические основы</p>
+                                <p class="textBlock__text">В работе няни важно выстраивать контакт не только с ребенком,
+                                    но и с семьей. Няни проходят подготовку к первому контакту с семьей и учатся
+                                    выстраивать партнерские отношения с родителями.</p>
+                            </div>
+
+                            <div class="textBlock textBlock_three">
+                                <p class="textBlock__title ">Кормление</p>
+                                <p class="textBlock__text">Няни изучают базовые принципы безопасного кормления: как
+                                    лучше посадить ребенка, как ему помочь, если трудно проглотить кашу, почему важно
+                                    следить за питьевым режимом.</p>
+                            </div>
+
+                            <div class="textBlock textBlock_four">
+                                <p class="textBlock__title">Роль постурального менеджмента</p>
+                                <p class="textBlock__text">Специалисты рассказывают о том, как перемещать детей с
+                                    высоким и низким мышечным тонусом, как важно правильное физическое сопровождение
+                                    ребенка в течении визита, как позиционировать детей во время кормления, отдыха и
+                                    игры. Няни узнают, какими бывают технические средства реабилитации и как правильно
+                                    их использовать.</p>
+                            </div>
+
+                            <div class="textBlock textBlock_five">
+                                <p class="textBlock__title">Медицинская помощь</p>
+                                <p class="textBlock__text">Блок посвящен оказанию первой доврачебной помощи. Например,
+                                    если у ребенка случился приступ или поднялась температура. Няни узнают, как
+                                    действовать в экстренной ситуации.</p>
+                            </div>
+
+                            <div class="textBlock textBlock_six">
+                                <p class="textBlock__title">Аутизм</p>
+                                <p class="textBlock__text">Няни знакомятся с тем, как дети с аутистическим спектром
+                                    воспринимают окружающий мир, что для них может оказаться трудным и заставить
+                                    беспокоиться. Практикующий специалист рассказывает, как помочь ребенку справиться с
+                                    нежелательным поведением и соблюдать режим дня.</p>
+                            </div>
+                        </div>
+
+                        <div class="curve__border">
+                            <div class="curve__number curve__number_one">1</div>
+                            <div class="curve__number curve__number_two">2</div>
+                            <div class="curve__icon curve__icon_top">
+                                <img src="./assets/images/pink_star.svg" alt="icon">
+                                <span class="tooltiptext">Задание</span>
+                            </div>
+                        </div>
+
+                        <div class="curve__border">
+                            <div class="curve__icon curve__icon_left">
+                                <img src="./assets/images/pink_star.svg" alt="icon">
+                                <span class="tooltiptext tooltiptext_even">Задание</span>
+                            </div>
+                        </div>
+
+                        <div class="curve__border">
+                            <div class="curve__number curve__number_three">3</div>
+                            <div class="curve__number curve__number_four">4</div>
+                            <div class="curve__number curve__number_five">5</div>
+                            <div class="curve__icon curve__icon_top">
+                                <img src="./assets/images/pink_star.svg" alt="icon">
+                                <span class="tooltiptext">Задание</span>
+                            </div>
+                            <div class="curve__icon curve__icon_bottom">
+                                <img src="./assets/images/pink_star.svg" alt="icon">
+                                <span class="tooltiptext">Задание</span>
+                            </div>
+                        </div>
+
+                        <div class="curve__border">
+                            <div class="curve__icon curve__icon_left">
+                                <img src="./assets/images/pink_star.svg" alt="icon">
+                                <span class="tooltiptext tooltiptext_even">Задание</span>
+                            </div>
+                        </div>
+
+                        <div class="curve__border">
+                            <div class="curve__number curve__number_six">6</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="trainingSection__item container__row">
+                    <div class="colorBlock colorBlock__left">
+                        <img class="colorBlock__icon" src="./assets/images/quest-white.svg" alt="icon">
+                        <h2 class="colorBlock__title">Еженедельные встречи</h2>
+                        <p class="colorBlock__text">На еженедельных встречах кандидаты задают вопросы по прошедшим
+                            блокам, делятся впечатлениями от материала, обсуждают сложные моменты и знакомятся друг
+                            с другом.</p>
+                    </div>
+
+                    <div class="colorBlock colorBlock__right">
+                        <img class="colorBlock__icon colorBlock__icon_accent" src="./assets/images/pink_star.svg"
+                            alt="icon">
+                        <h2 class="colorBlock__title">Итоговое задание и очный инструктаж</h2>
+                        <p class="colorBlock__text">После прохождения курса и выполнения всех промежуточных заданий,
+                            няни выполняют итоговое задание по всему курсу. На очном инструктаже они отвечают на
+                            вопросы, рассказывают, как будут поступать в той или иной ситуации, отрабатывают друг с
+                            другом практические навыки и знакомятся с правилами работы нашего сервиса.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="documentSection container__row">
+            <div class="documentSection__description">
+                <h2 class="documentSection__title">Пакет документов няни</h2>
+                <p class="documentSection__text documentSection__text_adaptive">Няни приступают к работе только
+                    после предоставления полного пакета документов, вы можете запросить его перед визитом.
+                </p>
+            </div>
+            <div class="documentSection__inner">
+                <div class="documentSection__item">
+                    <div>
+                        <div class="documentSection__box"><img class="documentSection__box_img"
+                                src="./assets/images/pass.svg" alt="Паспорт">
+                        </div>
+                        <p class="documentSection__text documentSection__text_font">
+                            Паспорт
+                        </p>
+                    </div>
+                    <p class="documentSection__text documentSection__text_size">Мы
+                        проверяем паспорт на благонадежность. Дополнительно мы можем провести финансовый скрининг и
+                        проверку задолженности по налогам</p>
+                </div>
+                <div class="documentSection__item">
+                    <div>
+                        <div class="documentSection__box"><img class="documentSection__box_img"
+                                src="./assets/images/med.svg" alt="Медицинская книжка">
+                        </div>
+                        <p class="documentSection__text documentSection__text_font">Медицинская<br>книжка</p>
+                    </div>
+                    <p class="documentSection__text documentSection__text_size">Няни предоставляют медкнижки,
+                        срок годности анализов и исследований 1 год. Мы проверяем
+                        подлинность медицинских книжек нянь</p>
+                </div>
+                <div class="documentSection__item">
+                    <div>
+                        <div class="documentSection__box"><img class="documentSection__box_img"
+                                src="./assets/images/law.svg" alt="Справка об отсутствии судимости"></div>
+                        <p class="documentSection__text documentSection__text_font">Справка об отсутствии судимости
+                        </p>
+                    </div>
+                    <p class="documentSection__text documentSection__text_size">Каждая няня предоставляет
+                        справку об отсутствии судимости</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="becomeSection container__row">
+            <h1 class="becomeSection__title">Хотите стать няней особого назначения?</h1>
+            <div class="becomeSection__inner">
+                <p class="becomeSection__text">Вы можете стать няней особого назначения даже если у вас нет
+                    опыта работы<br class="br__none"> с особыми детьми. Для
+                    нас
+                    важны любовь к детям и желание развиваться в этой<br class="br__none"> области.</p>
+                <div class="becomeSection__box">
+                    <a href="#" class="btn btn_defaultcolor becomenSection__btn">Хочу в проект!</a>
+                </div>
+            </div>
+        </section>
+        <div class="videoSection">
+            <div class="videoSection__YouTube"><iframe width="560" height="315"
+                    src="https://www.youtube.com/embed/jQ4ruNDMBiE" title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <section class="workingSection container__row">
+            <div class="workingSection__description">
+                <h2 class="workingSection__title">Почему стоит работать с нами?</h2>
+            </div>
+            <div class="workingSection__wrapper">
+                <div class="workingSection__inner">
+                    <div class="workingSection__number"><img class="workingSection__number_img"
+                            src="./assets/images/1_line.svg" alt="Один">
+                    </div>
+                    <div class="workingSection__text">
+                        Все няни проекта работают в команде, поддерживают друг друга в сложных
+                        вопросах ухода. Вы не останетесь одни.
+                    </div>
+                </div>
+                <div class="workingSection__inner">
+                    <div class="workingSection__number"><img class="workingSection__number_img"
+                            src="./assets/images/2_line.svg" alt="Два">
+                    </div>
+                    <div class="workingSection__text">
+                        Регулярно проводятся супервизии со специалистами для профилактики выгорания.
+                    </div>
+                </div>
+                <div class="workingSection__inner">
+                    <div class="workingSection__number"><img class="workingSection__number_img"
+                            src="./assets/images/3_line.svg" alt="Три">
+                    </div>
+                    <div class="workingSection__text">
+                        Мы помогаем решать вопросы коммуникации с семьями, строить
+                        рабочий график. Остаться без работы с нами невозможно.
+                    </div>
+                </div>
+                <div class="workingSection__inner">
+                    <div class="workingSection__number"><img class="workingSection__number_img"
+                            src="./assets/images/4_line.svg" alt="Четыре">
+                    </div>
+                    <div class="workingSection__text">
+                        После вводного курса обучения мы продолжаем проводить семинары
+                        и мастер-классы для наших нянь,
+                        повышая квалификацию.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="hiringSection">
+            <div class="container__row">
+                <div class="hiringSection__description">
+                    <h2 class="hiringSection__title">Как выглядит процесс приема в «Няни особого назначения»?</h2>
+                </div>
+                <div class="hiringSection_blockmain">
+                    <div class="hiringSection__inner">
+                        <div class="hiringSection__number"><img class="hiringSection__number_img"
+                                src="./assets/images/1_circle.svg" alt="Один">
+                        </div>
+                        <div class="hiringSection__text">
+                            Оставляете заявку
+                        </div>
+                    </div>
+                    <div class="hiringSection__inner">
+                        <div class="hiringSection__number"><img class="hiringSection__number_img"
+                                src="./assets/images/2_circle.svg" alt="Два">
+                        </div>
+                        <div class="hiringSection__text">
+                            Мы связываемся с вами
+                        </div>
+                    </div>
+                    <div class="hiringSection__inner">
+                        <div class="hiringSection__number"><img class="hiringSection__number_img"
+                                src="./assets/images/3_circle.svg" alt="Три">
+                        </div>
+                        <div class="hiringSection__text">
+                            Приглашаем вас на личную встречу
+                        </div>
+                    </div>
+                    <div class="hiringSection__inner">
+                        <div class="hiringSection__number"><img class="hiringSection__number_img"
+                                src="./assets/images/4_circle.svg" alt="Четыре">
+                        </div>
+                        <div class="hiringSection__text">
+                            Проходите обучение <br> и выполняете задания
+                        </div>
+                    </div>
+                    <div class="hiringSection__inner">
+                        <div class="hiringSection__number"><img class="hiringSection__number_img"
+                                src="./assets/images/5_circle.svg" alt="Пять">
+                        </div>
+                        <div class="hiringSection__text">
+                            Готовите пакет <br> необходимых документов
+                        </div>
+                    </div>
+                    <div class="hiringSection__inner">
+                        <div class="hiringSection__number"><img class="hiringSection__number_img"
+                                src="./assets/images/6_circle.svg" alt="Шесть">
+                        </div>
+                        <div class="hiringSection__text">
+                            Приступаете к работе с особыми детьми
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq faq_light container">
+            <div class="faq__inner faq_padding container__row">
+                <div class="faq__list">
+                    <h2 class="faq__header faq__header_padding">Ответы на часто задаваемые вопросы</h2>
+                    <div class="faq__item">
+                        <input class="faq__check" type="checkbox" name="item1" id="item1">
+                        <label class="faq__question" for="item1">
+                            <p class="faq__caption">С какими детьми предстоит работать?</p>
+                            <div class="faq__close">
+                                <svg class="faq__cross" xmlns="http://www.w3.org/2000/svg">
+                                    <g stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                                        <path d="M1 12h22M12 1v22" />
+                                    </g>
+                                </svg>
+                            </div>
+                        </label>
+                        <div class="faq__answer">
+                            <p class="faq__text">
+                                Няни сервиса работают с детьми с самыми разными особенностями здоровья и развития:
+                                расстройства аутистического спектра, проблемное поведение, разные формы ДЦП, тяжелые
+                                множественные нарушения, дети с паллиативным статусом, встречаются дети с трахеостомами
+                                и гастростомами.<br><br>
+
+                                Заявки для работы няни подбирают вместе с куратором.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq__item">
+                        <input class="faq__check" type="checkbox" name="item2" id="item2">
+                        <label class="faq__question" for="item2">
+                            <p class="faq__caption">Нужно ли медицинское образование для работы няней?</p>
+                            <div class="faq__close">
+                                <svg class="faq__cross" xmlns="http://www.w3.org/2000/svg">
+                                    <g stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                                        <path d="M1 12h22M12 1v22" />
+                                    </g>
+                                </svg>
+                            </div>
+                        </label>
+                        <div class="faq__answer">
+                            <div class="faq__text">
+                                <p>
+                                    Медицинское образование для работы няней в сервисе «Няни особого назначения» не
+                                    обязательно. Няни не выполняют манипуляции, требующие медицинской лицензии.<br><br>
+
+                                    Все необходимые знания вы получите на нашем специализированном курсе перед началом
+                                    работы.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq__item">
+                        <input class="faq__check" type="checkbox" name="item3" id="item3">
+                        <label class="faq__question" for="item3">
+                            <p class="faq__caption">Нужен ли опыт работы няней?</p>
+                            <div class="faq__close">
+                                <svg class="faq__cross" xmlns="http://www.w3.org/2000/svg">
+                                    <g stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                                        <path d="M1 12h22M12 1v22" />
+                                    </g>
+                                </svg>
+                            </div>
+                        </label>
+                        <div class="faq__answer">
+                            Вы можете стать няней особого назначения, даже если у вас нет опыта. Мы предъявляем
+                            всего 5 требований к кандидатам: <br><br>
+                            <ul class="faq__text">
+                                <li>Безусловная любовь к детям;</li>
+                                <li>Желание учиться и развиваться в сфере ухода и развития детей с ОВЗ;</li>
+                                <li>Позитивный взгляд на мир;</li>
+                                <li>Желание и умение справляться с трудными ситуациями;</li>
+                                <li>Образование не ниже среднего.</li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq__item">
+                        <input class="faq__check" type="checkbox" name="item4" id="item4">
+                        <label class="faq__question" for="item4">
+                            <p class="faq__caption">В каком графике я могу работать?</p>
+                            <div class="faq__close">
+                                <svg class="faq__cross" xmlns="http://www.w3.org/2000/svg">
+                                    <g stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                                        <path d="M1 12h22M12 1v22" />
+                                    </g>
+                                </svg>
+                            </div>
+                        </label>
+                        <div class="faq__answer">
+                            <p class="faq__text">
+                                В сервисе есть возможность работать в разном графике, няни участвуют в формировании
+                                своего графика визитов.<br><br>
+
+                                Нам поступают разные заявки от семей. Например, кому-то нужна няня на полную занятость
+                                5/2, кому-то на 2-3 дня в неделю, а кому-то — один раз в неделю на 3 часа. Поэтому в
+                                сервисе есть возможность работать в удобном именно для вас графике.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq__item">
+                        <input class="faq__check" type="checkbox" name="item5" id="item5">
+                        <label class="faq__question" for="item5">
+                            <p class="faq__caption">Обязательно ли проходить обучение?</p>
+                            <div class="faq__close">
+                                <svg class="faq__cross" xmlns="http://www.w3.org/2000/svg">
+                                    <g stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                                        <path d="M1 12h22M12 1v22" />
+                                    </g>
+                                </svg>
+                            </div>
+                        </label>
+                        <div class="faq__answer">
+                            <p class="faq__text">
+                                Обучение обязательно, оно является дополнительным этапом отбора и дает кандидатам
+                                возможность понять, подходит ли им эта работа.<br><br>
+
+                                Все няни проекта, независимо от образования и опыта работы, проходят обучение. Курс
+                                бесплатный и рассчитан на 2-3 недели.<br><br>
+
+                                Зарплата во время обучения не выплачивается.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq__item">
+                        <input class="faq__check" type="checkbox" name="item6" id="item6">
+                        <label class="faq__question" for="item6">
+                            <p class="faq__caption">Как проходит обучение?</p>
+                            <div class="faq__close">
+                                <svg class="faq__cross" xmlns="http://www.w3.org/2000/svg">
+                                    <g stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                                        <path d="M1 12h22M12 1v22" />
+                                    </g>
+                                </svg>
+                            </div>
+                        </label>
+                        <div class="faq__answer">
+                            <p class="faq__text">Обучение проходит дистанционно. Все лекции записаны, поэтому вы можете
+                                учиться в удобное для вас время, а также задавать вопросы по материалам курса и получать
+                                обратную связь.<br><br>
+
+                                Курс состоит из 6 блоков, в конце каждого из них нужно ответить на несколько вопросов и
+                                пройти тест.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq__item">
+                        <input class="faq__check" type="checkbox" name="item7" id="item7">
+                        <label class="faq__question" for="item7">
+                            <p class="faq__caption">Есть ли стажировка перед выходом на работу?</p>
+                            <div class="faq__close">
+                                <svg class="faq__cross" xmlns="http://www.w3.org/2000/svg">
+                                    <g stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                                        <path d="M1 12h22M12 1v22" />
+                                    </g>
+                                </svg>
+                            </div>
+                        </label>
+                        <div class="faq__answer">
+                            <p class="faq__text">У нас есть возможность организовать несколько дней стажировки в семьях
+                                с опытными нянями для новых сотрудников.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq__item">
+                        <input class="faq__check" type="checkbox" name="item8" id="item8">
+                        <label class="faq__question" for="item8">
+                            <p class="faq__caption">Что такое командная работа?</p>
+                            <div class="faq__close">
+                                <svg class="faq__cross" xmlns="http://www.w3.org/2000/svg">
+                                    <g stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                                        <path d="M1 12h22M12 1v22" />
+                                    </g>
+                                </svg>
+                            </div>
+                        </label>
+                        <div class="faq__answer">
+                            <p class="faq__text">Сервис организовывает работу автономных команд нянь до 12 человек по
+                                территориальному признаку. Няни работают в кругу единомышленников, принимают участие в
+                                еженедельных собраниях, а также выполняют разные административные роли: обработка
+                                заявок, составление графика визитов, организация и проведение собраний. Это нужно для
+                                профилактики выгорания, профессионального роста, поддержки и эффективной работы.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq__item">
+                        <input class="faq__check" type="checkbox" name="item9" id="item9">
+                        <label class="faq__question" for="item9">
+                            <p class="faq__caption">Какие документы нужны для работы няней?</p>
+                            <div class="faq__close">
+                                <svg class="faq__cross" xmlns="http://www.w3.org/2000/svg">
+                                    <g stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                                        <path d="M1 12h22M12 1v22" />
+                                    </g>
+                                </svg>
+                            </div>
+                        </label>
+                        <div class="faq__answer">
+                            <p class="faq__text">Для работы с детьми необходимо наличие действующей медицинской книжки,
+                                справки психиатра, нарколога и справки об отсутствии судимости.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="becomeSection  container__row">
+            <h1 class="becomeSection__title becomeSection__title_small">Быть няней особого назначения — престижно!</h1>
+            <div class="becomeSection__inner">
+                <p class="becomeSection__text">Стать частью команды «Няни особого назначения».</p>
+                <div class="becomeSection__box">
+                    <a href="#" class="btn btn_defaultcolor becomenSection__btn">Оставить заявку</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="feedbackSection">
+            <div class="feedbackSection__container">
+                <h2 class="feedbackSection__title">Отзывы о работе с нами</h2>
+                <div class="feedbackSection__inner">
+                    <div class="feedbackSection__item">
+                        <div>
+                            <img class="feedbackSection__img" src="./assets/images/Svetlana.jpg" alt="Светлана">
+                        </div>
+                        <div class="feedbackSection__bubble"></div>
+                        <div class="feedbackSection__box">
+                            <div class="feedbackSection__content">
+                                <p class="feedbackSection__header">Светлана П., няня особого
+                                    назначения</p>
+                                <p class="feedbackSection__text feedbackSection__text_margin">Привет! Меня зовут
+                                    Света, и я часть команды «Няни
+                                    особого назначения».</p>
+                                <p class="feedbackSection__text">Когда мне предстояла моя первая поездка в
+                                    организацию,
+                                    я не могла полностью
+                                    представить
+                                    себе, что меня ожидает. Я знала, что мне предстоит работа с особенными детками.
+                                    Впереди
+                                    меня ждало интересное и продолжительное обучение.</p>
+                                <input type="checkbox" class="feedbackSection__checker" id="feedbackSection__checker" />
+                                <div class="feedbackSection__more">
+                                    <p class="feedbackSection__text">На самом деле самое интересное и началось с
+                                        процесса обучения.
+                                        Большое количество лекций, задания, потрясающие практические занятия. Все
+                                        очень
+                                        доступно и понятно, а если становилось непонятно, то всегда можно
+                                        было что-то уточнить. Все объясняли.</p>
+                                    <p class="feedbackSection__text">После обучения было не менее интересно.
+                                        Пожалуй,
+                                        начну дальнейшее повествование
+                                        с коллектива. Этой теме можно посвятить отдельное письмо. Я всегда знаю,
+                                        что на этих людей я могу рассчитывать! Если сказать в общем,
+                                        то мы — дружная команда профессионалов.</p>
+                                    <p class="feedbackSection__text">Очень меня радует система непрерывного
+                                        обучения.
+                                        Даже если ты закончил курс
+                                        лекций, не спеши радоваться и расслабляться. Данная сфера деятельности
+                                        предполагает обучение длиною в жизнь. Всегда найдется что-то, с чем
+                                        ты еще не сталкивался, какие-то новые методики которые еще следует
+                                        изучить, к тому же каждый ребенок совершенно индивидуален.</p>
+                                    <p class="feedbackSection__text">У нас всегда есть возможность обсудить друг с
+                                        другом все детали, заручиться
+                                        помощью
+                                        и поддержкой. Сам процесс работы доставляет мне самые теплые чувства.
+                                        Каждому
+                                        ребенку я дарю частичку своей души и тепла, поэтому с твердой уверенностью
+                                        могу
+                                        сказать, что я люблю то, чем занимаюсь.</p>
+                                    <p class="feedbackSection__text">Надеюсь, что в ближайшем будущем мы, как
+                                        организация, выйдем на новый уровень, и
+                                        каждый особенный ребенок сможет найти свою няню особого назначения.</p>
+                                    <div class="feedbackSection__bottom"></div>
+                                </div>
+                                <label for="feedbackSection__checker" class="feedbackSection__moreBtn"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feedbackSection__item">
+                        <div><img class="feedbackSection__img" src="./assets/images/Sergia.jpg" alt="Севгия">
+                        </div>
+                        <div class="feedbackSection__bubble"></div>
+                        <div class="feedbackSection__box">
+                            <div class="feedbackSection__content">
+                                <p class="feedbackSection__header">Севгия И., няня
+                                    особого назначения</p>
+                                <p class="feedbackSection__text feedbackSection__text_margin">
+                                    Привет! Меня зовут
+                                    Севгия. Я работаю в сервисе с августа 2020 года. Увидев вакансию в интернете, я
+                                    влюбилась! Попав в проект, полюбила от всей души. Я думала, что без опыта работы
+                                    с
+                                    особыми детьми возникнут большие трудности, но я ошибалась.</p>
+                                <p class="feedbackSection__text feedbackSection__text_padding">1) Обучение</p>
+                                <p class="feedbackSection__text feedbackSection__text_padding">2) Постоянная, чуть
+                                    ли
+                                    не
+                                    24/7, поддержка
+                                    наставников</p>
+                                <p class="feedbackSection__text feedbackSection__text_padding">3) Группы поддержки
+                                    с
+                                    психологом</p>
+                                <p class="feedbackSection__text feedbackSection__text_padding">4) Обучение</p>
+                                <p class="feedbackSection__text feedbackSection__text_padding">5) Замечательные
+                                    коллеги</p>
+                                <p class="feedbackSection__text">«Няни особого назначения»
+                                    дадут тебе море солнца,
+                                    улыбок, тепла, заботы, любви. И теперь ты готов делится с этим с детьми.
+                                    Уверенно.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feedbackSection__item">
+                        <div><img class="feedbackSection__img" src="./assets/images/Anna.jpg" alt="Анна">
+                        </div>
+                        <div class="feedbackSection__bubble"></div>
+                        <div class="feedbackSection__box">
+                            <div class="feedbackSection__content">
+                                <p class="feedbackSection__header">Анна В., няня особого назначения</p>
+                                <p class="feedbackSection__text feedbackSection__text_margin">
+                                    Я счастлива быть частью команды «Няни особого назначения»!)</p>
+                                <p class="feedbackSection__text">Мне нравится
+                                    структурированная система обучения, получала удовольствие, проходя его. На
+                                    инструктаже подобно разобрали все ситуации, координатор сервиса ответил на все
+                                    вопросы.</p>
+                                <p class="feedbackSection__text">Мне нравится открытая
+                                    и доброжелательная атмосфера сервиса. Я с радостью отмечаю горящие глаза моих
+                                    коллег. Я очень волновалась перед первым визитом, но со временем поняла, что
+                                    новые
+                                    семьи и дети — это всегда шаг вперёд, возможность роста и развития. Я знаю, что
+                                    меня
+                                    поддерживают, я могу попросить совета или задать вопрос коллегам, и он не
+                                    останется
+                                    без ответа.</p>
+                                <p class="feedbackSection__text">Мне радостно видеть
+                                    улыбки детей и родителей! Как круто, что сервис существует 😊</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feedbackSection__item">
+                        <div><img class="feedbackSection__img" src="./assets/images/Polina.jpeg" alt="Полина">
+                        </div>
+                        <div class="feedbackSection__bubble"></div>
+                        <div class="feedbackSection__box">
+                            <div class="feedbackSection__content">
+                                <p class="feedbackSection__header">Полина К., няня особого назначения</p>
+                                <p class="feedbackSection__text feedbackSection__text_margin">Многие люди не
+                                    представляют, как можно работать с особенными детками и думают, что всë что,
+                                    есть в
+                                    этой работе — моральное выгорание, но они ошибаются. Детки дают очень много
+                                    позитивных эмоций и заряда хорошего настроения на весь день. Предоставляя
+                                    хорошие
+                                    эмоции, вы получаете обратную связь этих эмоций не меньшую, чем сами отдали и
+                                    это
+                                    прекрасно!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feedbackSection__item">
+                        <div><img class="feedbackSection__img" src="./assets/images/Yana.jpg" alt="Яна">
+                        </div>
+                        <div class="feedbackSection__bubble"></div>
+                        <div class="feedbackSection__box">
+                            <div class="feedbackSection__content">
+                                <p class="feedbackSection__header">Яна М., няня особого назначения</p>
+                                <p class="feedbackSection__text feedbackSection__text_margin">Здравствуйте! Меня
+                                    зовут Яна.</p>
+                                <p class="feedbackSection__text">Я работаю в сервисе
+                                    «Няни особого назначения» чуть больше двух месяцев и твёрдо могу сказать, что
+                                    сделала правильный выбор!</p>
+                                <p class="feedbackSection__text">Ценность данного
+                                    сервиса в том, что он делает всё, чтобы ВСЕМ было хорошо — и семьям, и няням!
+                                    Сервис
+                                    даёт суперклассную возможность стать отличным специалистом с сфере работы с
+                                    детьми с
+                                    ОВЗ.</p>
+                                <p class="feedbackSection__text">Нет ничего ценнее,
+                                    чем видеть счастливые улыбки и благодарность на лицах детей и их родителей! Это
+                                    служит серьёзным стимулом для того, чтобы не стоять на месте и развиваться
+                                    дальше.
+                                </p>
+                                <p class="feedbackSection__text">И даже если что-то
+                                    не получается, не стоит отчаиваться. Ведь всегда рядом те, кто поддержит,
+                                    поможет,
+                                    подскажет, наши наставники, психологи, няни, потому что мы большая дружная
+                                    команда!
+                                </p>
+                                <p class="feedbackSection__text">Я выражаю глубокую
+                                    признательность и уважение сервису и всем тем, кто в нем работает! Желаю, чтобы
+                                    каждый ребенок и каждая семья, которые в этом нуждаются, нашли свою няню особого
+                                    назначения!!!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feedbackSection__item feedbackSection__item_center">
+                        <div class="feedbackSection__box feedbackSection__box_center">
+                            <div class="feedbackSection__content">
+                                <p class="feedbackSection__header">Ксения Р., няня особого назначения</p>
+                                <p class="feedbackSection__text feedbackSection__text_margin">Меня зовут
+                                    Ксения. Я
+                                    уже четыре месяца работаю в сервисе. Самое привлекательное в этой работе то, что
+                                    мое
+                                    время и мои силы служат людям. Лично для меня очень важно заниматься стоящим
+                                    делом,
+                                    важным для общества. Кроме этого, ценно, что сервис оставляет сотрудникам
+                                    свободу
+                                    распоряжаться своим временем, а также свободу творчества. А самое приятное в
+                                    этой
+                                    деятельности — возможность общаться с чудесными детьми и замечательными
+                                    взрослыми. В
+                                    сервисе столько интересных, умных и добрых людей!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feedbackSection__item feedbackSection__item_center">
+                        <div class="feedbackSection__box feedbackSection__box_center">
+                            <div class="feedbackSection__content">
+                                <p class="feedbackSection__header">Олеся А., няня особого назначения</p>
+                                <p class="feedbackSection__text feedbackSection__text_margin">Как же я рада,
+                                    что
+                                    нашла эту организацию))😍</p>
+                                <p class="feedbackSection__text feedbackSection__text_padding">Долго я искала
+                                    работу
+                                    по специальности (дефектолог), но без опыта не берут. А тут и обучают, и
+                                    поддерживают постоянно😊</p>
+                                <p class="feedbackSection__text feedbackSection__text_padding">Мне очень
+                                    нравится
+                                    работать в «Нянях особого назначения»❤️</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feedbackSection__btn">
+                        <a href="#" class="btn btn_defaultcolor">Оставить отзыв</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="container">
+        <div class="block-footer">
+            <div class="container__row">
+                <div class="block-footer__items">
+                    <a href="#" class="block-footer__item1">Пользовательское соглашение (Публичная оферта) с
+                        заказчиком
+                        (клиентом)</a>
+                    <a href="#" class="block-footer__item2">Пользовательское соглашение (Публичная оферта) с
+                        исполнителем
+                        (няней)</a>
+                    <a href="https://mynanny.pro/organization-details" class="block-footer__item3">Сведения об
+                        организации</a>
+                </div>
+
+                <div class="block-footer__bottom">
+                    <a class="block-footer__privacy" href="https://mynanny.pro/policy">Политика
+                        конфиденциальности</a>
+                    <div class="block-footer__year">&#169; 2021</div>
+                    <div class="block-footer__dev">разработка: <a class="block-footer__design"
+                            href="https://lede.pro/">LeDesign</a></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

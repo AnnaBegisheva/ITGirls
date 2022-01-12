@@ -1,0 +1,62 @@
+.contacts__wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+#mskSp,
+#number1,
+#nabChel,
+#number2,
+#Kazan,
+#number3,
+#time,
+#mail {
+    color: $darkColor;
+    font-size: 21px;
+    font-weight: 410;
+    text-decoration: none;
+}
+
+.mainTxt {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.city {
+    margin-bottom: 30px;
+}
+
+#topText {
+    margin-bottom: 40px;
+    font-size: 45px;
+    font-weight: 600;
+}
+
+#mail {
+    margin-bottom: 35px;
+}
+
+#service {
+    font-size: 15px;
+    font-weight: 420;
+    text-align: center;
+}
+
+.icons {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 48px 48px 48px;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+    margin-bottom: 80px;
+}

@@ -1,0 +1,89 @@
+@import "vars";
+@import "mixins";
+@import "ui";
+@import "typography";
+@import "blocks/btn";
+@import "blocks/header";
+@import "blocks/footer";
+@import "blocks/faq";
+@import "pages/nannys";
+@import "pages/faq";
+@import "pages/partners";
+@import "pages/contacts";
+
+.container {
+    width: 100%;
+}
+
+.container__row_wide {
+    width: 95%;
+    margin: auto;
+    max-width: 1600px;
+    min-height: 80px;
+}
+
+.container__row {
+    margin: auto;
+
+    @media screen and (max-width: $smallMobile) {
+        width: 280px;
+    }
+
+    @media screen and (min-width: $smallMobile) {
+        width: 460px;
+    }
+
+    @media screen and (min-width: $mobile) {
+        width: 620px;
+    }
+
+    @media screen and (min-width: $tablet) {
+        width: 940px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 1160px;
+    }
+}
+
+body {
+    height: 100%;
+    font-family: $defaultFont;
+    color: $darkColor;
+
+    &::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    &::-webkit-scrollbar-track {
+        box-shadow: 1px 1px 10px rgba(78, 55, 55, 0.1);
+        background-color: $backgroundColor;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $defaultColor;
+        border-radius: 8px;
+        border: 3px solid $backgroundColor;
+    }
+}
+
+html {
+    height: 100%;
+}
+
+
+h1,
+h2,
+p {
+    margin: 0;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 45px;
+}
+
+p {
+    font-weight: 400;
+    font-size: 17px;
+}
