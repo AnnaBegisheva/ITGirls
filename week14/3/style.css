@@ -1,0 +1,40 @@
+.image {
+    width: 800px;
+    margin: 10% auto;
+}
+
+.photo {
+    max-width: 100%;
+    display: none;
+}
+
+.photo:first-child {
+    display: block;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+
+.button {
+    width: 90px;
+    opacity: 0.5;
+    border: none;
+    background-color: transparent;
+    align-self: center;
+    cursor: pointer;
+}
+
+.button:active {
+    opacity: 0.7;
+}
+
+.icon {
+    max-width: 100%;
+}
+
+.icon_next {
+    transform: rotate(180deg);
+}
