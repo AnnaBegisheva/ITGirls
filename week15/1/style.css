@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    margin: 25% auto;
+    justify-content: center;
+}
+
+.btn {
+    display: block;
+    box-sizing: border-box;
+    font-size: 1.1rem;
+    line-height: 1.55;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    text-align: center;
+    padding: 1.1rem 3.4rem 1.1rem 3.4rem;
+    border: none;
+    border-radius: 50px;
+    background: #3dc4c4;
+}
+
+.btn:hover {
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+    background: #2e9999;
+}
+
+.input {
+    margin: 30px auto 0 auto;
+    width: 200px;
+    text-align: center;
+}
+
+.result {
+    margin: 10px auto 0 auto;
+    border: 1px solid black;
+    width: 200px;
+    height: 30px;
+    text-align: center;
+}

@@ -9,5 +9,5 @@ function changeMeTwo () {
 };
 
 function select (sender) {
-    sender.classList.add ("selected");
+    sender.classList.toggle ("selected");
 }
