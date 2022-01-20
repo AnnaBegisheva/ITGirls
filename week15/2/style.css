@@ -175,11 +175,14 @@
 }
 
 #errorName,
-#errorSurname,
-#errorNameSurname {
+#errorSurname {
     margin-top: -15px;
 }
 
-.error > svg {
+#errorNameSurname {
+    margin-top: -5px;
+}
+
+.error>svg {
     margin-right: 5px;
 }

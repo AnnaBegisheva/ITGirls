@@ -15,6 +15,12 @@ function check () {
         document.getElementById ('errorSurname').style.display='flex';
     }
 
+    if (name.value == '' && surname.value == '') {
+        document.getElementById ('errorNameSurname').style.display='flex';
+        document.getElementById('errorName').innerHTML="";
+        document.getElementById('errorSurname').innerHTML="";
+    }
+
     if (email.value == '') {
         document.getElementById ('errorEmail').style.display='flex';
         document.getElementById ('loginLabel').style.display='none';
@@ -25,8 +31,8 @@ function check () {
         document.getElementById ('PWLabel').style.display='none';
     }
 
-    if (passwordConf.value == '') {
-        document.getElementById ('userpwconf').style.display='flex';
+    if (password.value == true && passwordConf.value == '') {
+        document.getElementById ('errorPWConf').style.display='flex';
         document.getElementById ('PWLabel').style.display='none';
     }
 }
