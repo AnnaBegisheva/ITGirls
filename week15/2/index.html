@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,42 +9,110 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
- <div class="container">
- <div class="form">
- <div class="logo">
-     <img src="assets/Google_logo.png" alt="logo" class="logo_img">
- </div>
- <div class="title">Создайте аккаунт Google</div>
- <div class="subtitle">Перейти в Gmail</div>
- <div class="username">
-     <input type="text" class="input name" placeholder="Имя">
-     <input type="text" class="input surname" placeholder="Фамилия">
- </div>
- <div class="userlogin">
-    <input type="text" class="input login" placeholder="Имя пользователя">
-    <div class="mail">@gmail.com</div>
-</div>
-    <div class="label">Можно использовать буквы латинского алфавита, цифры и точки.</div>
+    <div class="container">
+        <div class="form">
+            <div class="logo">
+                <img src="assets/Google_logo.png" alt="logo" class="logo_img">
+            </div>
+            <div class="title">Создайте аккаунт Google</div>
+            <div class="subtitle">Перейти в Gmail</div>
+            <div class="username">
+                <input type="text" class="input name" id="userName" placeholder="Имя">
+                <input type="text" class="input surname" id="userSurname" placeholder="Фамилия">
+            </div>
+            <div class="error" id="errorName">
+                <svg aria-hidden="true" class="stUf5b LxE1Id" fill="currentColor" focusable="false" width="16px"
+                    height="16px" color="#d93025" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
+                    <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z">
+                    </path>
+                </svg>
+                Укажите имя</div>
+            <div class="error" id="errorSurname">
+                <svg aria-hidden="true" class="stUf5b LxE1Id" fill="currentColor" focusable="false" width="16px"
+                    height="16px" color="#d93025" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
+                    <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z">
+                    </path>
+                </svg>
+                Укажите фамилию</div>
+            <div class="error" id="errorNameSurname">
+                <svg aria-hidden="true" class="stUf5b LxE1Id" fill="currentColor" focusable="false" width="16px"
+                    height="16px" color="#d93025" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
+                    <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z">
+                    </path>
+                </svg>
+                Введите имя и фамилию</div>
 
- <div class="userpassword">
-    <input type="text" class="input password" placeholder="Пароль">
-    <input type="text" class="input confirm" placeholder="Подтвердить">
-</div>
-    <div class="label">Пароль должен содержать не менее восьми знаков, включать буквы, цифры и специальные символы</div>
+            <div class="userlogin">
+                <input type="text" class="input login" id="userEmail" placeholder="Имя пользователя">
+                <div class="mail">@gmail.com</div>
+            </div>
+            <div class="label" id="loginLabel">Можно использовать буквы латинского алфавита, цифры и точки.</div>
+            <div class="error" id="errorEmail">
+                <svg aria-hidden="true" class="stUf5b LxE1Id" fill="currentColor" focusable="false" width="16px"
+                    height="16px" color="#d93025" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
+                    <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z">
+                    </path>
+                </svg>
+                Укажите адрес Gmail</div>
+                <div class="error" id="errorEmailSymbols">
+                    <svg aria-hidden="true" class="stUf5b LxE1Id" fill="currentColor" focusable="false" width="16px"
+                        height="16px" color="#d93025" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z">
+                        </path>
+                    </svg>
+                    Имя пользователя может включать буквы латинского алфавита (a-z), цифры (0-9) и точку (.).</div>
+                    <div class="error" id="errorEmailLength">
+                        <svg aria-hidden="true" class="stUf5b LxE1Id" fill="currentColor" focusable="false" width="16px"
+                            height="16px" color="#d93025" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z">
+                            </path>
+                        </svg>
+                        Имя пользователя должно содержать от 6 до 30 символов.</div>
 
-    <div class="chechbox">
- <input type="checkbox" class="tick"> 
- <label class="showpw">Показать пароль</label>
-</div>
-<div class="buttons">
-    <button class="signin">Войти</button>
-    <button class="next">Далее</button>
-</div>
+            <div class="userpassword">
+                <input type="text" class="input password" id="userPW" placeholder="Пароль">
+                <input type="text" class="input confirm" id="userPWConf" placeholder="Подтвердить">
+            </div>
+            <div class="label" id="PWLabel">Пароль должен содержать не менее восьми знаков, включать буквы, цифры и специальные
+                символы</div>
+            <div class="error" id="errorPW">
+                <svg aria-hidden="true" class="stUf5b LxE1Id" fill="currentColor" focusable="false" width="16px"
+                    height="16px" color="#d93025" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
+                    <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z">
+                    </path>
+                </svg>
+                Введите пароль</div>
+                <div class="error" id="errorPWConf">
+                    <svg aria-hidden="true" class="stUf5b LxE1Id" fill="currentColor" focusable="false" width="16px"
+                        height="16px" color="#d93025" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z">
+                        </path>
+                    </svg>
+                    Подтвердите пароль</div>
 
-</div>
-</div>
+            <div class="chechbox">
+                <input type="checkbox" class="tick">
+                <label class="showpw">Показать пароль</label>
+            </div>
+            <div class="buttons">
+                <button class="signin">Войти</button>
+                <button type="button" class="next" onclick="check();">Далее</button>
+            </div>
+
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>

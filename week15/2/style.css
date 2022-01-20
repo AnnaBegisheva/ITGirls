@@ -164,3 +164,22 @@
         width: 100%;
     }
 }
+
+.error {
+    color: #d93025;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    display: none;
+    align-items: center;
+}
+
+#errorName,
+#errorSurname,
+#errorNameSurname {
+    margin-top: -15px;
+}
+
+.error > svg {
+    margin-right: 5px;
+}
