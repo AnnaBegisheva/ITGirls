@@ -9,30 +9,78 @@ function check () {
 
     if (name.value == '') {
         document.getElementById ('errorName').style.display='flex';
-    }
+        document.getElementById ('userName').style.border="1px solid #d93025";
+    } 
 
     if (surname.value == '') {
         document.getElementById ('errorSurname').style.display='flex';
-    }
+        document.getElementById ('userSurname').style.border="1px solid #d93025";
+    } 
 
     if (name.value == '' && surname.value == '') {
         document.getElementById ('errorNameSurname').style.display='flex';
+        document.getElementById ('userName').style.border="1px solid #d93025";
+        document.getElementById ('userSurname').style.border="1px solid #d93025";
         document.getElementById('errorName').innerHTML="";
         document.getElementById('errorSurname').innerHTML="";
-    }
+    } 
 
     if (email.value == '') {
         document.getElementById ('errorEmail').style.display='flex';
         document.getElementById ('loginLabel').style.display='none';
-    }
+        document.getElementById ('userEmail').style.border="1px solid #d93025";
+    } else if (email.value.length <=5) {
+        document.getElementById ('errorEmailLength').style.display='flex';
+        document.getElementById ('loginLabel').style.display='none';
+        document.getElementById ('userEmail').style.border="1px solid #d93025";
+    } else if (!isEmail(email.value)) {
+        document.getElementById ('errorEmailSymbols').style.display='flex';
+        document.getElementById ('loginLabel').style.display='none';
+        document.getElementById ('userEmail').style.border="1px solid #d93025";
+    } 
 
     if (password.value == '') {
         document.getElementById ('errorPW').style.display='flex';
         document.getElementById ('PWLabel').style.display='none';
-    }
+        document.getElementById ('userPW').style.border="1px solid #d93025";
+    } else if (password.value.length <=7) {
+        document.getElementById ('errorPWLength').style.display='flex';
+        document.getElementById ('PWLabel').style.display='none';
+        document.getElementById ('userPW').style.border="1px solid #d93025";
+    } else if (!isPW (password.value)) {
+        document.getElementById ('errorPWSymbols').style.display='flex';
+        document.getElementById ('PWLabel').style.display='none';
+        document.getElementById ('userPW').style.border="1px solid #d93025";
+    } 
 
     if (password.value == true && passwordConf.value == '') {
         document.getElementById ('errorPWConf').style.display='flex';
         document.getElementById ('PWLabel').style.display='none';
+        document.getElementById ('userPWConf').style.border="1px solid #d93025";
+    } else if (password.value !== passwordConf.value) {
+        document.getElementById ('errorPWConf').style.display='flex';
+        document.getElementById ('PWLabel').style.display='none';
+        document.getElementById ('userPWConf').style.border="1px solid #d93025";
+    } 
+    
+    else {
+        alert (`Hello, ${name.value}`);
+    }
+}   
+
+function isEmail(email) {
+	return /^([a-zA-Z0-9\.]+)$/.test(email);
+};
+
+function isPW(password) {
+	return /^([A-Za-zА-Яа-яЁё0-9\.-_]+)$/.test(password);
+};
+
+function myFunction() {
+    let x = document.getElementById("userPW");
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
     }
 }

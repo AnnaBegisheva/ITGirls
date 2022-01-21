@@ -12,7 +12,7 @@
 
 <body>
     <div class="container">
-        <div class="form">
+        <form class="form">
             <div class="logo">
                 <img src="assets/Google_logo.png" alt="logo" class="logo_img">
             </div>
@@ -60,29 +60,29 @@
                     </path>
                 </svg>
                 Укажите адрес Gmail</div>
-                <div class="error" id="errorEmailSymbols">
-                    <svg aria-hidden="true" class="stUf5b LxE1Id" fill="currentColor" focusable="false" width="16px"
-                        height="16px" color="#d93025" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
-                        <path
-                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z">
-                        </path>
-                    </svg>
-                    Имя пользователя может включать буквы латинского алфавита (a-z), цифры (0-9) и точку (.).</div>
-                    <div class="error" id="errorEmailLength">
-                        <svg aria-hidden="true" class="stUf5b LxE1Id" fill="currentColor" focusable="false" width="16px"
-                            height="16px" color="#d93025" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
-                            <path
-                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z">
-                            </path>
-                        </svg>
-                        Имя пользователя должно содержать от 6 до 30 символов.</div>
+            <div class="error" id="errorEmailSymbols">
+                <svg aria-hidden="true" class="stUf5b LxE1Id" fill="currentColor" focusable="false" width="16px"
+                    height="16px" color="#d93025" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
+                    <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z">
+                    </path>
+                </svg>
+                Имя пользователя может включать буквы латинского алфавита (a-z), цифры (0-9) и точку (.).</div>
+            <div class="error" id="errorEmailLength">
+                <svg aria-hidden="true" class="stUf5b LxE1Id" fill="currentColor" focusable="false" width="16px"
+                    height="16px" color="#d93025" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
+                    <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z">
+                    </path>
+                </svg>
+                Имя пользователя должно содержать от 6 до 30 символов.</div>
 
             <div class="userpassword">
                 <input type="password" class="input password" id="userPW" placeholder="Пароль">
                 <input type="password" class="input confirm" id="userPWConf" placeholder="Подтвердить">
             </div>
-            <div class="label" id="PWLabel">Пароль должен содержать не менее восьми знаков, включать буквы, цифры и специальные
-                символы</div>
+            <div class="label" id="PWLabel">Пароль должен содержать не менее восьми знаков, включать буквы, цифры и
+                специальные символы</div>
             <div class="error" id="errorPW">
                 <svg aria-hidden="true" class="stUf5b LxE1Id" fill="currentColor" focusable="false" width="16px"
                     height="16px" color="#d93025" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
@@ -91,17 +91,33 @@
                     </path>
                 </svg>
                 Введите пароль</div>
-                <div class="error" id="errorPWConf">
-                    <svg aria-hidden="true" class="stUf5b LxE1Id" fill="currentColor" focusable="false" width="16px"
-                        height="16px" color="#d93025" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
-                        <path
-                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z">
-                        </path>
-                    </svg>
-                    Подтвердите пароль</div>
+            <div class="error" id="errorPWLength">
+                <svg aria-hidden="true" class="stUf5b LxE1Id" fill="currentColor" focusable="false" width="16px"
+                    height="16px" color="#d93025" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
+                    <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z">
+                    </path>
+                </svg>
+                Пароль не может быть короче 8 символов.</div>
+            <div class="error" id="errorPWSymbols">
+                <svg aria-hidden="true" class="stUf5b LxE1Id" fill="currentColor" focusable="false" width="16px"
+                    height="16px" color="#d93025" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
+                    <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z">
+                    </path>
+                </svg>
+                Пароль должен включать буквы, цифры и специальные символы.</div>
+            <div class="error" id="errorPWConf">
+                <svg aria-hidden="true" class="stUf5b LxE1Id" fill="currentColor" focusable="false" width="16px"
+                    height="16px" color="#d93025" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
+                    <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z">
+                    </path>
+                </svg>
+                Подтвердите пароль</div>
 
             <div class="chechbox">
-                <input type="checkbox" class="tick">
+                <input type="checkbox" class="tick" onclick="myFunction()">
                 <label class="showpw">Показать пароль</label>
             </div>
             <div class="buttons">
@@ -109,7 +125,7 @@
                 <button type="button" class="next" onclick="check();">Далее</button>
             </div>
 
-        </div>
+        </form>
     </div>
 
     <script src="script.js"></script>
