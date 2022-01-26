@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,8 +9,63 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
+
+    <div class="container">
+        <div class="header">
+            <h1 class="title">Узнайте стоимость Вашего автомобиля всего за 1 минуту!</h1>
+            <p class="subtitle">Укажите параметры автомобиля, которые Вам необходимы, и мы определим его стоимость.</p>
+        </div>
+        <form class="form"></form>
+        <div>
+            <label for="brand"><b>Модель автомобиля</b></label>
+            <select required="required" id="carModel">
+                <option value="">Выберите модель автомобиля</option>
+                <option value="option 1">Fabia</option>
+                <option value="option 2">Felicia</option>
+                <option value="option 3">Karoq</option>
+                <option value="option 4">Kodiaq</option>
+                <option value="option 5">Octavia</option>
+                <option value="option 6">Rapid</option>
+                <option value="option 7">Roomster</option>
+                <option value="option 8">Superb</option>
+                <option value="option 9">Yeti</option>
+            </select>
+        </div>
+        <div>
+            <b>Тип топлива</b><br />
+            <input type="radio" id="gasoline" name="fuel" value="1" />
+            <label for="gasoline">Бензин</label> <br />
+            <input type="radio" id="diesel" name="fuel" value="1" />
+            <label for="diesel">Дизель</label> <br />
+            <input type="radio" id="electric" name="fuel" value="1" />
+            <label for="electric">Электрический</label>
+        </div>
+        <div>
+            <b>Тип КПП</b><br />
+            <input type="radio" id="manual" name="gearbox" value="1" />
+            <label for="manual">Механика</label> <br />
+            <input type="radio" id="automatic" name="gearbox" value="1" />
+            <label for="automatic">Автомат</label> <br />
+            <input type="radio" id="robot" name="gearbox" value="1" />
+            <label for="robot">Робот</label>
+        </div>
+
+        <div>
+            <b>Пол питомца:</b><br />
+            <input type="checkbox" id="m" name="sex" value="m" />
+            <label for="m">Самец</label> <br />
+
+            <input type="checkbox" id="f" name="sex" value="f" />
+            <label for="f">Самка</label>
+        </div>
+
+        </form>
+    </div>
+
 
     <script src="script.js"></script>
 </body>
+
 </html>
