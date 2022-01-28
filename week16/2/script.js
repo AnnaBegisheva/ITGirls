@@ -82,9 +82,6 @@ function calc() {
             totalPrice += 100000;
             break;
         case "3":
-            totalPrice += 50000;
-            break;
-        case "4":
             totalPrice += 150000;
             break;
     }
@@ -93,6 +90,7 @@ function calc() {
     
     if (document.getElementById('carModel').value == "0") {
         totalPrice = 0;
+        alert ('Выберите модель автомобиля');
     } else {
         document.getElementById('yourPrice').innerText= formatter.format(totalPrice);
     }

@@ -20,7 +20,7 @@
             <div class="header">
                 <h1 class="title">Остался всего 1 шаг для расчета финальной стоимости вашего автомобиля!</h1>
                 <p class="subtitle">Укажите параметры, которые Вам необходимы, и <br> мы определим стоимость.</p>
-                <button class="button button_small"> Рассчитать </button>
+                <button type="button" class="button button_small" onclick="calc()"> Рассчитать </button>
             </div>
 
 
@@ -38,32 +38,28 @@
                         <option value="Yeti">Yeti</option>
                     </select>
                 </div>
-                <div class="formField">
+                <div class="formField formField_radio">
                     <b>Привод</b><br />
-                    <input type="radio" id="four-wheel" name="drive" value="1.2" />
+                    <input type="radio" id="four-wheel" name="drive" value="1.2" checked />
                     <label for="four-wheel">Полный</label>
                     <input type="radio" id="front-wheel" name="drive" value="1" />
                     <label for="front-wheel">Передний</label>
-                    <input type="radio" id="rear-wheel" name="drive" value="1" />
-                    <label for="rear-wheel">Задний</label>
                 </div>
-                <div class="formField">
+                <div class="formField formField_radio">
                     <b>Тип КПП</b><br />
-                    <input type="radio" id="manual" name="gearbox" value="1" />
-                    <label for="manual">Механика</label>
-                    <input type="radio" id="automatic" name="gearbox" value="1.1" />
+                    <input type="radio" id="automatic" name="gearbox" value="1.1" checked />
                     <label for="automatic">Автомат</label>
                     <input type="radio" id="robot" name="gearbox" value="1.1" />
                     <label for="robot">Робот</label>
+                    <input type="radio" id="manual" name="gearbox" value="1" />
+                    <label for="manual">Механика</label>
                 </div>
-                <div class="formField">
+                <div class="formField formField_radio">
                     <b>Тип топлива</b><br />
-                    <input type="radio" id="gasoline" name="fuel" value="1" />
+                    <input type="radio" id="gasoline" name="fuel" value="1" checked />
                     <label for="gasoline">Бензин</label>
                     <input type="radio" id="diesel" name="fuel" value="1.1" />
                     <label for="diesel">Дизель</label>
-                    <input type="radio" id="electric" name="fuel" value="1.2" />
-                    <label for="electric">Электрический</label>
                 </div>
                 <div class="formField">
                     <b>Безопасность</b><br />
@@ -110,11 +106,9 @@
                 <div class="formField">
                     <label for="carInterior"><b>Обивка салона</b></label>
                     <select required="required" id="carInterior">
-                        <option value="0">Выберите обивку салона</option>
                         <option value="1">Тканевый салон</option>
                         <option value="2">Комбинированный салон</option>
-                        <option value="3">Велюровый салон</option>
-                        <option value="4">Кожаный салон</option>
+                        <option value="3">Кожаный салон</option>
                     </select>
                 </div>
 

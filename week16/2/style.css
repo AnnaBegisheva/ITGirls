@@ -43,6 +43,10 @@ body::-webkit-scrollbar {
     color: lightgrey;
 }
 
+.formField_radio input[type='radio']+label:not(:last-child) {
+    margin-right: 60px;
+}
+
 .header {
     position: absolute;
     top: 50px;
