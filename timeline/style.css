@@ -5,6 +5,7 @@
 .timeline {
     margin: 50px auto;
     width: 50%;
+    counter-reset: myCounter; /* Добавляем автоматический счетчик */
 }
 
 @media screen and (max-width:580px) {
@@ -14,18 +15,17 @@
 }
 
 .block {
-    border: 3px solid transparent;
-    border-bottom: 3px solid brown;
-    border-top: 3px solid brown;
+    border-bottom: 2px solid brown;
+    border-top: 2px solid brown;
     margin: 0;
     padding: 40px;
-    counter-increment: section; /* Добавляем автоматический счетчик c 1*/
+    counter-increment: myCounter; /* Инкрементирует значение счетчика */
     position: relative;
 }
 
 /* Нумерация */
 .block::before {
-    content: counter(section); /* Отображает текущее значение счетчика */
+    content: counter(myCounter); /* Отображает текущее значение счетчика */
     position: absolute;
     border-radius: 50%;
     padding: 10px;
@@ -40,11 +40,11 @@
 
 /* Правая граница для четных блоков */
 .block:nth-child(even) {
-    border-right: 3px solid brown;
+    border-right: 2px solid brown;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
     padding-left: 0;
-    margin-top: -2.5px;
+    margin-top: -2px;
     margin-left: 50px;
     text-align: right;
 }
@@ -58,11 +58,11 @@
 /* Левая граница для нечетных блоков */
 .block:nth-child(odd) {
     width: 80%;
-    border-left: 3px solid brown;
+    border-left: 2px solid brown;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
     padding-right: 0;
-    margin-top: -3px;
+    margin-top: -2px;
 }
 
 @media screen and (max-width:858px) {
@@ -77,21 +77,16 @@
     }
 }
 
-
 /* Расположение номера для нечетных блоков */
 .block:nth-child(odd)::before {
     right: 100%;
     margin-right: -20px;
 }
 
-/* Стили для последнего блока кривой */
+/* Стили для пeрвого блока кривой */
 .block:first-child {
     border-top: 0;
     border-top-left-radius: 0;
 }
 
-.block:last-child:nth-child(odd) {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 50px;
-}
 

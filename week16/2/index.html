@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:regular,600,700" rel="stylesheet" />
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
@@ -13,57 +14,118 @@
 <body>
 
     <div class="container">
-        <div class="header">
-            <h1 class="title">Узнайте стоимость Вашего автомобиля всего за 1 минуту!</h1>
-            <p class="subtitle">Укажите параметры автомобиля, которые Вам необходимы, и мы определим его стоимость.</p>
-        </div>
-        <form class="form"></form>
-        <div>
-            <label for="brand"><b>Модель автомобиля</b></label>
-            <select required="required" id="carModel">
-                <option value="">Выберите модель автомобиля</option>
-                <option value="option 1">Fabia</option>
-                <option value="option 2">Felicia</option>
-                <option value="option 3">Karoq</option>
-                <option value="option 4">Kodiaq</option>
-                <option value="option 5">Octavia</option>
-                <option value="option 6">Rapid</option>
-                <option value="option 7">Roomster</option>
-                <option value="option 8">Superb</option>
-                <option value="option 9">Yeti</option>
-            </select>
-        </div>
-        <div>
-            <b>Тип топлива</b><br />
-            <input type="radio" id="gasoline" name="fuel" value="1" />
-            <label for="gasoline">Бензин</label> <br />
-            <input type="radio" id="diesel" name="fuel" value="1" />
-            <label for="diesel">Дизель</label> <br />
-            <input type="radio" id="electric" name="fuel" value="1" />
-            <label for="electric">Электрический</label>
-        </div>
-        <div>
-            <b>Тип КПП</b><br />
-            <input type="radio" id="manual" name="gearbox" value="1" />
-            <label for="manual">Механика</label> <br />
-            <input type="radio" id="automatic" name="gearbox" value="1" />
-            <label for="automatic">Автомат</label> <br />
-            <input type="radio" id="robot" name="gearbox" value="1" />
-            <label for="robot">Робот</label>
-        </div>
+        <div class="bg">
+            <img class="img" alt="bg_img" src="./bg.jpg">
+            <img class="logo" alt="logo" src="./logo_skoda.png">
+            <div class="header">
+                <h1 class="title">Остался всего 1 шаг для расчета финальной стоимости вашего автомобиля!</h1>
+                <p class="subtitle">Укажите параметры, которые Вам необходимы, и <br> мы определим стоимость.</p>
+                <button class="button button_small"> Рассчитать </button>
+            </div>
 
-        <div>
-            <b>Пол питомца:</b><br />
-            <input type="checkbox" id="m" name="sex" value="m" />
-            <label for="m">Самец</label> <br />
 
-            <input type="checkbox" id="f" name="sex" value="f" />
-            <label for="f">Самка</label>
+            <form class="form">
+                <div class="formField">
+                    <label for="carModel"><b>Модель автомобиля</b></label>
+                    <select required="required" id="carModel">
+                        <option value="">Выберите модель автомобиля</option>
+                        <option value="option 1">Fabia</option>
+                        <option value="option 2">Karoq</option>
+                        <option value="option 3">Kodiaq</option>
+                        <option value="option 4">Octavia</option>
+                        <option value="option 5">Rapid</option>
+                        <option value="option 6">Superb</option>
+                        <option value="option 7">Yeti</option>
+                    </select>
+                </div>
+                <div class="formField">
+                    <b>Привод</b><br />
+                    <input type="radio" id="four-wheel" name="drive" value="1" />
+                    <label for="four-wheel">Полный</label>
+                    <input type="radio" id="front-wheel" name="drive" value="1" />
+                    <label for="front-wheel">Передний</label>
+                    <input type="radio" id="rear-wheel" name="drive" value="1" />
+                    <label for="rear-wheel">Задний</label>
+                </div>
+                <div class="formField">
+                    <b>Тип КПП</b><br />
+                    <input type="radio" id="manual" name="gearbox" value="1" />
+                    <label for="manual">Механика</label>
+                    <input type="radio" id="automatic" name="gearbox" value="1" />
+                    <label for="automatic">Автомат</label>
+                    <input type="radio" id="robot" name="gearbox" value="1" />
+                    <label for="robot">Робот</label>
+                </div>
+                <div class="formField">
+                    <b>Тип топлива</b><br />
+                    <input type="radio" id="gasoline" name="fuel" value="1" />
+                    <label for="gasoline">Бензин</label>
+                    <input type="radio" id="diesel" name="fuel" value="1" />
+                    <label for="diesel">Дизель</label>
+                    <input type="radio" id="electric" name="fuel" value="1" />
+                    <label for="electric">Электрический</label>
+                </div>
+                <div class="formField">
+                    <b>Безопасность</b><br />
+                    <input type="checkbox" id="abs" name="safety" value="1" />
+                    <label for="abs">Антиблокировочная система (ABS)</label> <br />
+                    <input type="checkbox" id="anti-slip" name="safety" value="1" />
+                    <label for="anti-slip">Антипробуксовочная система</label> <br />
+                    <input type="checkbox" id="blindSpots" name="safety" value="1" />
+                    <label for="blindSpots">Система контроля слепых зон</label> <br />
+                    <input type="checkbox" id="laneControl" name="safety" value="1" />
+                    <label for="laneControl">Система контроля за полосой движения</label> <br />
+                    <input type="checkbox" id="collisionAvoidance" name="safety" value="1" />
+                    <label for="collisionAvoidance">Система предотвращения столкновения</label> <br />
+                    <input type="checkbox" id="airbags" name="safety" value="1" />
+                    <label for="airbags">Подушки безопасности</label> <br />
+                    <input type="checkbox" id="fogLights" name="safety" value="1" />
+                    <label for="fogLights">Противотуманные фары</label><br />
+                    <input type="checkbox" id="parktronic" name="safety" value="1" />
+                    <label for="parktronic">Парктроник</label><br />
+                    <input type="checkbox" id="alarm" name="safety" value="1" />
+                    <label for="alarm">Защита от угона</label>
+                </div>
+                <div class="formField">
+                    <b>Дополнительно</b><br />
+                    <input type="checkbox" id="audio" name="optional" value="1" />
+                    <label for="audio">Аудиосистема</label> <br />
+                    <input type="checkbox" id="computer" name="optional" value="1" />
+                    <label for="computer">Бортовой компьютер</label> <br />
+                    <input type="checkbox" id="cruiseControl" name="optional" value="1" />
+                    <label for="cruiseControl">Круиз-контроль</label> <br />
+                    <input type="checkbox" id="remote" name="optional" value="1" />
+                    <label for="remote">Дистанционный запуск двигателя</label> <br />
+                    <input type="checkbox" id="heatedSeats" name="optional" value="1" />
+                    <label for="heatedSeats">Обогрев сидений</label> <br />
+                    <input type="checkbox" id="heatedWheel" name="optional" value="1" />
+                    <label for="heatedWheel">Обогрев рулевого колеса</label> <br />
+                    <input type="checkbox" id="powerSteering" name="optional" value="1" />
+                    <label for="powerSteering">Усилитель руля</label> <br />
+                    <input type="checkbox" id="foldingMirrors" name="optional" value="1" />
+                    <label for="foldingMirrors">Электроскладывание зеркал</label> <br />
+                    <input type="checkbox" id="heating" name="optional" value="1" />
+                    <label for="heating">Электрообогрев лобового стекла и зеркал</label>
+                </div>
+                <div class="formField">
+                    <label for="carInterior"><b>Обивка салона</b></label>
+                    <select required="required" id="carInterior">
+                        <option value="">Выберите обивку салона</option>
+                        <option value="option 1">Тканевый салон</option>
+                        <option value="option 2">Комбинированный салон</option>
+                        <option value="option 3">Велюровый салон</option>
+                        <option value="option 4">Кожаный салон</option>
+                    </select>
+                </div>
+
+                <button class="button">Узнать стоимость </button>
+            </form>
         </div>
-
-        </form>
+        <div class="price"> 
+            <p>
+                Предварительная стоимость комплектации:
+            </p> 000 000 ₽</div>
     </div>
-
 
     <script src="script.js"></script>
 </body>
