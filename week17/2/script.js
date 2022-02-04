@@ -1,4 +1,4 @@
-let comments = [];
+const comments = [];
 
 function checkSpam() {
     let str = document.getElementById("newComment").value;
