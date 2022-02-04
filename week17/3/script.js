@@ -1,4 +1,4 @@
-let date = new Date(new Date - 86400* 4 * 1000);
+ let date = new Date(new Date - 86400 * 4 * 1000);
 // let date = new Date(new Date - 1);
 // let date = new Date(new Date - 30 * 1000);
 // let date = new Date(new Date - 5 * 60 * 1000);
@@ -19,14 +19,12 @@ function formatDate(date) {
     if (distance < second) {
         alert("прямо сейчас");
     } else if (distance < minute && distance > second) {
-        alert(Math.floor((distance % minute) / second) + "сек. назад");
+        alert(Math.floor((distance % minute) / second) + " сек. назад");
     } else if (distance < hour && distance > minute) {
-        alert(Math.floor((distance % hour) / minute) + "мин. назад");
+        alert(Math.floor((distance % hour) / minute) + " мин. назад");
     } else {
         alert(date.toLocaleString('ru', options));
     }
-
 }
 
 formatDate(date)
-

@@ -7,5 +7,5 @@ function getName() {
           newArray.push(newName);
      }
 
-     document.getElementById("result").innerHTML = `Фамилия: ${newArray[0]}, Имя: ${newArray[1]}, Отчество: ${newArray[2]}`
+     document.getElementById("result").innerHTML = `<div>Фамилия: ${newArray[0]},</div> <div>Имя: ${newArray[1]},</div> <div>Отчество: ${newArray[2]}</div>`
 }
