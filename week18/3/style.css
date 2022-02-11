@@ -1,25 +1,28 @@
 .container {
-    margin: 50px 20px;
+    margin: 50px auto;
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 80%;
+    background-color: aqua;
 }
 
-.comment {
-    margin-top: 15px;
+.addComment {
+    display: flex;
+    flex-direction: column;
+    background-color: bisque;
 }
 
 .button {
-    width: 50%;
+    align-self: flex-end;
     margin: 10px auto;
     background-color: mintcream;
     box-shadow: 0 3px 8px 2px rgb(60 60 60 / 30%);
     border: none;
     border-radius: 20px;
-    padding: 8px;
+    padding: 8px 15px;
 }
 
-.chat>div {
+.commentsList>div {
     background-color: rgb(245, 244, 244);
     width: 70%;
     border: 1px solid grey;

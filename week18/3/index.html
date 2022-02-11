@@ -12,22 +12,25 @@
 
 <body>
     <div class="container">
-        <div class="chat" id="message"></div>
-            <div class="comment">
+        <h1>Комментарии</h1>
+        <div class="commentsList" id="message"></div>
+            <div class="addComment">
                 <label>Добавить комментарий:</label>
-                <textarea rows="5" cols="50" id="newComment"></textarea>
+                <textarea rows="5" id="newComment"></textarea>
+                <button class="button" onclick="checkSpam()">Добавить</button>
             </div>
-            <button class="button" onclick="checkSpam()">Добавить</button>
+            
 
 
             <div class="account">
                 <div><label>* Имя:</label> </div>
                 <div><input type="text" name="author" id="author" value=""></div>
                 <div><label>Добавить аватар</label> 
-                <input type="file" id="avatar"></div>
+                <input type="url" id="avatar" placeholder="укажите ссылку"></div>
                 <img src="" id="tableBanner" />
             </div>
             <button class="button">Сохранить данные</button>
+            
     </div>
 
     <script src="script.js"></script>

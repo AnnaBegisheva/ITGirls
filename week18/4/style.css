@@ -1,6 +1,6 @@
 .container {
     width: 80%;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0 auto;
     border-radius: 10px;
     background: linear-gradient(0deg, rgba(255, 255, 255, 0) 1.9em, rgba(0, 0, 0, .15) 2em) 0 0;
@@ -25,7 +25,7 @@
 }
 
 .button:hover {
-    color: lightseagreen;
+    font-weight: 900;
     box-shadow: 0 3px 8px 2px rgb(60 60 60 / 30%);
 }
 
@@ -47,4 +47,25 @@
     margin-left: 3%;
     margin-top: 35px;
     line-height: 2em;
+}
+
+.notesContainer>div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.notesContainer>div>button {
+    background-color: transparent;
+    border: none;
+    padding: 5px 10px;
+    margin-bottom: 2em;
+    cursor: pointer;
+    color: darkgrey;
+}
+
+.notesContainer>div>button:hover {
+    color: black;
+    font-weight: 900;
+    box-shadow: 0 3px 8px 2px rgb(60 60 60 / 30%);
 }

@@ -13,7 +13,7 @@ function generateComment() {
     let str = document.getElementById("newComment").value;
     let name = document.getElementById("author").value;
 
-    if (str != '') {
+    if (str != '' && name !='') {
         let commentBox = document.createElement('div');
         for (let comment of comments) {
             commentBox.innerHTML = `${name}: ${comment}`
@@ -40,26 +40,3 @@ function checkAuthor() {
     }
 };
 
-bannerImage = document.getElementById('avatar');
-imgData = getBase64Image(bannerImage);
-localStorage.setItem("imgData", imgData);
-
-
-function getBase64Image(img) {
-    let avatar = document.createElement("canvas");
-    avatar.width = img.width;
-    avatar.height = img.height;
-
-    let ctx = avatar.getContext("2d");
-    ctx.drawImage(img, 0, 0);
-
-    let dataURL = avatar.toDataURL("image/png");
-
-    return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
-}
-
-function fetchimage() {
-    let dataImage = localStorage.getItem('imgData');
-    let bannerImg = document.getElementById('tableBanner');
-    bannerImg.src = "data:image/png;base64," + dataImage;
-}
