@@ -9,6 +9,14 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="container">
+            <div class="addNote">
+                <button class="button" onclick="generateNote()">Add note</button>
+                <textarea id="newNoteTitle" rows="1" placeholder="Title"></textarea>
+                <textarea id="newNote" rows="10" placeholder="Note text"></textarea>
+            </div>
+            <div class="notesContainer" id="notesContainer"></div>
+    </div>
 
     <script src="script.js"></script>
 </body>

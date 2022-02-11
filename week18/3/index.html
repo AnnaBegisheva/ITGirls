@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,8 +9,36 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
+    <div class="container">
+        <div class="chat" id="message"></div>
+            <div class="comment">
+                <label>Добавить комментарий:</label>
+                <textarea rows="5" cols="50" id="newComment"></textarea>
+            </div>
+            <button class="button" onclick="checkSpam()">Добавить</button>
+
+
+            <div class="account">
+                <div><label>* Имя:</label> </div>
+                <div><input type="text" name="author" id="author" value=""></div>
+                <div><label>Добавить аватар</label> 
+                <input type="file" id="avatar"></div>
+                <img src="" id="tableBanner" />
+            </div>
+            <button class="button">Сохранить данные</button>
+    </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>
+
+<!-- <label>Имя:</label> <br>
+<input type="text">
+<label>Загрузить фото</label> <br>
+<input type="file">
+                <div class="avatar"></div>
+                <div class="name">Cat</div>
+-->

@@ -1,0 +1,49 @@
+.container {
+    margin: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.comment {
+    margin-top: 15px;
+}
+
+.button {
+    width: 50%;
+    margin: 10px auto;
+    background-color: mintcream;
+    box-shadow: 0 3px 8px 2px rgb(60 60 60 / 30%);
+    border: none;
+    border-radius: 20px;
+    padding: 8px;
+}
+
+.chat>div {
+    background-color: rgb(245, 244, 244);
+    width: 70%;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px 0;
+}
+
+
+
+/* .name {
+    align-self: flex-end;
+    margin-left: 5px;
+    font-size: larger;
+    font-weight: 900;
+    color: green;
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    background: url(https://i.natgeofe.com/n/46b07b5e-1264-42e1-ae4b-8a021226e2d0/domestic-cat_thumb_square.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: 1px solid gray;
+} */

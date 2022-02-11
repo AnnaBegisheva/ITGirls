@@ -1,0 +1,50 @@
+.container {
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+    border-radius: 10px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 1.9em, rgba(0, 0, 0, .15) 2em) 0 0;
+    background-size: 2em 2em;
+    background-color: ivory;
+}
+
+.addNote {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    align-self: flex-end;
+    background-color: transparent;
+    border: 1.5px solid slategrey;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-bottom: 2em;
+    cursor: pointer;
+}
+
+.button:hover {
+    color: lightseagreen;
+    box-shadow: 0 3px 8px 2px rgb(60 60 60 / 30%);
+}
+
+#newNoteTitle {
+    background-color: transparent;
+    width: 90%;
+    font-size: larger;
+    font-weight: 900;
+}
+
+#newNote {
+    background-color: transparent;
+    width: 90%;
+    line-height: 2em;
+}
+
+.notesContainer {
+    width: 90%;
+    margin-left: 3%;
+    margin-top: 35px;
+    line-height: 2em;
+}
