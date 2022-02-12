@@ -1,52 +1,106 @@
+body {
+    background-color: #292c31;
+}
+
+h1 {
+    color: #448460;
+}
+
 .container {
+
     margin: 50px auto;
     display: flex;
     flex-direction: column;
     width: 80%;
-    background-color: aqua;
-}
-
-.addComment {
-    display: flex;
-    flex-direction: column;
-    background-color: bisque;
 }
 
 .button {
-    align-self: flex-end;
-    margin: 10px auto;
-    background-color: mintcream;
+    background-color: #5fa67d;
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 3px 10px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    font-weight: 900;
     box-shadow: 0 3px 8px 2px rgb(60 60 60 / 30%);
-    border: none;
-    border-radius: 20px;
-    padding: 8px 15px;
+}
+
+.addComment {
+    color: antiquewhite;
+    display: grid;
+    grid-template-areas:
+        "avatar name"
+        "avatar comment"
+        " . comment";
+    grid-template-columns: 140px 1fr;
+}
+
+.avatar {
+    grid-area: avatar;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatarImg {
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    border: 1px solid gray;
+    background: url(./GuyFox.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#avatarURL {
+    width: 110px;
+    margin-top: 5px;
+}
+
+.authorName {
+    grid-area: name;
+    display: flex;
+    align-items: center;
+}
+
+#author {
+    margin-left: 10px;
+}
+
+.saveBtn {
+    margin-left: 10px;
+    margin-top: 0;
+}
+
+.newComment {
+    grid-area: comment;
+    display: flex;
+    flex-direction: column;
 }
 
 .commentsList>div {
+    display: flex;
+}
+
+.commentsList>div>div {
     background-color: rgb(245, 244, 244);
-    width: 70%;
     border: 1px solid grey;
     border-radius: 5px;
     padding: 5px;
     margin: 10px 0;
+    width: 100%;
 }
 
-
-
-/* .name {
-    align-self: flex-end;
-    margin-left: 5px;
-    font-size: larger;
-    font-weight: 900;
-    color: green;
-}
-
-.avatar {
-    width: 30px;
-    height: 30px;
-    border-radius: 50px;
-    background: url(https://i.natgeofe.com/n/46b07b5e-1264-42e1-ae4b-8a021226e2d0/domestic-cat_thumb_square.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
+.commentsList>div>div:first-child {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
     border: 1px solid gray;
-} */
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 50px;
+    margin-right: 10px;
+}

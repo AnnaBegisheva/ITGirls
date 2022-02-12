@@ -12,36 +12,32 @@
 
 <body>
     <div class="container">
-        <h1>Комментарии</h1>
-        <div class="commentsList" id="message"></div>
-            <div class="addComment">
+        <h1>Комментарии:</h1>
+        <div class="commentsList" id="message">
+        </div>
+
+        <div class="addComment">
+                <div class="avatar">
+                    <div class="avatarImg" id="avatarImg"> </div>
+                    <button class="button" id="changeAvatarBtn" onclick="changeAvatar()">Изменить</button>
+                    <input type="url" id="avatarURL" placeholder="Укажите ссылку">
+                </div>
+
+                <div class="authorName">
+                    <label>Имя:</label>
+                    <input type="text" id="author" placeholder="Anonymous">
+                    <button class="button saveBtn">Сохранить данные</button>
+                </div>
+
+            <div class="newComment">
                 <label>Добавить комментарий:</label>
                 <textarea rows="5" id="newComment"></textarea>
-                <button class="button" onclick="checkSpam()">Добавить</button>
+                <button class="button" onclick="checkSpam()">Отправить комментарий</button>
             </div>
-            
-
-
-            <div class="account">
-                <div><label>* Имя:</label> </div>
-                <div><input type="text" name="author" id="author" value=""></div>
-                <div><label>Добавить аватар</label> 
-                <input type="url" id="avatar" placeholder="укажите ссылку"></div>
-                <img src="" id="tableBanner" />
-            </div>
-            <button class="button">Сохранить данные</button>
-            
+        </div>
     </div>
 
     <script src="script.js"></script>
 </body>
 
 </html>
-
-<!-- <label>Имя:</label> <br>
-<input type="text">
-<label>Загрузить фото</label> <br>
-<input type="file">
-                <div class="avatar"></div>
-                <div class="name">Cat</div>
--->
