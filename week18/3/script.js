@@ -3,13 +3,17 @@ function checkSpam() {
     comment = comment.replace(/viagra/ig, "***")
     comment = comment.replace(/xxx/ig, "***")
 
-    generateComment(comment)
+    generateComment(comment);
+    document.getElementById("newComment").value = "";
 }
 
 function generateComment(comment) {
     let name = document.getElementById("author").value;
+    if (name == "") {
+        name = "Anonymous";
+    }
 
-    if (comment != '' && name != '') {
+    if (comment != '') {
         let wrapper = document.createElement('div');
         let commentBox = document.createElement('div');
         let avatarBox = document.createElement('div');
@@ -24,14 +28,20 @@ function generateComment(comment) {
         avatarBox.style.backgroundSize = 'cover';
         avatarBox.style.backgroundRepeat = 'no-repeat';
     }
-    checkAuthor()
+    checkAuthor();
+    
 }
 
 document.addEventListener("DOMContentLoaded",
     function () {
         let name = localStorage.getItem('name');
+        
         if (name != null) {
             document.getElementById('author').value = name;
+            let avatarPath = localStorage.getItem(name);
+            if (avatarPath != null && avatarPath != "") {
+                resetAvatarImg (avatarPath);
+            }
         }
     });
 
@@ -45,8 +55,22 @@ function checkAuthor() {
 
 function changeAvatar () {
     let avatarPath = document.getElementById("avatarURL").value;
+    resetAvatarImg (avatarPath);
+}
+
+function resetAvatarImg (avatarPath) {
     let avatarImg = document.getElementById("avatarImg");
     avatarImg.style.background = `url(${avatarPath})`;
     avatarImg.style.backgroundSize = 'cover';
     avatarImg.style.backgroundRepeat = 'no-repeat';
+}
+
+function addToLocalStorage () {
+    let author = document.getElementById('author').value;
+    let avatarPath = document.getElementById("avatarURL").value;
+
+    if (author != "") {
+        localStorage.setItem(author, avatarPath);
+    };
+
 }
