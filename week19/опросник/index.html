@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <form class="form">
+            <h1>Опросник для обладателей котиков</h1>
+            <div>
+                <label for="name"><b>Кличка питомца</b></label>
+                <input type="text" id="name" class="input" required />
+            </div>
+            <div>
+                <label for="owner"><b>Имя владельца</b></label>
+                <input type="text" id="owner" class="input" required />
+            </div>
+            <div>
+                <strong>Контактная информация</strong> </br>
+                <label for="contacts">E-mail</label>
+                <input type="email" id="email" class="input" required pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$" > </br>
+                <label for="contacts">Номер телефона</label>
+                <input type="tel" id="tel" class="input" required pattern="^\+?(\d{1,3})?[- .]?\(?(?:\d{2,3})\)?[- .]?\d\d\d[- .]?\d\d\d\d$">
+            </div>
+            <div>
+                <label for="breed"><b>Порода питомца</b></label>
+                <select class="input" required id="breed">
+                    <option value="">Выберите породу питомца</option>
+                    <option value="Абиссинская">Абиссинская</option>
+                    <option value="Бенгальская">Бенгальская</option>
+                    <option value="Британская">Британская</option>
+                    <option value="Корниш-рекс">Корниш-рекс</option>
+                    <option value="Манчкин">Манчкин</option>
+                    <option value="Мейн-кун">Мейн-кун</option>
+                    <option value="Персидская">Персидская</option>
+                    <option value="Русская голубая">Русская голубая</option>
+                    <option value="Сиамская">Сиамская</option>
+                    <option value="Сфинкс">Сфинкс</option>
+                    <option value="Без породы">Без породы</option>
+                    <option value="Другая">Другая</option>
+                </select>
+            </div>
+            <div>
+                <b>Чем питается?</b><br />
+                <input type="checkbox" id="dry" name="food" value="Сухой корм" class="input"/>
+                <label for="dry">Сухой корм</label> <br />
+                <input type="checkbox" id="wet" name="food" value="Влажный корм" class="input"/>
+                <label for="wet">Влажный корм</label> <br />
+                <input type="checkbox" id="natural" name="food" value="Натуральный корм" class="input"/>
+                <label for="natural">Натуральный корм</label>
+            </div>
+            <div>
+                <b>Пол питомца:</b><br />
+                <input type="radio" id="m" name="sex" value="Самец" class="input"/>
+                <label for="m">Самец</label> <br />
+
+                <input type="radio" id="f" name="sex" value="Самка" class="input"/>
+                <label for="f">Самка</label>
+            </div>
+            <div>
+                <label for="weight"><b>Вес питомца</b></label>
+                <input type="number" id="weight" min="2" max="15" class="input" required/>
+            </div>
+
+            <div>
+                <label for="comment"><b>Комментарий владельца:</b></label><br />
+                <textarea id="comment" rows="5" cols="40"></textarea>
+            </div>
+
+            <div>
+                <label for="file"><b>Фото питомца</b></label>
+                <input type="file" id="file" />
+            </div>
+
+            <div>
+                <input type="button" value="Ок" onclick="createCat()"/>
+            </div>
+
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
