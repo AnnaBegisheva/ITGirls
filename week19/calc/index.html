@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="inputcontainer">
+    <div class="input">
+        <label for="a"> Введите первое число
+            <input type="text" id="number1">
+        </label>
+        <div class="input">
+            <label for="b"> Введите второе число
+                <input type="text" id="number2">
+            </label>
+        </div>
+    <div class="container">
+        <button class="btn" onClick="showMessage1 ()">+</button>
+        <button class="btn" onClick="showMessage2 ()">-</button>
+        <button class="btn" onClick="showMessage3 ()">x</button>
+        <button class="btn" onClick="showMessage4 ()">/</button>
+    </div>
+
+    <div class="result" id="result"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
