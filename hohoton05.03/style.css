@@ -95,8 +95,42 @@
     }
 }
 
+@media screen and (max-width: 1024px) {
+    .bg {
+        flex-direction: column;
+    }
+
+    .bg__white,
+    .bg__black,
+    .bg__image {
+        width: 100%;
+    }
+
+    .bg__image {
+        top: 25%;
+    }
+
+    .header_item {
+        color: black;
+    }
+
+    .main_text {
+        font-size: 6em;
+    }
+
+    .header_item {
+        font-size: 1.2em;
+    }
+
+    .main_text {
+        font-size: 6em;
+    }
+}
+
+@media screen and (max-width: 600px) {}
+
 .countdownSection {
-    background-color: black;
+    background-color: rgb(19, 19, 19);
     color: white;
     margin: 0;
 }
@@ -132,6 +166,10 @@ li span {
     }
 
     li span {
+        font-size: 3.375rem;
+    }
+
+    .countdownSection_text {
         font-size: 3.375rem;
     }
 }
