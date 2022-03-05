@@ -1,0 +1,144 @@
+.bg {
+    display: flex;
+}
+
+.bg__white {
+    background-color: white;
+    width: 50%;
+    height: 100vh;
+}
+
+.bg__black {
+    background-color: rgb(19, 19, 19);
+    width: 50%;
+    height: 100vh;
+}
+
+.logo {
+    max-width: 200px;
+    position: absolute;
+    top: 15px;
+}
+
+.bg__image {
+    position: absolute;
+    top: 20%;
+    width: 50%;
+    display: flex;
+    /*left: 50%;
+    transform: translate(-50%, 0);
+    top: 70px;
+     */
+}
+
+.image {
+    max-width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.header_nav {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    text-align: right;
+}
+
+.header_item {
+    text-decoration: none;
+    color: white;
+    font-size: 2em;
+    margin: 0 10px;
+}
+
+.header_item:hover {
+    color: red;
+}
+
+.main_text {
+    color: red;
+    font-size: 8em;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 25vh;
+}
+
+.quote {
+    color: white;
+    font-size: 1.5em;
+    width: 80%;
+    margin: 50px auto;
+}
+
+.quote>span {
+    color: red;
+}
+
+@media screen and (min-width: 2000px) {
+    .main_text {
+        font-size: 12em;
+    }
+
+    .quote {
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .main_text {
+        font-size: 7em;
+    }
+
+    .header_item {
+        font-size: 1.5em;
+    }
+}
+
+.countdownSection {
+    background-color: black;
+    color: white;
+    margin: 0;
+}
+
+.countdownSection_text {
+    color: red;
+    font-size: 5em;
+    margin-top: 30px;
+}
+
+.container {
+    margin: 0 auto;
+    text-align: center;
+}
+
+li {
+    display: inline-block;
+    font-size: 1.5em;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
+}
+
+li span {
+    display: block;
+    font-size: 4.5rem;
+}
+
+@media all and (max-width: 768px) {
+    li {
+        font-size: 1.125rem;
+        padding: .75rem;
+    }
+
+    li span {
+        font-size: 3.375rem;
+    }
+}
+
+#finalMessage {
+    color: red;
+    font-size: 3em;
+    text-align: center;
+    padding: 20px;
+}
