@@ -120,7 +120,7 @@ XML:
 7. Напишите, как будет выглядеть fetch для получения данных вашего пользователя на github?
 fetch('https://api.github.com/users/AnnaBegisheva')
   .then(response => response.json())
-  .then(commits => alert(commits[0].author.login));
+  .then(user => console.log(user));
 
 8. Самостоятельно разберитесь, что такое SPA? 
 Single Page Application – сокращенно SPA, в переводе на русский язык означает “Приложение одной страницы”. 
