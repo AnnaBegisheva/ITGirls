@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <button class="button" id="prev">
+            <img class="icon" src="assets/arrow.png" alt="prev">
+        </button>
+        <div class="inner">
+            <h1 class="name"></h1>
+            <div class="image"></div>
+            <div class="card"></div>
+            <div class="rating">
+                <input type="range" min="1" max="10" list="tickmarks" class="slider" id="rating">
+                <datalist id="tickmarks">
+                    <option value="0">
+                    <option value="1">
+                    <option value="2">
+                    <option value="3">
+                    <option value="4">
+                    <option value="5">
+                    <option value="6">
+                    <option value="7">
+                    <option value="8">
+                    <option value="9">
+                    <option value="10">
+                </datalist>
+                <div class="ratingValue" id="ratingValue"></div>
+            </div>
+        </div>
+        <button class="button" id="next">
+            <img class="icon icon_next" src="assets/arrow.png" alt="next">
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
