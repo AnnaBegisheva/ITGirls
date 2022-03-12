@@ -4,6 +4,8 @@
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+    color: dimgrey;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .form {
@@ -46,12 +48,15 @@ button:before {
 
 .search:focus {
     outline: none;
-    color: dimgrey;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .container {
     display: flex;
+}
+
+.container>div {
+    margin: 20px auto;
+    text-align: center;
 }
 
 .container>img {
