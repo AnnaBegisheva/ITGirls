@@ -3,10 +3,16 @@
     margin: 90px auto;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
+}
+
+.form {
+    position: relative;
+    width: 300px;
+    margin: 0 auto;
 }
 
 .button {
-    box-sizing: border-box;
     font-size: 1.1rem;
     line-height: 1.55;
     font-weight: 600;
@@ -19,10 +25,17 @@
     background: cornflowerblue;
 }
 
+button:before {
+    content: "\f002";
+    font-family: FontAwesome;
+    font-size: 16px;
+    color: #F9F0DA;
+}
+
 .button:hover {
     cursor: pointer;
     transition: background-color 0.4s ease;
-    background: #2e9999;
+    background: rgb(55, 123, 250);
 }
 
 .search {
@@ -31,6 +44,17 @@
     border: 2px solid cornflowerblue;
 }
 
-.search:active {
-    text-decoration: none;
+.search:focus {
+    outline: none;
+    color: dimgrey;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+    display: flex;
+}
+
+.container>img {
+    margin-top: 20px;
+    max-width: 20%;
 }
