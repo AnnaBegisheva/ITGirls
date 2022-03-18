@@ -7,6 +7,10 @@ body {
     color: dimgrey;
 }
 
+h2 {
+    color: rgb(46, 88, 255);
+}
+
 .container {
     display: grid;
     grid-template-areas: "aside main"
@@ -96,7 +100,7 @@ body {
 }
 
 .viewAll {
-    color: #8bc4ff;
+    color: rgb(139, 196, 255);
     text-decoration: none;
     cursor: pointer;
 }
@@ -108,7 +112,7 @@ body {
 .task-item {
     width: 37%;
     max-height: 3rem;
-    background-color: #afd1f5;
+    background-color: rgb(139, 196, 255, 0.5);
     border-radius: 20px;
     padding: 15px;
     margin-bottom: 20px;
@@ -132,4 +136,21 @@ body {
     margin-bottom: 0;
     color: #2e58ff;
     font-weight: 900;
+}
+
+.chart {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.chartBox {
+    width: 250px;
+}
+
+.chartTitle {
+    width: 250px;
+    text-align: center;
 }
