@@ -34,18 +34,11 @@ const picker = datepicker('#datepicker', {
 });
 
 //---------------
-const title = document.querySelector('.newTask_title').value;
-const body = document.querySelector('.newTask_textarea').value;
-
-const task = {
-    title: title,
-    body: body,
-    done: false
-}
 
 const createTask = () => {
     let section = document.querySelector('.tasks__narrow');
     let newTask = document.createElement('div');
+    newTask.id = section.children.length + 1;
     newTask.classList.add('task', 'task__active');
     section.append(newTask);
 
@@ -53,6 +46,7 @@ const createTask = () => {
     delButton.classList.add('delButton');
     delButton.innerText = "X";
     newTask.append(delButton);
+    delButton.addEventListener("click", delTask);
 
     let icon = document.createElement('img');
     icon.src = '../assets/solution.svg';
@@ -78,11 +72,15 @@ const createTask = () => {
     let checkbox = document.createElement('div');
     checkbox.classList.add('task_checkbox');
     newTask.append(checkbox);
+    checkbox.addEventListener("click", toggleDone);
+    checkbox.addEventListener("click", toggleTick);
 
     let tick = document.createElement('img');
     tick.src = '../assets/tick.png';
     tick.classList.add('tick', 'tick__hidden');
     checkbox.append(tick);
+
+    addToLocalStorage(newTask.id);
 };
 
 addButton.onclick = function () {
@@ -100,7 +98,7 @@ const toggleTick = (event) => {
     } else {
         target.classList.toggle("tick__visible");
     }
-    
+
 };
 
 const checkbox = document.querySelectorAll('.task_checkbox');
@@ -109,4 +107,36 @@ for (let i = 0; i < checkbox.length; i++) {
     checkbox[i].addEventListener("click", toggleTick);
 };
 
+const delTask = (event) => {
+    let task = event.target.closest(".task");
+    task.remove();
+};
 
+const delButton = document.querySelectorAll('.delButton');
+for (let i = 0; i < delButton.length; i++) {
+    delButton[i].addEventListener("click", delTask);
+};
+
+const addToLocalStorage = (id) => {
+    let title = document.querySelector('.newTask_title').value;
+    let body = document.querySelector('.newTask_textarea').value;
+    let task = {
+        title: title,
+        body: body,
+        done: false,
+        id: id
+    }
+
+    let date = document.querySelector('.datepicker').value;
+    let storedTasks = localStorage.getItem(date);
+
+    if (storedTasks == null) {
+        let tasks = [];
+        tasks.push(task);
+        localStorage.setItem(date, JSON.stringify(tasks));
+    } else {
+        let parsedTasks = JSON.parse(storedTasks);
+        parsedTasks.push(task);
+        localStorage.setItem(date, JSON.stringify(parsedTasks));
+    };
+};
