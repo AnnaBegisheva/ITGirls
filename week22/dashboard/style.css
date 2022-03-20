@@ -130,7 +130,7 @@ a:hover {
 }
 
 .tasks {
-    width: 40%;
+    width: 50%;
 }
 
 .sectionHeader {
@@ -161,55 +161,36 @@ a:hover {
     box-shadow: none;
 }
 
-.task-item {
+.task {
     position: relative;
     max-height: 3rem;
+    margin-bottom: 20px;
     border-radius: 20px;
     padding: 15px;
-    margin-bottom: 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
-.task-item__active {
+.task__active {
     background-color: rgba(139, 196, 255, 0.5);
 }
 
-.task-item__done {
+.task__done {
     background-color: rgb(220, 230, 240);
     text-decoration: line-through;
 }
 
-.tick {
-    max-width: 75%;
-}
-
-.task_container {
-    display: flex;
-    width: 80%;
-}
-
-.task-item_icon {
+.task_icon {
+    max-width: 15%;
     transform: rotate(90deg);
-    width: 20%;
 }
 
-.task-item_text {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+.task_text {
     margin-left: 10%;
-    max-width: 80%;
+    max-width: 50%;
 }
 
-.task-item_title {
-    margin-bottom: 0;
-    color: #2e58ff;
-    font-weight: 900;
-}
-
-.task-item_body {
+.task_body {
     white-space: nowrap;
     /* Запрещаем перенос строк */
     overflow: hidden;
@@ -218,7 +199,9 @@ a:hover {
     /* Добавляем многоточие */
 }
 
-.task-item_chechbox {
+.task_checkbox {
+    position: absolute;
+    left: 85%;
     width: 30px;
     height: 30px;
     border: 2px solid #2e58ff;
@@ -228,8 +211,20 @@ a:hover {
     justify-content: center;
 }
 
-.task-item_chechbox:hover {
+.task_checkbox:hover {
     box-shadow: 0 0 5px rgb(0 0 0 / 50%);
+}
+
+.tick {
+    max-width: 75%;
+}
+
+.tick__hidden {
+    visibility: hidden;
+}
+
+.tick__visible {
+    visibility: visible;
 }
 
 .button {
@@ -294,6 +289,10 @@ a:hover {
 
 /* Tasks styles */
 
+.tasks__narrow {
+    width: 40%;
+}
+
 .tasksCalendar {
     margin-right: 10%;
     display: flex;
@@ -314,11 +313,27 @@ a:hover {
 .delButton {
     position: absolute;
     left: 97%;
+    bottom: 80%;
     border-radius: 50%;
     border: 2px solid #2e58ff;
     color: #2e58ff;
 }
 
 .delButton:hover {
+    box-shadow: 0 0 5px rgb(0 0 0 / 50%);
+}
+
+.newTask_title,
+.newTask_textarea {
+    width: 80%;
+    background-color: rgba(139, 196, 255, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #2e58ff;
+}
+
+.newTask_title:focus,
+.newTask_textarea:focus {
+    outline: none;
     box-shadow: 0 0 5px rgb(0 0 0 / 50%);
 }
