@@ -1,27 +1,60 @@
-/* #e8f3ff
-#8bc4ff
-#2e58ff */
-
 body {
     font-family: 'Noto Sans', sans-serif;
-    color: dimgrey;
+    color: #424242;
 }
 
-h2 {
+h2,
+h3 {
     color: rgb(46, 88, 255);
+}
+
+a:hover {
+    box-shadow: 0 0 5px rgb(0 0 0 / 50%);
 }
 
 .container {
     display: grid;
-    grid-template-areas: "aside main"
-        "footer footer";
-    grid-template-rows: 1fr 200px;
+    grid-template-areas: "aside main";
+    grid-template-rows: 1fr;
     grid-template-columns: 250px 1fr;
     padding: 1%;
 }
 
 .sidebar {
     padding: 20px;
+}
+
+.logo {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo>p {
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.menu_item {
+    text-decoration: none;
+    color: #424242;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.menu_item:hover {
+    color: #2e58ff;
+}
+
+.aside_image {
+    margin-bottom: 20px;
 }
 
 .main {
@@ -37,6 +70,7 @@ h2 {
     font-weight: bold;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .account {
@@ -88,10 +122,27 @@ h2 {
     max-width: 100%;
 }
 
-.sectionHeader {
-    width: 40%;
+.container_row {
+    width: 100%;
     display: flex;
-    align-items: baseline;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.tasks {
+    width: 40%;
+}
+
+.sectionHeader {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.tasksTitle {
+    display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -107,22 +158,41 @@ h2 {
 
 .viewAll:hover {
     color: #2e58ff;
+    box-shadow: none;
 }
 
 .task-item {
-    width: 37%;
     max-height: 3rem;
-    background-color: rgb(139, 196, 255, 0.5);
     border-radius: 20px;
     padding: 15px;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+
+.task-item__active {
+    background-color: rgba(139, 196, 255, 0.5);
+}
+
+.task-item__done {
+    background-color: rgb(220, 230, 240);
+    text-decoration: line-through;
+}
+
+.tick {
+    max-width: 75%;
+}
+
+.task_container {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
 }
 
 .task-item_icon {
     transform: rotate(90deg);
-    width: 15%;
+    width: 20%;
 }
 
 .task-item_text {
@@ -130,12 +200,36 @@ h2 {
     justify-content: center;
     flex-direction: column;
     margin-left: 5%;
+    max-width: 80%;
 }
 
 .task-item_title {
     margin-bottom: 0;
     color: #2e58ff;
     font-weight: 900;
+}
+
+.task-item_body {
+    white-space: nowrap;
+    /* Запрещаем перенос строк */
+    overflow: hidden;
+    /* Обрезаем все, что не помещается в область */
+    text-overflow: ellipsis;
+    /* Добавляем многоточие */
+}
+
+.task-item_chechbox {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #2e58ff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.task-item_chechbox:hover {
+    box-shadow: 0 0 5px rgb(0 0 0 / 50%);
 }
 
 .chart {
@@ -147,10 +241,40 @@ h2 {
 }
 
 .chartBox {
-    width: 250px;
+    width: 150px;
 }
 
 .chartTitle {
     width: 250px;
     text-align: center;
+}
+
+.barBox {
+    width: 320px;
+    height: 150px;
+}
+
+.qs-controls {
+    background: rgba(139, 196, 255, 0.5) !important;
+}
+
+.qs-square:not(.qs-empty):not(.qs-disabled):not(.qs-day):not(.qs-active):hover {
+    background: #2e58ff !important;
+}
+
+.qs-overlay {
+    background: rgba(46, 88, 255, .75) !important;
+}
+
+.qs-overlay-year::-webkit-input-placeholder {
+    color: white !important;
+}
+
+.qs-overlay-year::-moz-placeholder {
+    color: white !important;
+}
+
+/* Tasks styles */
+.tasksCalendar {
+    width: 30%;
 }

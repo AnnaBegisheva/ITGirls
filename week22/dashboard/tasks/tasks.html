@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../normalize.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../node_modules/js-datepicker/dist/datepicker.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="../assets/logo.png" alt="" class="icon">
+                <p>Learning tracker</p>
+            </div>
+            <nav>
+                <div class="menu">
+                    <a class="menu_item" href="../index.html">Dashboard</a>
+                    <a class="menu_item" href="">Tasks</a>
+                    <a class="menu_item" href="">Notifications</a>
+                    <a class="menu_item" href="">Profile</a>
+                    <a class="menu_item" href="">Settings</a>
+                </div>
+            </nav>
+            <div class="aside_image">
+                <h2>Let's learn something new today!</h2>
+                <img src="../assets/guitar.png" alt="" class="bgImage">
+            </div>
+        </aside>
+
+        <main class="main">
+            <header class="header">
+                <div class="hello">
+                    <h1>
+                        Hello, User!
+                    </h1>
+                </div>
+                <div class="account">
+                    <a href="" class="notifications">
+                        <img src="../assets/message.svg" alt="" class="icon">
+                    </a>
+                    <a href="" class="avatar">
+                        <img src="../assets/female_avatar.svg" alt="" class="icon-avatar">
+                    </a>
+                </div>
+            </header>
+
+            <div class="container_row"> 
+                    <section class="tasksCalendar">
+                        <h2 class="today"></h2>
+                        <div type="text" class="datepicker" id="datepicker"> </input>
+                    </section>
+
+
+            </div>
+
+
+            <div class="image">
+                <img src="../assets/to-do.png" alt="" class="bgImage">
+            </div>
+        </main>
+    </div>
+    <script src="../bundle.js"></script>
+
+</body>
+
+</html>

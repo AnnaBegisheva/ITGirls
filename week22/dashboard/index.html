@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="node_modules/js-datepicker/dist/datepicker.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
@@ -18,25 +19,26 @@
         <aside class="sidebar">
             <div class="logo">
                 <img src="assets/logo.png" alt="" class="icon">
-                <p>Track your learning</p>
+                <p>Learning tracker</p>
             </div>
             <nav>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
+                <div class="menu">
+                    <a class="menu_item" href="index.html">Dashboard</a>
+                    <a class="menu_item" href="">Tasks</a>
+                    <a class="menu_item" href="">Notifications</a>
+                    <a class="menu_item" href="">Profile</a>
+                    <a class="menu_item" href="">Settings</a>
+                </div>
             </nav>
+            <div class="aside_image">
+                <h2>Let's learn something new today!</h2>
+                <img src="assets/guitar.png" alt="" class="bgImage">
+            </div>
         </aside>
 
         <main class="main">
             <header class="header">
-                <div class="hello">
-                    <h1>
-                        Hello, User!
-                    </h1>
-                </div>
+                <h1>Hello, User!</h1>
                 <div class="account">
                     <a href="" class="notifications">
                         <img src="assets/message.svg" alt="" class="icon">
@@ -47,54 +49,66 @@
                 </div>
             </header>
 
-            <section class="tasks">
-                <div class="sectionHeader">
-                    <h2>My tasks</h2>
-                    <a href="" class="viewAll">View all</a>
-                </div>
-                <div class="task-item">
-                    <img src="assets/solution.svg" alt="" class="task-item_icon">
-                    <div class="task-item_text">
-                        <h3 class="task-item_title">JS objects</h3>
-                        <p class="task-item_body">10.00-12.00 - learn theory</p>
+            <div class="container_row">
+                <section class="tasks">
+                    <div class="sectionHeader">
+                        <h2 class="today"></h2>
+                        <div class="tasksTitle">
+                        <h3>My tasks for today</h3>
+                        <a href="" class="viewAll">View all</a>
                     </div>
-                </div>
-                <div class="task-item">
-                    <img src="assets/solution.svg" alt="" class="task-item_icon">
-                    <div class="task-item_text">
-                        <h3 class="task-item_title">JS objects</h3>
-                        <p class="task-item_body">10.00-12.00 - learn theory</p>
                     </div>
-                </div>
-                <div class="task-item">
-                    <img src="assets/solution.svg" alt="" class="task-item_icon">
-                    <div class="task-item_text">
-                        <h3 class="task-item_title">JS objects</h3>
-                        <p class="task-item_body">10.00-12.00 - learn theory</p>
+                    <div class="task-item task-item__active">
+                        <div class="task_container">
+                            <img src="assets/solution.svg" alt="" class="task-item_icon">
+                            <div class="task-item_text">
+                                <h3 class="task-item_title">JS objects</h3>
+                                <p class="task-item_body">10.00-12.00 - learn theory</p>
+                            </div>
+                        </div>
+                        <div class="task-item_chechbox">
+                            <img src="" alt="" class="icon">
+                        </div>
                     </div>
-                </div>
-            </section>
+                    <div class="task-item task-item__done">
+                        <div class="task_container">
+                            <img src="assets/solution.svg" alt="" class="task-item_icon">
+                            <div class="task-item_text">
+                                <h3 class="task-item_title">JS objects</h3>
+                                <p class="task-item_body">10.00-12.00 - learn theory</p>
+                            </div>
+                        </div>
+                        <div class="task-item_chechbox">
+                            <img src="assets/tick.png" alt="" class="tick">
+                        </div>
+                    </div>
+                </section>
 
-            <section class="chart">
-                <h2 class="chartTitle">My progress</h2>
-                <div class="chartBox">
-                    <canvas id="myChart"></canvas>
-                </div>
-                <p>Good work! Keep going!</p>
-            </section>
+                <section class="chart">
+                    <h2 class="chartTitle">My progress</h2>
+                    <div class="chartBox">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                    <p>Good work! Keep going!</p>
+                </section>
+
+                <section class="chart">
+                    <h2 class="chartTitle">Productivity</h2>
+                    <div class="barBox">
+                        <canvas id="barChart"></canvas>
+                    </div>
+                    <p>Last week activity</p>
+                </section>
+
+            </div>
 
             <div class="image">
                 <img src="assets/bg_image.png" alt="" class="bgImage">
             </div>
         </main>
-
-        <footer>
-
-        </footer>
-
     </div>
     <script src="bundle.js"></script>
-    
+
 </body>
 
 </html>
