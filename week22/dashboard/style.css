@@ -162,6 +162,7 @@ a:hover {
 }
 
 .task-item {
+    position: relative;
     max-height: 3rem;
     border-radius: 20px;
     padding: 15px;
@@ -187,7 +188,6 @@ a:hover {
 .task_container {
     display: flex;
     width: 80%;
-    justify-content: space-between;
 }
 
 .task-item_icon {
@@ -199,7 +199,7 @@ a:hover {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-left: 5%;
+    margin-left: 10%;
     max-width: 80%;
 }
 
@@ -230,6 +230,24 @@ a:hover {
 
 .task-item_chechbox:hover {
     box-shadow: 0 0 5px rgb(0 0 0 / 50%);
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #2e58ff;
+    color: #ebf5ff;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    margin-left: 73%;
+}
+
+.button:hover {
+    box-shadow: 0 0 5px rgb(0 0 0 / 50%);
+}
+
+.button:active {
+    background-color: rgba(46, 88, 255, 0.75);
 }
 
 .chart {
@@ -275,6 +293,32 @@ a:hover {
 }
 
 /* Tasks styles */
+
 .tasksCalendar {
-    width: 30%;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.datepicker {
+    padding-bottom: 20px;
+    width: 70%;
+    background-color: #ebf5ff;
+    border: none;
+    color: rgb(46, 88, 255);
+    font-size: 1.5em;
+    font-weight: 900;
+}
+
+.delButton {
+    position: absolute;
+    left: 97%;
+    border-radius: 50%;
+    border: 2px solid #2e58ff;
+    color: #2e58ff;
+}
+
+.delButton:hover {
+    box-shadow: 0 0 5px rgb(0 0 0 / 50%);
 }
