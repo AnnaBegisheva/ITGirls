@@ -1,9 +1,10 @@
-const datepicker = require('js-datepicker');
-const picker = datepicker('#datepicker', {
+const JSdatepicker = require('js-datepicker');
+const picker = JSdatepicker('#datepicker', {
     // Event callbacks.
     onSelect: instance => {
         // Show which date was selected.
-        console.log(instance.dateSelected)
+        console.log(instance.dateSelected);
+        getTasks();
     },
     onMonthChange: instance => {
         // Show the month of the selected date.
@@ -35,11 +36,19 @@ const picker = datepicker('#datepicker', {
 
 //---------------
 
-const createTask = () => {
+const createTask = (titleValue, bodyValue, doneValue) => {
     let section = document.querySelector('.tasks__narrow');
     let newTask = document.createElement('div');
-    newTask.id = section.children.length + 1;
-    newTask.classList.add('task', 'task__active');
+    if (section.children.length == 1) {
+        newTask.id = Number(1);
+    } else {
+        newTask.id = Number(section.children[section.children.length - 1].id) + 1;
+    }
+    if (doneValue == true) {
+        newTask.classList.add('task', 'task__done');
+    } else {
+        newTask.classList.add('task')
+    }
     section.append(newTask);
 
     let delButton = document.createElement('button');
@@ -59,17 +68,18 @@ const createTask = () => {
 
     let title = document.createElement('h3');
     title.classList.add('task_title');
-    let titleValue = document.querySelector('.newTask_title').value;
+
     title.innerText = titleValue;
     text.append(title);
 
     let body = document.createElement('p');
     body.classList.add('task_body');
-    let bodyValue = document.querySelector('.newTask_textarea').value;
+
     body.innerHTML = bodyValue;
     text.append(body);
 
     let checkbox = document.createElement('div');
+    checkbox.id = newTask.id;
     checkbox.classList.add('task_checkbox');
     newTask.append(checkbox);
     checkbox.addEventListener("click", toggleDone);
@@ -77,14 +87,38 @@ const createTask = () => {
 
     let tick = document.createElement('img');
     tick.src = '../assets/tick.png';
-    tick.classList.add('tick', 'tick__hidden');
+    if (doneValue == true) {
+        tick.classList.add('tick', 'tick__visible');
+    } else {
+        tick.classList.add('tick');
+    }
+
+    tick.id = newTask.id;
     checkbox.append(tick);
 
-    addToLocalStorage(newTask.id);
+    return newTask.id;
+};
+
+const addToLocalStorage = (date, storedTasks) => {
+    JSONstoredTasks = JSON.stringify(storedTasks);
+    localStorage.setItem(date, JSONstoredTasks);
+};
+
+const getFromLocalStorage  = (date) => {
+    let JSONstoredTasks = localStorage.getItem(date);
+    return JSON.parse(JSONstoredTasks);
 };
 
 addButton.onclick = function () {
-    createTask();
+    let titleValue = document.querySelector('.newTask_title').value;
+    let bodyValue = document.querySelector('.newTask_textarea').value;
+    if (titleValue != '' & bodyValue != '') {
+        let id = createTask(titleValue, bodyValue, false);
+        addTaskToLocalStorage(id);
+        document.getElementById('form').reset();
+    } else {
+        alert("Нельзя добавить пустую задачу!")
+    }
 };
 
 const toggleDone = (event) => {
@@ -93,12 +127,21 @@ const toggleDone = (event) => {
 
 const toggleTick = (event) => {
     let target = event.target;
+    let date = document.querySelector('.datepicker').value;
+    let storedTasks = getFromLocalStorage(date);
+    let checkbox = target;
+
     if (target.className == 'task_checkbox') {
-        target.children[0].classList.toggle("tick__visible");
-    } else {
-        target.classList.toggle("tick__visible");
+        checkbox = target.children[0];
     }
 
+    checkbox.classList.toggle("tick__visible");
+    storedTasks.forEach(element => {
+        if (element.id == checkbox.id) {
+            element.done = !element.done;
+        }
+    });
+    addToLocalStorage(date, storedTasks);
 };
 
 const checkbox = document.querySelectorAll('.task_checkbox');
@@ -110,6 +153,20 @@ for (let i = 0; i < checkbox.length; i++) {
 const delTask = (event) => {
     let task = event.target.closest(".task");
     task.remove();
+    let date = document.querySelector('.datepicker').value;
+    let tasks = getFromLocalStorage(date);
+    let index = -1;
+    for (let i = 0; i < tasks.length; i++) {
+        const element = tasks[i];
+        if (task.id == element.id) {
+            index = i;
+            break;
+        }
+    }
+    if (index > -1) {
+        tasks.splice(index, 1);
+    }
+    addToLocalStorage(date, tasks);
 };
 
 const delButton = document.querySelectorAll('.delButton');
@@ -117,7 +174,7 @@ for (let i = 0; i < delButton.length; i++) {
     delButton[i].addEventListener("click", delTask);
 };
 
-const addToLocalStorage = (id) => {
+const addTaskToLocalStorage = (id) => {
     let title = document.querySelector('.newTask_title').value;
     let body = document.querySelector('.newTask_textarea').value;
     let task = {
@@ -133,10 +190,40 @@ const addToLocalStorage = (id) => {
     if (storedTasks == null) {
         let tasks = [];
         tasks.push(task);
-        localStorage.setItem(date, JSON.stringify(tasks));
+        addToLocalStorage(date, tasks);
     } else {
         let parsedTasks = JSON.parse(storedTasks);
         parsedTasks.push(task);
-        localStorage.setItem(date, JSON.stringify(parsedTasks));
+        addToLocalStorage(date, parsedTasks);
     };
 };
+
+const getTasks = () => {
+    let section = document.querySelector('.tasks__narrow');
+    let max = section.children.length;
+    for (let i = max; i > 1; i--) {
+        const element = section.children[i - 1];
+        element.remove();
+    }
+
+    let date = document.querySelector('.datepicker').value;
+    let storedTasksJSON = localStorage.getItem(date);
+    let message = document.querySelector('.message');
+    if (storedTasksJSON == null) {
+        message.innerHTML = "No tasks for the day";
+    } else {
+        let storedTasks = JSON.parse(storedTasksJSON);
+        if (storedTasks.length == 0) {
+            message.innerHTML = "No tasks for the day";
+        } else {
+            message.innerHTML = "Tasks for the day:";
+        }
+        storedTasks.forEach(element => {
+            createTask(element.title, element.body, element.done)
+        });
+    };
+};
+
+document.addEventListener("DOMContentLoaded", function (event) {
+    getTasks();
+});

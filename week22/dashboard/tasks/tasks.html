@@ -57,33 +57,9 @@
                 <section class="tasks__narrow">
                     <div class="sectionHeader">
                         <div class="tasksTitle">
-                            <h2>Tasks for the day</h2>
+                            <h2 class="message">Tasks for the day</h2>
                         </div>
                     </div>
-<!-- 
-                    <div class="task task__active">
-                        <button class="delButton">X</button>
-                        <img src="../assets/solution.svg" alt="" class="task_icon">
-                        <div class="task_text">
-                            <h3 class="task_title">JS objects</h3>
-                            <p class="task_body">10.00-12.00 - learn theory</p>
-                        </div>
-                        <div class="task_checkbox">
-                            <img src="../assets/tick.png" alt="" class="tick tick__hidden">
-                        </div>
-                    </div>
-
-                    <div class="task task__done">
-                        <button class="delButton">X</button>
-                        <img src="../assets/solution.svg" alt="" class="task_icon">
-                        <div class="task_text">
-                            <h3 class="task_title">JS objects</h3>
-                            <p class="task_body">10.00-12.00 - learn theory</p>
-                        </div>
-                        <div class="task_checkbox">
-                            <img src="../assets/tick.png" alt="" class="tick tick__visible">
-                        </div>
-                    </div> -->
                 </section>
 
                 <section class="tasksCalendar">
@@ -92,14 +68,14 @@
 
                 <section class="addTask">
                     <div class="newTask">
-                        <div class="newTask_container">
+                        <form class="newTask_container" id="form">
                             <h2>Add new task</h2>
                             <h3>Title</h3>
                             <input type="text" class="newTask_title"></input>
                             <p>Task</p>
                             <textarea class="newTask_textarea" rows="3"></textarea>
-                        </div>
-                        <button class="addButton" id="addButton">Add task</button>
+                        </form>
+                        <button class="button addButton" id="addButton">Add task</button>
                 </section>
             </div>
 
