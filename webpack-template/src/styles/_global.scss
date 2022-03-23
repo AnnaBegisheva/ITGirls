@@ -1,0 +1,23 @@
+$mainColor: darkcyan;
+$secondartColor: grey;
+
+html {
+    font-family: generalFont;
+}
+
+h1 {
+    color: $mainColor;
+}
+
+.container {
+    &__subtitle {
+        color: $secondartColor;
+        display: block;
+        height: 140px;
+        background: url("../images/arrow.png");
+        display: flex;
+        justify-content: center;
+    }
+}
+
+;
