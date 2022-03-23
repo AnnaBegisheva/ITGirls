@@ -1,0 +1,65 @@
+.wrapper {
+    width: 80%;
+    margin: 90px auto;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    color: dimgrey;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.form {
+    position: relative;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.button {
+    font-size: 1.1rem;
+    line-height: 1.55;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 50px;
+    background: cornflowerblue;
+}
+
+button:before {
+    content: "\f002";
+    font-family: FontAwesome;
+    font-size: 16px;
+    color: #F9F0DA;
+}
+
+.button:hover {
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+    background: rgb(55, 123, 250);
+}
+
+.search {
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid cornflowerblue;
+}
+
+.search:focus {
+    outline: none;
+}
+
+.container {
+    display: flex;
+}
+
+.container>div {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.container>img {
+    margin-top: 20px;
+    max-width: 20%;
+}

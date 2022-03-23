@@ -298,6 +298,5 @@ const updateProgress = () => {
     let dataPoints = [currentProgress, 100 - currentProgress];
     myChart.data.datasets[0].data = dataPoints;
 
-    // myChart.ctx.fillText(currentProgress + '%', width / 2, (height / 2) + (options.fontSize * 0.34));
     myChart.update();
 };
