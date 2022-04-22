@@ -1,0 +1,8 @@
+.hero-card {
+    width: 80%;
+    margin: 50px auto;
+}
+
+.hero-text p span {
+    font-weight: 700;
+}
