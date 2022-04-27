@@ -1,0 +1,25 @@
+{
+  "name": "itgirls",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnnaBegisheva/ITGirls.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnnaBegisheva/ITGirls/issues"
+  },
+  "homepage": "https://github.com/AnnaBegisheva/ITGirls#readme",
+  "devDependencies": {
+    "eslint": "^8.14.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-react": "^7.29.4"
+  }
+}
