@@ -16,7 +16,7 @@ function App() {
       <div className="plans">
         {
           data.map((plan, i) =>
-          <Plan title={plan.title} price={plan.price} speed={plan.speed} theme={themes[i]}></Plan>
+          <Plan title={plan.title} price={plan.price} speed={plan.speed} theme={themes[i]} isSelected={plan.isSelected}></Plan>
           )
         }
       </div>
