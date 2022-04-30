@@ -1,0 +1,9 @@
+@import "./assets/styles/_vars.scss";
+
+.container {
+  max-width: 100%;
+  background-color: $button-color;
+  font-family: $base-font;
+  font-size: $base-fontSize;
+  font-weight: $base-fontWeight;
+}

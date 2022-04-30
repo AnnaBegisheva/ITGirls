@@ -1,0 +1,45 @@
+@import "../vars";
+
+img {
+    max-width: 100%;
+}
+
+.wrapper {
+    background: $background-color;
+    max-width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    width: 80%;
+    border-radius: 20px;
+    min-height: 80vh;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 13.0709px 13.0709px 104.567px rgba(63, 39, 102, 0.1);
+    backdrop-filter: blur(26.1418px);
+    position: relative;
+    display: flex;
+}
+
+.sidebar {
+    flex-grow: 1;
+}
+
+.magnifierImg {
+    position: absolute;
+    z-index: 100;
+    width: 30vw;
+    top: -7vw;
+    left: -10vw;
+}
+
+.folderImg {
+    position: absolute;
+    width: 30vw;
+    left: 80%;
+    bottom: -10vw;
+}
