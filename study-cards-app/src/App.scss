@@ -1,6 +1,7 @@
 @import "./assets/styles/_vars.scss";
 
 .container {
+  box-sizing: border-box;
   max-width: 100%;
   background-color: $button-color;
   font-family: $base-font;

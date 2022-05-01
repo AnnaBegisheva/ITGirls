@@ -15,9 +15,11 @@ img {
 }
 
 .content {
-    width: 80%;
+    box-sizing: border-box; 
+    width: 85%;
     border-radius: 20px;
     min-height: 80vh;
+    padding: 20px 0;
     background: rgba(255, 255, 255, 0.2);
     box-shadow: 13.0709px 13.0709px 104.567px rgba(63, 39, 102, 0.1);
     backdrop-filter: blur(26.1418px);

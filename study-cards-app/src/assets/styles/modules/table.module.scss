@@ -1,1 +1,30 @@
 @import "../vars";
+
+.container {
+    box-sizing: border-box; 
+    color: $text-color-main;
+    width: 90%;
+    margin: 0 auto;
+    max-height: 60vh;
+    overflow-y: scroll; // then pagination
+}
+
+.table {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 2px;
+}
+
+.cell {
+    background-color: $menu-color;
+    color: $text-color-white;
+    border-radius: 10px;
+    padding: 10px;
+}

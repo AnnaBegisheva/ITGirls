@@ -1,1 +1,20 @@
 @import "../vars";
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-top: 5px;
+    box-shadow: 10px 10px 80px rgba(63, 39, 102, 0.1);
+    backdrop-filter: blur(26.1418px);
+
+    &:first-child {
+        margin-top: 20px;
+    }
+}
+
+.icons {
+    color: $secondary-color-darker;
+    justify-self: center;
+}

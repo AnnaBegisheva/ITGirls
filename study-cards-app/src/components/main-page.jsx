@@ -3,6 +3,7 @@ import bgFolder from "../assets/images/folder.png";
 import Header from "./Header";
 import Footer from "./Footer";
 import Sidebar from "./Sidebar";
+import Table from "./Table";
 
 function MainPage() {
   return (
@@ -10,7 +11,7 @@ function MainPage() {
       <div className={styles.content}>
         <Sidebar className={styles.sidebar}></Sidebar>
         <Header></Header>
-
+        <Table></Table>
         <Footer></Footer>
         <div className={styles.folderImg}>
           <img src={bgFolder} alt="folder"></img>
