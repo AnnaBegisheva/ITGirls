@@ -22,6 +22,7 @@ function Table() {
               transcription={tr.transcription}
               russian={tr.russian}
               tags={tr.tags}
+              isEditable={tr.isEditable}
             ></TableRow>
           ))}
         </tbody>

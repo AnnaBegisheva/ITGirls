@@ -8,6 +8,8 @@
     margin-top: 5px;
     box-shadow: 10px 10px 80px rgba(63, 39, 102, 0.1);
     backdrop-filter: blur(26.1418px);
+    position: relative;
+    z-index: 5;
 
     &:first-child {
         margin-top: 20px;
@@ -17,4 +19,46 @@
 .icons {
     color: $secondary-color-darker;
     justify-self: center;
+}
+
+.iconBtn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}   
+
+.icon {
+    color: $secondary-color-darker;
+
+    &:hover {
+        color: $secondary-color-bright;
+    }
+
+    &:active {
+        color: $secondary-color;
+    }
+}
+
+.iconAccent {
+    color: $accent-color-darker;
+
+    &:hover {
+        color: $accent-color-bright;
+    }
+
+    &:active {
+        color: $accent-color;
+    }
+}
+
+.input {
+    background-color: transparent;
+    border-radius: 10px;
+    border: 1px solid $text-color-light;
+    padding: 3px 5px;
+
+    &:focus {
+        border: 2px solid $accent-color-darker;
+        outline: none;
+    }
 }
