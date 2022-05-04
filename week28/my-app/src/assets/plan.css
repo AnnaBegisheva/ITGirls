@@ -1,0 +1,57 @@
+.plan {
+    display: flex;
+    flex-direction: column;
+    width: 24.5%;
+    border: 1px solid gray;
+}
+
+.selected {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transform: scale(1.03);
+}
+
+.plan__header {
+    padding: 1.5em 0.5em;
+    font-size: 2em;
+    border-bottom: 1px solid whitesmoke;
+    color: white;
+    position: relative;
+}
+
+.plan__header:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.plan__price {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: white;
+    padding: 3em 0;
+}
+
+.plan__priceValue {
+    font-size: 5em;
+    margin: 0;
+}
+
+.plan__priceValue_upper {
+    align-self: flex-start;
+}
+
+.plan__speed {
+    padding: 1.2em;
+    color: grey;
+}
+
+.footer {
+    padding: 1em;
+    background-color: rgb(232, 228, 228);
+    color: grey;
+}
