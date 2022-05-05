@@ -1,1 +1,8 @@
 @import "../vars";
+
+.container {
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    align-items: center;
+}

@@ -1,1 +1,50 @@
 @import "../vars";
+
+.container {
+    width: 20vw;
+    height: 50%;
+    margin: 0 auto;
+    background: $button-color;
+    color: $text-color-white;
+    font-size: xx-large;
+    border-radius: 20px;
+    border: 1px solid $text-color-main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    padding: 2em 2em 1em 2em;
+
+    &:hover {
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        transform: scale(1.03);
+    }
+}
+
+.button {
+    background: $button-color var(--p, 0) / var(--p, 0) no-repeat;
+    transition: 0.4s, background-position 0s;
+    color: $text-color-main;
+    font-size: medium;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 1em 2em;
+    margin-top: 30px;
+    border: 2px solid $menu-color;
+
+    &:hover {
+        --p: 100%;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    &:active {
+        --p: 100%;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        color: $secondary-color-darker;
+    }
+}
+
+.translation {
+    color: $secondary-color-darker;
+}
