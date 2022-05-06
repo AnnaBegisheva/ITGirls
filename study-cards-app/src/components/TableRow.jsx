@@ -1,8 +1,27 @@
+import React, { useState } from "react";
 import styles from "../assets/styles/modules/table-row.module.scss";
 import Icon from "@mui/material/Icon";
 
 function TableRow(props) {
-  const isEditable = props.isEditable;
+  let isEditable = props.isEditable;
+  const [state, setState] = useState(props);
+
+  const handleChange = (event) => {
+    console.log('handleChange', state)
+    console.log(event.target.dataset.name, event.target.value)
+    setState({
+      ...state,
+      [event.target.dataset.name]: event.target.value,
+    });
+  };
+
+  const handleCancel = () => {
+    setState({
+      ...props,
+    });
+    props.cancel();
+  };
+
   if (isEditable) {
     return (
       <tr className={styles.row}>
@@ -10,38 +29,54 @@ function TableRow(props) {
           <input
             className={styles.input}
             type="text"
-            defaultValue={props.english}
+            onChange={handleChange}
+            value={state.english}
+            data-name={"english"}
           ></input>
         </td>
         <td className={styles.cell}>
           <input
             className={styles.input}
             type="text"
-            defaultValue={props.transcription}
+            onChange={handleChange}
+            value={state.transcription}
+            data-name={"transcription"}
           ></input>
         </td>
         <td className={styles.cell}>
           <input
             className={styles.input}
             type="text"
-            defaultValue={props.russian}
+            onChange={handleChange}
+            value={state.russian}
+            data-name={"russian"}
           ></input>
         </td>
         <td className={styles.cell}>
           <input
             className={styles.input}
             type="text"
-            defaultValue={props.tags}
+            onChange={handleChange}
+            value={state.tags}
+            data-name={"tags"}
           ></input>
         </td>
         <td className={styles.icons}>
           <button className={styles.iconBtn}>
-            <Icon fontSize="small" className={styles.iconAccent} onClick={props.save}>
+            <Icon
+              fontSize="small"
+              className={styles.iconAccent}
+              onClick={props.save}
+            >
               save
             </Icon>
           </button>
           <button className={styles.iconBtn}>
-            <Icon fontSize="small" className={styles.icon} onClick={props.cancel}>
+            <Icon
+              fontSize="small"
+              className={styles.icon}
+              onClick={handleCancel}
+            >
               cancel
             </Icon>
           </button>
@@ -57,12 +92,20 @@ function TableRow(props) {
         <td className={styles.cell}>{props.tags}</td>
         <td className={styles.icons}>
           <button className={styles.iconBtn}>
-            <Icon fontSize="small" className={styles.iconAccent} onClick={props.edit}>
+            <Icon
+              fontSize="small"
+              className={styles.iconAccent}
+              onClick={props.edit}
+            >
               edit
             </Icon>
           </button>
           <button className={styles.iconBtn}>
-            <Icon fontSize="small" className={styles.icon} onClick={props.delete}>
+            <Icon
+              fontSize="small"
+              className={styles.icon}
+              onClick={props.delete}
+            >
               delete
             </Icon>
           </button>

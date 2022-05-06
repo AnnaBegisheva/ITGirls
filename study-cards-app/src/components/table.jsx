@@ -6,10 +6,6 @@ import data from "../assets/data.json";
 function Table() {
   const [editable, setEditable] = useState();
 
-  const handleCancel = (i) => {
-    setEditable(!editable);
-  };
-
   return (
     <div className={styles.container}>
       <table className={styles.table}>
@@ -32,7 +28,7 @@ function Table() {
               tags={tr.tags}
               isEditable={editable === i}
               edit={() => setEditable(i)}
-              cancel={() => handleCancel(i)}
+              cancel={() => setEditable(!editable)}
             ></TableRow>
           ))}
         </tbody>
