@@ -2,7 +2,6 @@
 
 .container {
     width: 20vw;
-    height: 50%;
     margin: 0 auto;
     background: $button-color;
     color: $text-color-white;
@@ -47,4 +46,5 @@
 
 .translation {
     color: $secondary-color-darker;
+    margin-top: 30px;
 }

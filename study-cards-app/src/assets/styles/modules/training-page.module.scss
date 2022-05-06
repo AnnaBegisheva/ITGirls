@@ -1,7 +1,11 @@
 @import "../vars";
 
 .container {
+    max-height: 60vh;
+    overflow: hidden;
     display: flex;
+    justify-content: center;
+    flex-direction: column;
     width: 70%;
     margin: 0 auto;
     align-items: center;
