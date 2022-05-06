@@ -3,8 +3,8 @@ import bgFolder from "../assets/images/folder.png";
 import Header from "./Header";
 import Footer from "./Footer";
 import Sidebar from "./Sidebar";
-// import Table from "./Table";
-import TrainingPage from "./TrainingPage";
+import Table from "./Table";
+// import TrainingPage from "./TrainingPage";
 
 function MainPage() {
   return (
@@ -12,8 +12,8 @@ function MainPage() {
       <div className={styles.content}>
         <Sidebar className={styles.sidebar}></Sidebar>
         <Header></Header>
-
-        <TrainingPage></TrainingPage>
+        <Table></Table>
+        {/* <TrainingPage></TrainingPage> */}
         <Footer></Footer>
         <div className={styles.folderImg}>
           <img src={bgFolder} alt="folder"></img>

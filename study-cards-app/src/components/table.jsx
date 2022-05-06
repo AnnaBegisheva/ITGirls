@@ -1,8 +1,15 @@
+import React, { useState } from "react";
 import styles from "../assets/styles/modules/table.module.scss";
 import TableRow from "./TableRow";
 import data from "../assets/data.json";
 
 function Table() {
+  const [editable, setEditable] = useState();
+
+  const handleCancel = (i) => {
+    setEditable(!editable);
+  };
+
   return (
     <div className={styles.container}>
       <table className={styles.table}>
@@ -16,13 +23,16 @@ function Table() {
           </tr>
         </thead>
         <tbody className={styles.body}>
-          {data.map((tr) => (
-            <TableRow className={styles.row}
+          {data.map((tr, i) => (
+            <TableRow
+              className={styles.row}
               english={tr.english}
               transcription={tr.transcription}
               russian={tr.russian}
               tags={tr.tags}
-              isEditable={tr.isEditable}
+              isEditable={editable === i}
+              edit={() => setEditable(i)}
+              cancel={() => handleCancel(i)}
             ></TableRow>
           ))}
         </tbody>

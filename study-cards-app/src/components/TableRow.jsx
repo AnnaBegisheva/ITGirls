@@ -36,12 +36,12 @@ function TableRow(props) {
         </td>
         <td className={styles.icons}>
           <button className={styles.iconBtn}>
-            <Icon fontSize="small" className={styles.iconAccent}>
+            <Icon fontSize="small" className={styles.iconAccent} onClick={props.save}>
               save
             </Icon>
           </button>
           <button className={styles.iconBtn}>
-            <Icon fontSize="small" className={styles.icon}>
+            <Icon fontSize="small" className={styles.icon} onClick={props.cancel}>
               cancel
             </Icon>
           </button>
@@ -57,12 +57,12 @@ function TableRow(props) {
         <td className={styles.cell}>{props.tags}</td>
         <td className={styles.icons}>
           <button className={styles.iconBtn}>
-            <Icon fontSize="small" className={styles.iconAccent}>
+            <Icon fontSize="small" className={styles.iconAccent} onClick={props.edit}>
               edit
             </Icon>
           </button>
           <button className={styles.iconBtn}>
-            <Icon fontSize="small" className={styles.icon}>
+            <Icon fontSize="small" className={styles.icon} onClick={props.delete}>
               delete
             </Icon>
           </button>
