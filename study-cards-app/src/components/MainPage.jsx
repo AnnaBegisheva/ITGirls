@@ -1,10 +1,9 @@
+import { Outlet } from "react-router-dom";
 import styles from "../assets/styles/modules/main-page.module.scss";
 import bgFolder from "../assets/images/folder.png";
 import Header from "./Header";
 import Footer from "./Footer";
 import Sidebar from "./Sidebar";
-import Table from "./Table";
-// import TrainingPage from "./TrainingPage";
 
 function MainPage() {
   return (
@@ -12,8 +11,7 @@ function MainPage() {
       <div className={styles.content}>
         <Sidebar className={styles.sidebar}></Sidebar>
         <Header></Header>
-        <Table></Table>
-        {/* <TrainingPage></TrainingPage> */}
+        <Outlet />
         <Footer></Footer>
         <div className={styles.folderImg}>
           <img src={bgFolder} alt="folder"></img>

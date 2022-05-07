@@ -1,5 +1,9 @@
 import styles from "../assets/styles/modules/sidebar.module.scss";
 import bgMagnifier from "../assets/images/magnifier.png";
+import { Link } from "react-router-dom";
+import MenuBookRoundedIcon from '@mui/icons-material/MenuBookRounded';
+import SchoolRoundedIcon from '@mui/icons-material/SchoolRounded';
+import FactCheckRoundedIcon from '@mui/icons-material/FactCheckRounded';
 
 function Sidebar() {
   return (
@@ -9,19 +13,22 @@ function Sidebar() {
       </div>
       <ul className={styles.menu}>
         <li className={styles.menuItem}>
-          <a href="../" className={styles.menuLink}>
-            Dictionary
-          </a>
+          <Link to="/" className={styles.menuLink}>
+            <MenuBookRoundedIcon className={styles.menuIcon}/>
+            Learn
+          </Link>
         </li>
         <li className={styles.menuItem}>
-          <a href="../" className={styles.menuLink}>
-            Training
-          </a>
+          <Link to="/training" className={styles.menuLink}>
+          <SchoolRoundedIcon className={styles.menuIcon}/>
+          Practice
+          </Link>
         </li>
         <li className={styles.menuItem}>
-          <a href="../" className={styles.menuLink}>
+          <Link to="../vocabulary" className={styles.menuLink}>
+          <FactCheckRoundedIcon className={styles.menuIcon}/>
             My vocabulary
-          </a>
+          </Link>
         </li>
       </ul>
     </div>
