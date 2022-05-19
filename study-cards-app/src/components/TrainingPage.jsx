@@ -18,9 +18,20 @@ function TrainingPage(props) {
     }
   };
 
+  const handleCount = (i) => {
+    setTranslated(null);
+    if (i<0) {
+      setCount(data.length-1);
+    } else if (i>data.length-1) {
+      setCount(0);
+    } else {
+      setCount(i);
+    }
+  }
+
   return (
     <div className={styles.container}>
-      <button className={styles.button} onClick={() => setCount(count - 1)}>
+      <button className={styles.button} onClick={() => handleCount(count - 1)}>
         <ArrowBackIosIcon className={styles.icon} />
       </button>
       {data.map((card, count) => (
@@ -34,7 +45,7 @@ function TrainingPage(props) {
           onClick={() => handleClick(count)}
         ></Card>
       ))[count]}
-      <button className={styles.button} onClick={() => setCount(count + 1)}>
+      <button className={styles.button} onClick={() => handleCount(count + 1)}>
         <ArrowForwardIosIcon className={styles.icon} />
       </button>
     </div>
