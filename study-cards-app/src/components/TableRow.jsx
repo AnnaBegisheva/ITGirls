@@ -7,8 +7,7 @@ function TableRow(props) {
   const [state, setState] = useState(props);
 
   const handleChange = (event) => {
-    console.log('handleChange', state)
-    console.log(event.target.dataset.name, event.target.value)
+    console.log(event);
     setState({
       ...state,
       [event.target.dataset.name]: event.target.value,
@@ -19,6 +18,21 @@ function TableRow(props) {
     setState({
       ...props,
     });
+    props.cancel();
+  };
+
+  const handleSave = () => {
+    let data = JSON.parse(localStorage.getItem("JSON"));
+    data.forEach((element) => {
+      if (element.id === state.id) {
+        for (const key in element) {
+          if (Object.hasOwnProperty.call(element, key)) {
+            element[key] = state[key];
+          }
+        }
+      }
+    });
+    localStorage.setItem("JSON", JSON.stringify(data));
     props.cancel();
   };
 
@@ -66,7 +80,7 @@ function TableRow(props) {
             <Icon
               fontSize="small"
               className={styles.iconAccent}
-              onClick={props.save}
+              onClick={handleSave}
             >
               save
             </Icon>

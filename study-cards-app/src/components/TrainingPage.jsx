@@ -6,7 +6,7 @@ import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 function TrainingPage(props) {
-  const [translated, setTranslated] = useState(0);
+  const [translated, setTranslated] = useState(null);
   const [count, setCount] = useState(props.count || 0);
   const data = props.data;
 

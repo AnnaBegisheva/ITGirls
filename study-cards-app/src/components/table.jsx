@@ -1,10 +1,20 @@
 import React, { useState } from "react";
 import styles from "../assets/styles/modules/table.module.scss";
 import TableRow from "./TableRow";
-import data from "../assets/data.json";
+// import words from '../assets/data.json'
 
 function Table() {
   const [editable, setEditable] = useState();
+  // localStorage.setItem('JSON', JSON.stringify(words));
+  let dataArr = JSON.parse(localStorage.getItem("JSON"));
+  const [data, setData] = useState(dataArr);
+
+  const handleDelete = (i) => {
+    const newData = [...data];
+    newData.splice(i, 1);
+    setData(newData);
+    localStorage.setItem("JSON", JSON.stringify(newData));
+  };
 
   return (
     <div className={styles.container}>
@@ -21,6 +31,8 @@ function Table() {
         <tbody className={styles.body}>
           {data.map((tr, i) => (
             <TableRow
+              key={tr.id}
+              id={tr.id}
               className={styles.row}
               english={tr.english}
               transcription={tr.transcription}
@@ -29,6 +41,7 @@ function Table() {
               isEditable={editable === i}
               edit={() => setEditable(i)}
               cancel={() => setEditable(!editable)}
+              delete={() => handleDelete(i)}
             ></TableRow>
           ))}
         </tbody>
