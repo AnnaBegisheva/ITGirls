@@ -1,7 +1,7 @@
 @import "../vars";
 
 .container {
-  width: clamp(100px, 20%, 400px);
+  width: clamp(200px, 20%, 400px);
   background-color: $menu-color;
   border-radius: 20px;
   position: relative;

@@ -7,7 +7,6 @@ function TableRow(props) {
   const [state, setState] = useState(props);
 
   const handleChange = (event) => {
-    console.log(event);
     setState({
       ...state,
       [event.target.dataset.name]: event.target.value,
@@ -22,17 +21,7 @@ function TableRow(props) {
   };
 
   const handleSave = () => {
-    let data = JSON.parse(localStorage.getItem("JSON"));
-    data.forEach((element) => {
-      if (element.id === state.id) {
-        for (const key in element) {
-          if (Object.hasOwnProperty.call(element, key)) {
-            element[key] = state[key];
-          }
-        }
-      }
-    });
-    localStorage.setItem("JSON", JSON.stringify(data));
+    props.save(state)
     props.cancel();
   };
 

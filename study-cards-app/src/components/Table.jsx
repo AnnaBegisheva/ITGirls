@@ -16,6 +16,20 @@ function Table() {
     localStorage.setItem("JSON", JSON.stringify(newData));
   };
 
+  const handleSave = (state) => {
+    const newData = [...data];
+    newData.forEach((element) => {
+      if (element.id === state.id) {
+        for (const key in element) {
+          if (Object.hasOwnProperty.call(element, key)) {
+            element[key] = state[key];
+          }
+        }
+      }
+    });
+    localStorage.setItem("JSON", JSON.stringify(newData));
+  };
+
   return (
     <div className={styles.container}>
       <table className={styles.table}>
@@ -42,6 +56,7 @@ function Table() {
               edit={() => setEditable(i)}
               cancel={() => setEditable(!editable)}
               delete={() => handleDelete(i)}
+              save={(state) => handleSave(state, setEditable)}
             ></TableRow>
           ))}
         </tbody>
