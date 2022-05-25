@@ -9,7 +9,10 @@ function Sidebar() {
   return (
     <div className={styles.container}>
       <div className={styles.magnifierImg}>
-        <img src={bgMagnifier} alt="folder"></img>
+      <img src={bgMagnifier} alt="magnifier"></img>
+      <Link to="/" className={styles.logo}>
+        Word magnifier!
+        </Link>
       </div>
       <ul className={styles.menu}>
         <li className={styles.menuItem}>

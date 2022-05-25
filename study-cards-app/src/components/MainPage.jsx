@@ -1,7 +1,6 @@
 import { Outlet } from "react-router-dom";
 import styles from "../assets/styles/modules/main-page.module.scss";
 import bgFolder from "../assets/images/folder.png";
-import Header from "./Header";
 import Footer from "./Footer";
 import Sidebar from "./Sidebar";
 
@@ -10,7 +9,6 @@ function MainPage() {
     <div className={styles.wrapper}>
       <div className={styles.content}>
         <Sidebar className={styles.sidebar}></Sidebar>
-        <Header></Header>
         <Outlet />
         <Footer></Footer>
         <div className={styles.folderImg}>
