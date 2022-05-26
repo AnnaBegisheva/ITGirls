@@ -37,3 +37,23 @@ img {
     left: 80%;
     bottom: -10vw;
 }
+
+.burgerIcon {
+    color: $menu-color;
+    align-self: flex-start;
+    margin-top: 30px;
+    display: none;
+
+    &:hover {
+        color: $secondary-color-darker;
+    }
+
+    &:active {
+        color: $secondary-color-darker;
+    }
+
+    @media screen and (max-width: 768px) {
+        display: inline;
+        z-index: 20;
+    }
+}
