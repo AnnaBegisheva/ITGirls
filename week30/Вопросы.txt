@@ -47,9 +47,17 @@ return (
 })}
 
 5. Как задать параметр в пути? Например, filter
-Мы можем сделать это, добавив параметр в prop path:
+1) Мы можем сделать это, добавив параметр в prop path:
 <Route path='/users/:filter' element={<Users />} /> 
 :filter часть строки в /users/:filter означает, что часть path после /users/ будет получена в виде переменной и сохранится в match.params.number. 
+
+2) Хук 
+useLocation возвращает объект, в котором есть поля path и search
+С помощью хука useSearchParams можно взять изначальный адрес (searchParams) и его дописать (setSearchParams):
+setSearchParams({ filter: *some filter* });
+
+Два варианта отличаются логикой: 
+первый используется, когда необходимо менять адрес динамически и происходит полный ререндер страницы, второй - когда страница не меняется, но происходит смена некоторого параметра в адресе и на странице
 
 6. Какая разница между `element` и `children` в указании роутера?
 Element - тот компонент, который отвечает за обработку запроса по маршруту, отображает компонент, если путь сопоставляется
@@ -67,6 +75,7 @@ history -  "история" (history) и "объект истории" (history 
 - action: string - текущая операция (PUSH, REPLACE или POP)
 - location
 Одним из наиболее часто используемых методов объекта истории является .push(), который перенаправляет вас на другой URL-адрес.
+Сейчас устарел, вместо него используется useNavigate.
 
 location - объект истории, текущая локация,  информацию о текущем URL. 
 Можно думать о нем как о useState, возвращающем новую локацию при изменении URL. 
@@ -90,6 +99,7 @@ function CartScreen({ history, location, match }) {
  const productQuantity = location.search ? 
   parseInt(location.search.split("=")[1])) : 1; 
 }
+В основном используется в рамках хука useLocation, который возвращает объект
 
 match - объект совпадения (match object) содержит информацию о том, насколько <Route path> совпадает с URL.
 Он имеет следующие свойства:
@@ -103,13 +113,30 @@ match - объект совпадения (match object) содержит инф
 <Route path="/student/:id?" component={StudentScreen} /
 function StudentScreen({ history, location, match }) {
   const theStudentId = match.params.id;
-
   // now place theStudentId in navigation bar or do anything you 
   // want with it.
 }
+Хук useMatch используется редко (пережиток 5ой версии, но может найти применение в условном рендеринге). 
+Он проверяет, что текущий адрес совпадает с location, удобно в том случае, когда нет возможности использовать роутер
+Принимает либо строку с путем, либо объект PathPattern (пример: 
+interface PathPattern {
+  path: string;
+  caseSensitive?: boolean;
+  end?: boolean;
+})
 
 9. Как можно сделать перенаправление на другую страницу по клику на кнопку с помощью `history`? *Ищите ответ в документации к react-router-dom*
 Использовать метод  .push() , который перенаправляет на другой URL:
 const handleClick = () => {
     history.push("/login"); // now we're in localhost:3000/login
+  };
+Сейчас устарел, вместо него используется хук useNavigate, который принимает строку или объект и позволяет перенаправлять по клику.
+const navigate = useNavigate();
+const handleRedirect = () => {
+    navigate({
+      pathname: '/',
+      search: `?${createSearchParams({
+        index: state.index,
+      })}`,
+    });
   };
