@@ -34,8 +34,14 @@
     cursor: pointer;
 
     &:hover {
+        background: $background-color var(--p, 0) / var(--p, 0) no-repeat;
+        --p: 100%;
+    }
+
+    &:focus {
         --p: 100%;
         box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        outline: none;
     }
 
     &:active {

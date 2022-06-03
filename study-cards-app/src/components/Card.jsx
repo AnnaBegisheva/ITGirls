@@ -1,8 +1,13 @@
+import React, { useEffect, useRef } from "react";
 import styles from "../assets/styles/modules/card.module.scss";
 
 function TranslateButton(props) {
+  const inputReference = useRef(null);
+  useEffect(() => {
+    inputReference.current.focus();
+  }, []);
   return (
-    <button onClick={props.onClick} className={styles.button}>
+    <button onClick={props.onClick} className={styles.button} ref={inputReference}>
       Translate
     </button>
   );
