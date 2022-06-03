@@ -1,12 +1,18 @@
 @import "../vars";
 
 .container {
-    max-height: 60vh;
+    max-height: 80vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60%;
-    margin: 0 auto;
 }
 
 .button {
@@ -43,4 +49,15 @@
     &:active {
         color: $secondary-color-darker;
     }
+}
+
+.vocabulary {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    padding: 5px 10px;
+}
+
+.vocabularyNumber {
+    font-size: larger;
+    color: $secondary-color-darker;
 }

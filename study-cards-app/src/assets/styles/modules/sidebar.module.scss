@@ -35,7 +35,7 @@
 
 .logo {
   position: absolute;
-  top: 95px;
+  top: 105px;
   left: 170px;
   color: $menu-color;
   font-family:monospace;
@@ -54,6 +54,10 @@
 .logo span {
   font-size: 1.3em;
   text-shadow: 0.06em 0.06em 0 rgba(175,170,215,1);
+
+  &:hover {
+    font-size: 1.4em;
+  }
 }
 
 .menu {

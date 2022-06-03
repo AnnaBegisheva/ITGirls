@@ -9,7 +9,7 @@ function Sidebar() {
       <div className={styles.magnifierImg}>
         <img src={bgMagnifier} alt="magnifier"></img>
         <Link to="/" className={styles.logo}>
-          Your vocabulary <span>magnifier!</span>
+          Vocabulary <span>magnifier!</span>
         </Link>
       </div>
       <nav>
