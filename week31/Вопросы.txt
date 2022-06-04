@@ -26,7 +26,25 @@
             e.preventDefault();
             this.setState({ count: this.state.count + 1 });
         };
-    
+render() {
+          const {id} = this.props;
+          const {count} = this.state;
+          return <a href="#" onClick={this.onClick(id, title)}>click {count}</a>;
+      }    
+
+Или через дата атрибуты:
+onClick = (e) => {
+        console.log('Действие на строке ' + e.target.dataset.id);
+        console.log('Действие на строке ' + e.target.dataset.title);
+        e.preventDefault();
+        this.setState({ count: this.state.count + 1 });
+    };
+
+    render() {
+        const {id, title} = this.props;
+        const {count} = this.state;
+        return <a href="#" data-id={id} data-title={title} onClick={this.onClick}>click {count}</a>;
+    }
 3. В чем отличие VirtualDOM от обычного DOM?
 Но DOM никогда не был рассчитан для создания динамического пользовательского интерфейса (UI). 
 Манипуляции с ним являются очень ресурсозатратными. 
@@ -38,14 +56,14 @@
 
 4. В каком порядке выйдут сообщения в консоли и почему?
     handleChange = () => {
-    	console.log('foo');
+    	console.log('foo'); // 1
     
     	this.setState({
     		checked: !this.state.checked, 
     		},
-    		()=>{console.log('baz')}
+    		()=>{console.log('baz')} //3 - асинхронная функция сработает в конце
     	);
-    	console.log('bar') 
+    	console.log('bar') //2
     };
 
     
@@ -60,8 +78,20 @@ React позволяет сделать это с помощью рефов (ref
 Избегайте использования рефов в ситуациях, когда задачу можно решить декларативным способом.
 
 6. Как вы думаете почему вызов методов ребенка из родительского компонента противоречит философии реакта?
+Реакт построен на ООП, в этом случае нарушаем принцип инкапсуляции - методы и свойства объекта должны принадлежать ему, а не вызываться родителем
+В принципе рефы имеют место в реакте (т.е есть техническая возможность),  но лучше стараться этого не использовать
 
 7. Можно ли с помощью хука `setRef` передать `ref` дочерним элементам? 
+Если речь идет о useRef, то для этого используется метод forwardRef, и им оборачивается весь компонент:
+//Дочерний элемент
+const Input = forwardRef(({ value, handleChange }, ref) => (
+  <input
+    type="text"
+    value={value}
+    onChange={handleChange}
+    ref={ref}
+  />
+));
 
 8. Что дает нам использование кастомных хуков?
 Иногда может понадобиться сделать специфический хук с более сложной логикой, чем те, что поставляются из коробки. 
