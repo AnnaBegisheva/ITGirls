@@ -9,7 +9,7 @@ function Input() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (input.length === 0) {
+    if (input.trim().length === 0) {
       alert('Add some text to comment');
       return;
     }
