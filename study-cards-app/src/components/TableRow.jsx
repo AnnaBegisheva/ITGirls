@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import styles from "../assets/styles/modules/table-row.module.scss";
 import Icon from "@mui/material/Icon";
+import { useEffect } from "react";
 
 function TableRow(props) {
   let isEditable = props.isEditable;
   const [state, setState] = useState(props);
+  const [disabled, setDisabled] = useState(false);
 
   const handleChange = (event) => {
     setState({
@@ -12,6 +14,17 @@ function TableRow(props) {
       [event.target.dataset.name]: event.target.value,
     });
   };
+
+  
+  useEffect(() => {
+    let englishIsEnabled = state.english === "";
+    let transcriptionIsEnabled = state.transcription === "" ;
+    let tagsIsEnabled = state.tags === ""
+    let russianIsEnabled = state.russian === ""
+
+    setDisabled(englishIsEnabled || transcriptionIsEnabled || tagsIsEnabled || russianIsEnabled)
+  }, [disabled, state.english, state.russian, state.tags, state.transcription]);
+  
 
   const handleCancel = () => {
     setState({
@@ -21,8 +34,11 @@ function TableRow(props) {
   };
 
   const handleSave = () => {
-    props.save(state)
-    props.cancel();
+    console.log(disabled)
+    if (!disabled) {
+      props.save(state)
+      props.cancel();
+    }
   };
 
   if (isEditable) {
@@ -30,7 +46,7 @@ function TableRow(props) {
       <tr className={styles.row}>
         <td className={styles.cell}>
           <input
-            className={styles.input}
+            className={`${styles.input} ${state.english === "" ? `${styles.error}` : ""}`}
             type="text"
             onChange={handleChange}
             value={state.english}
@@ -39,7 +55,7 @@ function TableRow(props) {
         </td>
         <td className={styles.cell}>
           <input
-            className={styles.input}
+            className={`${styles.input} ${state.transcription === "" ? `${styles.error}` : ""}`}
             type="text"
             onChange={handleChange}
             value={state.transcription}
@@ -48,7 +64,7 @@ function TableRow(props) {
         </td>
         <td className={styles.cell}>
           <input
-            className={styles.input}
+            className={`${styles.input} ${state.russian === "" ? `${styles.error}` : ""}`}
             type="text"
             onChange={handleChange}
             value={state.russian}
@@ -57,7 +73,7 @@ function TableRow(props) {
         </td>
         <td className={styles.cell}>
           <input
-            className={styles.input}
+            className={`${styles.input} ${state.tags === "" ? `${styles.error}` : ""}`}
             type="text"
             onChange={handleChange}
             value={state.tags}
@@ -69,7 +85,7 @@ function TableRow(props) {
             <Icon
               fontSize="small"
               className={styles.iconAccent}
-              onClick={handleSave}
+              onClick={handleSave}            
             >
               save
             </Icon>

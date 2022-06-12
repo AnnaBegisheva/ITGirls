@@ -62,3 +62,11 @@
         outline: none;
     }
 }
+
+.error {
+    border: 2px solid $secondary-color-bright;
+    &:focus {
+        border: 2px solid $secondary-color-bright;
+        outline: none;
+    }
+}

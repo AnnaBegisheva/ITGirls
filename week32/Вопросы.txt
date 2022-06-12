@@ -41,14 +41,41 @@ React.PureComponent изменяет метод жизненного цикла 
 Это и дает плюс производительности
 
 6. Что будет, если компоненту `input` передать метод `onChange`, но не передать `value`?
+Компонент будет работать и считывать состояние
 
- А что будет, если компоненту `input` передать `value`, но не передать метод `onChange`?
-
+А что будет, если компоненту `input` передать `value`, но не передать метод `onChange`?
+Состояние при наборе текста считываться не будет, value=undefined
 
 7. Как сделать из обычного `select` список с несколькими выбранными значениями (мультиселект)?
 В атрибут value передать массив:
 <select multiple={true} value={['Б', 'В']}>
 
 8. Напишите пример валидации текстового поля на React - чтобы оно было не пустым
+function Input() {
+const [input, setInput] = useState();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (input.trim().length === 0) {
+      alert('Add some text');
+      return;
+    }
+// some code
+}
+
+return (
+<form 
+          <textarea
+            rows="5"
+            cols="50"
+            onChange={(e) => setInput(e.target.value)}
+            value={input}
+          />
+ <button type="submit" onClick={handleSubmit}>
+/>
+  );
+}
 
 9. Приведите пример простейшей формы логина на сторонних компонентах (Formic, Material или Bootstrap на ваш выбор)
+
