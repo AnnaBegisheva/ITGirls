@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../assets/styles/modules/table-row.module.scss";
 import Icon from "@mui/material/Icon";
-import { useEffect } from "react";
 
 function TableRow(props) {
   let isEditable = props.isEditable;
@@ -34,7 +33,6 @@ function TableRow(props) {
   };
 
   const handleSave = () => {
-    console.log(disabled)
     if (!disabled) {
       props.save(state)
       props.cancel();

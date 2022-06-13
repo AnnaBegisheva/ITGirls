@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "../assets/styles/modules/table.module.scss";
+import NewWord from "./NewWord";
 import TableRow from "./TableRow";
 // import words from '../assets/data.json'
 
@@ -43,6 +44,14 @@ function Table() {
           </tr>
         </thead>
         <tbody className={styles.body}>
+          <NewWord
+            className={styles.row}
+            english={""}
+            transcription={""}
+            russian={""}
+            tags={""}
+            addWord={(newData) => setData(newData)}
+          />
           {data.map((tr, i) => (
             <TableRow
               key={tr.id}
