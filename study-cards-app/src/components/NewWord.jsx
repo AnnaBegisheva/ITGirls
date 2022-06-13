@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../assets/styles/modules/table-row.module.scss";
 import Icon from "@mui/material/Icon";
 import useLocalStorage from "../hooks/useLocalStorage";
-import { useEffect } from "react";
 
 function NewWord(props) {
   const [state, setState] = useState(props);
@@ -12,7 +11,6 @@ function NewWord(props) {
   const [disabled, setDisabled] = useState();
 
   useEffect(() => {
-    console.log("disabled:", disabled);
     if (disabled === false) {
       setDisabled(undefined);
       let newWord = {
@@ -58,7 +56,7 @@ function NewWord(props) {
         return "The field is empty";
       } else if (arrWord.includes(state[item])) {
         return "The word is already in the dictionary";
-      } else if (!/^[a-zA-Z]+$/.test("item")) {
+      } else if (!/^[a-zA-Z]+$/.test(state[item])) {
         return "Only latin letters";
       } else {
         return undefined;
@@ -77,11 +75,10 @@ function NewWord(props) {
     };
 
     const checkRussian = (item) => {
-      console.log("cyrillic= ");
       if (state[item].length === 0) {
         return "The field is empty";
       } else if (!/^[а-яА-Я]+$/.test(state[item])) {
-        return "Only cyrillic letters";
+        return "Use only cyrillic letters";
       } else {
         return undefined;
       }
